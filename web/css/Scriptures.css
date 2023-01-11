@@ -1,0 +1,808 @@
+﻿@font-face {
+    font-family: 'CalibriRegular';
+    src: url('/fonts/calibri-regular.ttf'), url('/fonts/calibri-regular.woff2');
+}
+
+@font-face {
+    font-family: 'Cambria';
+    src: url('/fonts/Cambria.ttf'), url('/fonts/Cambria.woff2');
+}
+
+@font-face {
+    font-family: 'EBGaramondItalic';
+    src: url('/fonts/EBGaramond-Italic.ttf'), url('/fonts/EBGaramond-Italic.woff2');
+}
+
+@font-face {
+    font-family: 'EBGaramondRegular';
+    src: url('/fonts/EBGaramond-Regular.ttf'), url('/fonts/EBGaramond-Regular.woff2');
+}
+
+@font-face {
+    font-family: 'ETBemboBold';
+    src: url('/fonts/ETBembo-Bold.ttf'), url('/fonts/ETBembo-Bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ETBemboItalic';
+    src: url('/fonts/ETBembo-Italic.ttf'), url('/fonts/ETBembo-Italic.woff2');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ETBembo';
+    src: url('/fonts/ETBembo.ttf'), url('/fonts/ETBembo.woff2');
+}
+
+@font-face {
+    font-family: 'GillSansBold';
+    src: url('/fonts/Gill sans mt bold.TTF'), url('/fonts/Gill sans mt bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'GillSansItalic';
+    src: url('/fonts/Gill sans mt italic.ttf'), url('/fonts/Gill sans mt italic.woff2');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GillSans';
+    src: url('/fonts/Gill Sans mt.ttf'), url('/fonts/Gill Sans mt.woff2');
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica.ttf'), url('/fonts/Helvetica.woff2');
+}
+
+@font-face {
+    font-family: 'Symbol';
+    src: url('/fonts/symbol.ttf'), url('/fonts/symbol.woff2');
+}
+
+@font-face {
+    font-family: 'TimesNewRoman';
+    src: url('/fonts/times-new-roman.ttf'), url('/fonts/times-new-roman.woff2');
+}
+
+@font-face {
+    font-family: 'MarckScript';
+    src: url('/fonts/Marck-Script.ttf'), url('/fonts/Marck-Script.woff'), url('/fonts/Marck-Script.woff2');
+}
+
+body {
+    margin-left: 100px;
+    margin-right: 150px;
+    font-size: 1em;
+    font-family: 'ETBembo';
+}
+
+mainheading {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 5em;
+    font-family: 'ETBembo';
+    font-weight: 500;
+    padding-top: 150px;
+}
+
+subheading {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: 'ETBembo';
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+
+blockheading {
+    font-size: 1.1em;
+    display: block;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-family: 'GillSans';
+    text-transform: uppercase;
+}
+
+subsectionheading {
+    font-size: 1.3em;
+    display: block;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-family: 'GillSans';
+    text-transform: uppercase;
+    border-top: 2px solid black;
+}
+
+heading {
+    font-size: 1.1em;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    font-family: 'GillSansItalic';
+    font-style: italic;
+}
+
+highlightheading {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 5em;
+    font-family: 'GillSans';
+    background-color: #D9E2F3;
+    text-align: center;
+}
+
+line {
+    display: block;
+    border-top: 2px solid black;
+}
+
+inscription {
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+titlephrase {
+    text-transform: uppercase;
+}
+
+book {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'ETBembo';
+    /* font-size: 3em; */
+    font-size: calc(100% + 3vw);
+    margin-top: 5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+booksection {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'ETBembo';
+    /* font-size: 3em; */
+    font-size: calc(100% + 2vw);
+    margin-top: 5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+largebookheading {
+    display: flex;
+    justify-content: center;
+    font-family: 'ETBembo';
+    /* font-size: 3em; */
+    font-size: calc(100% + 2vw);
+    text-transform: uppercase;
+}
+
+bookheading {
+    display: flex;
+    justify-content: center;
+    font-family: 'ETBembo';
+    /* font-size: 3em; */
+    font-size: calc(100% + 0vw);
+    text-transform: uppercase;
+}
+
+chapter {
+    font-size: 2em;
+    float: left;
+    margin-left: -1.35em;
+    margin-top: -0.25em;
+    color: #A6A6A6;
+    font-family: 'GillSans';
+}
+
+verse {
+    font-size: 0.5em;
+    color: #808080;
+    vertical-align: text-top;
+    display: inline-block;
+    font-family: 'GillSans';
+    font-weight: normal;
+}
+
+block {
+    display: block;
+    margin-bottom: 1em;
+}
+
+    block::after {
+        display: block;
+        /* content: '\A'; */
+        /* white-space: pre; */
+    }
+
+nblock {
+    display: block;
+}
+
+    nblock::after {
+        display: block;
+        /* content: '\A'; */
+        /* white-space: pre; */
+    }
+
+break::before {
+    content: '\A';
+    white-space: pre;
+}
+
+break {
+}
+
+bindent::before {
+    content: '\A';
+    white-space: pre;
+}
+
+bindent {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+}
+
+indent {
+    display: block;
+    margin-left: 2em;
+    /* margin-top: -1em; */
+}
+
+quote::before {
+    content: '\A';
+    white-space: pre;
+}
+
+quote {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    /* margin-bottom: 0.5em; */
+}
+
+border {
+}
+
+box {
+    border: 2px solid black;
+    display: block;
+    padding: 0.5em;
+}
+
+superscript {
+    font-size: 0.5em;
+    color: #808080;
+    vertical-align: text-top;
+    display: inline-block;
+    font-family: 'GillSans';
+}
+
+reference {
+    background-color: #F2F2F2;
+    display: block;
+}
+
+referencenote {
+    background-color: #F2F2F2;
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    /* font-weight: bold; */
+    color: #808080;
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+under {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #AAAAAA;
+}
+
+dunder {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #AAAAAA;
+}
+
+ddunder {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #AAAAAA;
+}
+
+italic {
+    font-style: italic;
+    font-family: 'ETBemboItalic';
+    font-size: 1.15em;
+}
+
+bold {
+    font-weight: bold;
+}
+
+question {
+    font-weight: bold;
+}
+
+dot::before {
+    content: '\A \2022';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+dot {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+}
+
+symbol {
+    font-size: 2em;
+    font-family: 'CalibriRegular';
+}
+
+note {
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    color: #808080;
+    /* font-weight: bold; */
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+originalchar::before {
+    font-family: 'MarckScript';
+    content: 'O ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+originalchar {
+}
+
+original:before {
+    font-family: 'MarckScript';
+    content: 'O ';
+    /* font-weight: bold; */
+}
+
+original {
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    color: #808080;
+    /* font-weight: bold; */
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+printerchar::before {
+    font-family: 'MarckScript';
+    content: 'P ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+printerchar {
+}
+
+printer:before {
+    font-family: 'MarckScript';
+    content: 'P ';
+    /* font-weight: bold; */
+}
+
+printer {
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    color: #808080;
+    /* font-weight: bold; */
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+manuscriptchar::before {
+    font-family: 'MarckScript';
+    content: 'M ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+manuscriptchar {
+}
+
+
+manuscript::before {
+    font-family: 'MarckScript';
+    content: 'M ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+manuscript {
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    /* font-weight: bold; */
+    color: #808080;
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+jstchar::before {
+    /* font-family: 'MarckScript'; */
+    content: 'JST ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+jstchar {
+}
+
+jst::before {
+    content: 'JST ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+jst {
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    color: #808080;
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+bcchar::before {
+    /* font-family: 'MarckScript'; */
+    content: 'BC ';
+    color: #808080;
+    /* font-weight: bold; */
+}
+
+bcchar {
+}
+
+bc:before {
+    content: 'BC ';
+    /* font-weight: bold; */
+    color: #808080;
+}
+
+bc {
+    float: right;
+    font-size: 0.90em;
+    /* color: red; */
+    /* font-weight: bold; */
+    color: #808080;
+    margin-right: -300px;
+    width: 275px !important;
+    clear: both;
+}
+
+commandment1::before {
+    content: '\A 1';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment1 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment2::before {
+    content: '\A 2';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment2 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment3::before {
+    content: '\A 3';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment3 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment4::before {
+    content: '\A 4';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment4 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment5::before {
+    content: '\A 5';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment5 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment6::before {
+    content: '\A 6';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment6 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment7::before {
+    content: '\A 7';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment7 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment8::before {
+    content: '\A 8';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment8 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment9::before {
+    content: '\A 9';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment9 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+commandment10::before {
+    content: '\A 10';
+    white-space: pre;
+    margin-right: 1em;
+}
+
+commandment10 {
+    display: block;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+}
+
+sectionheader {
+    font-family: 'GillSans';
+    border-top: 2px solid black;
+    border-bottom: 2px solid darkgray;
+    margin-bottom: 1em;
+    margin-top: 10em;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto auto auto auto;
+    padding-top: 1em;
+}
+
+sectiontitle {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: left;
+    justify-content: start;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+sectionnumber {
+    font-size: 3em;
+    text-transform: uppercase;
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    margin-right: 1em;
+}
+
+sectiontime {
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 5px;
+    grid-column: 2;
+    grid-row: 3 / span 2;
+}
+
+sectioninfo {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+    margin-top: 1em;
+    /* color: red; */
+    color: #808080;
+}
+
+sectionreference1 {
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: 10px;
+}
+
+sectionreference2 {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: 10px;
+}
+
+sectionreference3 {
+    grid-column: 3;
+    grid-row: 3;
+    margin-left: 10px;
+}
+
+journalaccount {
+    display: block;
+    font-family: 'GillSans';
+}
+
+hebrew {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+		
+propername {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+    propername::first-letter {
+        display: inline-block;
+        font-size: 125%;
+    }
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANCSURBVFhH7ZbNS1RhFMbnQ2vRSogihD6kFi4Uw201NgRtEqkoNP+DoIW1qCC/ZohsY+DC/6AckorIFkEYM7gdDFvUQkoFF4bgIlxUzky/55137M6de6e8MxCBDzyeM+e93uec9+O8N7SLf42wtXXD4ODgnkgkchL3IFzP5/PZZDL53Qx6oG4JIByJRqMDuHfgfhMsYgOOk8hYIpHYKoZ+oy4JDA0NNVL1Y9wrMAfThUJhMRwOH8WPwwY4QxIX3UnUnIAVn8K9DFcQ7hkdHX1vBsHw8HAribzEPQHvjYyM3DcDFjUlwMsbeXlJfBmeReCLxpywSSzgfsvlcoeceyJibSDw0keYquICM/IRMwubmK1OE7QInABVtWGuww2mPe4nXgLPLFnXuUGDJ0D1vTJwnAo/K0ZS3SQyhW3Xbyd4/rh116w1qGUJWvWHyjKyiF5F5DluL/auYiUw1oGJQfWFeRO0qCUBHadNuGrFdQx13LZI6gnWgBk5xphOQRSOsQF/mAGLwAkgMgcv4Ha6xPtZkld6RuKYd/AwnOYEaNOW4a+OIRW2IaI117RLZA6RCY/KJf4UX//Twph2/hH4jKnvown91JgTVRPgJTrnylq7vfTspq38gFscm4XNxM9gb8Im6Csu+Cbg6nCmnyOiDbcKK6Ydu0bsNXYfFApwkrEBZsVTXPBMwCW+zEvijqPmOe3EbxA/TUyb7RPxFPEP+FVRkYC91VK4uljKOpyXOPYrbEdsArtjVJwCxLV2El+BTvFuD/EssRl4Ss8EQVkC+pjA3IY5BHpK4gIi1zBl047fDLXmigdCWQKsu75k1KvTCGxfqQKiDzAp7CUrrqS02wVdNoHgXgJ9Rkls0fxyANEFZqQPa5oMS9KC0XLleV57JhDcCazrD5XpS8YX6nA8Y65XOElSf9ztfihLgIahRqIzH6dCc9m4IXGM2qvpcFSvWQgMndltZDKZXFdXlzbUOSo8H4vF3qbTaTMrAkl1EH+DW7W97gQVfYAm1MBmfIGrdqsbb5YqlxDWfa4rVUlPI95fq7jg1wmVhI7jLah1LkGz8ZBbbZxrNV8M1Qbfu0CgL+wlEX3D6WiuUfW8+z7fxX+OUOgXnzmEformB30AAAAASUVORK5CYII=) 0 0 no-repeat;
+    background-size: contain;
+    margin: auto;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

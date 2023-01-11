@@ -1,0 +1,1791 @@
+[
+  {
+    "IsVisible": true,
+    "Name": "About This Edition",
+    "XPath": "/html[1]/body[1]/book[1]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Preface To 1835 Edition",
+    "XPath": "/html[1]/body[1]/book[2]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Lectures On Faith",
+    "XPath": "/html[1]/body[1]/book[3]",
+    "Parent": null,
+    "Children": [
+      {
+        "IsVisible": true,
+        "Name": "Lectures 1",
+        "XPath": "/html[1]/body[1]/chapter[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Lectures 2",
+        "XPath": "/html[1]/body[1]/chapter[2]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Lectures 3",
+        "XPath": "/html[1]/body[1]/chapter[3]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Lectures 4",
+        "XPath": "/html[1]/body[1]/chapter[4]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Lectures 5",
+        "XPath": "/html[1]/body[1]/chapter[5]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Lectures 6",
+        "XPath": "/html[1]/body[1]/chapter[6]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Lectures 7",
+        "XPath": "/html[1]/body[1]/chapter[7]",
+        "Parent": null,
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Name": "Doctrine and Covenants",
+    "XPath": "/html[1]/body[1]/sectionheader[1]/sectionnumber[1]",
+    "Parent": null,
+    "Children": [
+      {
+        "IsVisible": true,
+        "Name": "Section 1 - The Lord\u0027s Preface",
+        "XPath": "/html[1]/body[1]/sectionheader[1]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 2 - Promise of Priesthood",
+        "XPath": "/html[1]/body[1]/sectionheader[2]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 3 - Lost 116 Pages",
+        "XPath": "/html[1]/body[1]/sectionheader[3]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 4 - Joseph Smith, Sr.",
+        "XPath": "/html[1]/body[1]/sectionheader[4]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 5 - Martin\u0027s Witness",
+        "XPath": "/html[1]/body[1]/sectionheader[5]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 6 - Witness of The Spirit",
+        "XPath": "/html[1]/body[1]/sectionheader[6]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 7 - John The Beloved",
+        "XPath": "/html[1]/body[1]/sectionheader[7]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 8 - Oliver\u0027s Gifts",
+        "XPath": "/html[1]/body[1]/sectionheader[8]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 9 - Oliver Tries Translating",
+        "XPath": "/html[1]/body[1]/sectionheader[9]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 10 - Retranslating The Lost Pages",
+        "XPath": "/html[1]/body[1]/sectionheader[10]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 11 - Hyrum Smith",
+        "XPath": "/html[1]/body[1]/sectionheader[11]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 12 - Joseph Knight, Sr.",
+        "XPath": "/html[1]/body[1]/sectionheader[12]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 13 - Priesthood of Aaron",
+        "XPath": "/html[1]/body[1]/sectionheader[13]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 14 - David Whitmer",
+        "XPath": "/html[1]/body[1]/sectionheader[14]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 15 - John Whitmer",
+        "XPath": "/html[1]/body[1]/sectionheader[15]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 16 - Peter Whitmer",
+        "XPath": "/html[1]/body[1]/sectionheader[16]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 17 - Seeing The Plates",
+        "XPath": "/html[1]/body[1]/sectionheader[17]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Articles of The Church of Christ",
+        "XPath": "/html[1]/body[1]/sectionheader[18]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 18 - Choosing The Twelve",
+        "XPath": "/html[1]/body[1]/sectionheader[19]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 19 - Endless And Eternal",
+        "XPath": "/html[1]/body[1]/sectionheader[20]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 20 - Articles And Covenants of The Church",
+        "XPath": "/html[1]/body[1]/sectionheader[21]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 21 - Ordaining The First Elders",
+        "XPath": "/html[1]/body[1]/sectionheader[22]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 22 - Baptism",
+        "XPath": "/html[1]/body[1]/sectionheader[23]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 23 - Personal Messages",
+        "XPath": "/html[1]/body[1]/sectionheader[24]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses Chapter 1 Received",
+        "XPath": "/html[1]/body[1]/sectionheader[25]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 24 - First And Second Elders",
+        "XPath": "/html[1]/body[1]/sectionheader[26]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 25 - Emma Smith",
+        "XPath": "/html[1]/body[1]/sectionheader[27]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 26 - Common Consent",
+        "XPath": "/html[1]/body[1]/sectionheader[28]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 27 - Sacrament",
+        "XPath": "/html[1]/body[1]/sectionheader[29]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 28 - Receiving Revelations For The Church",
+        "XPath": "/html[1]/body[1]/sectionheader[30]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 29 - Gathering The Elect",
+        "XPath": "/html[1]/body[1]/sectionheader[31]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 30 - Whitmer Brothers",
+        "XPath": "/html[1]/body[1]/sectionheader[32]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 31 - Thomas Marsh",
+        "XPath": "/html[1]/body[1]/sectionheader[33]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 32 - Mission To The Lamanites",
+        "XPath": "/html[1]/body[1]/sectionheader[34]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Mission Covenant",
+        "XPath": "/html[1]/body[1]/sectionheader[35]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 33 - Ezra Thayre And Northrop Sweet",
+        "XPath": "/html[1]/body[1]/sectionheader[36]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 34 - Orson Pratt",
+        "XPath": "/html[1]/body[1]/sectionheader[37]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 35 - Sidney Rigdon",
+        "XPath": "/html[1]/body[1]/sectionheader[38]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 36 - Edward Partridge",
+        "XPath": "/html[1]/body[1]/sectionheader[39]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses Chapter 7 Received",
+        "XPath": "/html[1]/body[1]/sectionheader[40]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 37 - Go To The Ohio",
+        "XPath": "/html[1]/body[1]/sectionheader[41]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 74 - Explaining 1 Corinthians 7:14",
+        "XPath": "/html[1]/body[1]/sectionheader[42]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 38 - Look To The Poor And The Needy",
+        "XPath": "/html[1]/body[1]/sectionheader[43]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 39 - James Covel: Called To Preach",
+        "XPath": "/html[1]/body[1]/sectionheader[44]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 40 - James Covel: Breaking The Covenant",
+        "XPath": "/html[1]/body[1]/sectionheader[45]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 41 - Bishop of Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[46]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 42 - Laws of The Church of Christ",
+        "XPath": "/html[1]/body[1]/sectionheader[47]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 43 - Commandments And Revelations",
+        "XPath": "/html[1]/body[1]/sectionheader[48]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 44 - Elders To Assemble",
+        "XPath": "/html[1]/body[1]/sectionheader[49]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 45 - Coming of The Son of Man",
+        "XPath": "/html[1]/body[1]/sectionheader[50]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 46 - Gifts of The Spirit",
+        "XPath": "/html[1]/body[1]/sectionheader[51]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 47 - John Whitmer \u2013 Church Historian",
+        "XPath": "/html[1]/body[1]/sectionheader[52]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 48 - Purchasing Land",
+        "XPath": "/html[1]/body[1]/sectionheader[53]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 49 - The Shakers",
+        "XPath": "/html[1]/body[1]/sectionheader[54]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 50 - Detecting False Spirits",
+        "XPath": "/html[1]/body[1]/sectionheader[55]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 51 - Directions For The Bishop",
+        "XPath": "/html[1]/body[1]/sectionheader[56]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Conference At Morley Farm",
+        "XPath": "/html[1]/body[1]/sectionheader[57]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 52 - A Consecrated Land",
+        "XPath": "/html[1]/body[1]/sectionheader[58]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 53 - Sidney Gilbert",
+        "XPath": "/html[1]/body[1]/sectionheader[59]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 54 - Newel Knight",
+        "XPath": "/html[1]/body[1]/sectionheader[60]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 55 - William Phelps",
+        "XPath": "/html[1]/body[1]/sectionheader[61]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 56 - Revoked Commandments",
+        "XPath": "/html[1]/body[1]/sectionheader[62]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 57 - The Center Place",
+        "XPath": "/html[1]/body[1]/sectionheader[63]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 58 - The Lord\u0027s Will For The Land of Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[64]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Sidney\u0027s First Description of Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[65]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Dedication of Land of Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[66]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 59 - The Sabbath",
+        "XPath": "/html[1]/body[1]/sectionheader[67]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 60 - Burying Your Talent",
+        "XPath": "/html[1]/body[1]/sectionheader[68]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 61 - Journeying By Water And Land",
+        "XPath": "/html[1]/body[1]/sectionheader[69]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 62 - Blessed For Bearing Testimony",
+        "XPath": "/html[1]/body[1]/sectionheader[70]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Oliver Ordained To High Priesthood",
+        "XPath": "/html[1]/body[1]/sectionheader[71]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 63 - Assemble Together Unto Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[72]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Sidney\u0027s Second Description of Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[73]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 64 - Kirtland: A Strong Hold For Five Years",
+        "XPath": "/html[1]/body[1]/sectionheader[74]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 65 - May The Kingdom Come",
+        "XPath": "/html[1]/body[1]/sectionheader[75]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 66 - William Mclellin",
+        "XPath": "/html[1]/body[1]/sectionheader[76]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 1 Received",
+        "XPath": "/html[1]/body[1]/sectionheader[77]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 67 - Language of Revelation",
+        "XPath": "/html[1]/body[1]/sectionheader[78]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 68 - Bishops And Children In Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[79]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Witnesses of The Book of Commandments",
+        "XPath": "/html[1]/body[1]/sectionheader[80]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 133 - Prepare For The Last Days",
+        "XPath": "/html[1]/body[1]/sectionheader[81]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Part of Section 107 Received",
+        "XPath": "/html[1]/body[1]/sectionheader[82]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 69 - Traveling Church Historian",
+        "XPath": "/html[1]/body[1]/sectionheader[83]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 70 - Stewards Over The Revelations",
+        "XPath": "/html[1]/body[1]/sectionheader[84]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 71 - Proclaim My Gospel Unto The World",
+        "XPath": "/html[1]/body[1]/sectionheader[85]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 72 - Bishop of Ohio",
+        "XPath": "/html[1]/body[1]/sectionheader[86]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 73 - Resume Translation of The Bible",
+        "XPath": "/html[1]/body[1]/sectionheader[87]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 75 - Missionaries And Journeys",
+        "XPath": "/html[1]/body[1]/sectionheader[89]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 76 - The Vision",
+        "XPath": "/html[1]/body[1]/sectionheader[90]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 77 - The Book of Revelation",
+        "XPath": "/html[1]/body[1]/sectionheader[91]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 78 - Organize The Storehouse",
+        "XPath": "/html[1]/body[1]/sectionheader[92]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 79 - Jared Carter",
+        "XPath": "/html[1]/body[1]/sectionheader[93]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 80 - Stephen Burnett",
+        "XPath": "/html[1]/body[1]/sectionheader[94]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 81 - Office of Counselor",
+        "XPath": "/html[1]/body[1]/sectionheader[95]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Duty of Bishops",
+        "XPath": "/html[1]/body[1]/sectionheader[96]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 82 - Forming The United Firm",
+        "XPath": "/html[1]/body[1]/sectionheader[97]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 83 - Women And Children",
+        "XPath": "/html[1]/body[1]/sectionheader[98]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 99 - John Murdock",
+        "XPath": "/html[1]/body[1]/sectionheader[99]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "1832 History Written",
+        "XPath": "/html[1]/body[1]/sectionheader[100]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 84 - Priesthood",
+        "XPath": "/html[1]/body[1]/sectionheader[101]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 85 - Names In The Book of The Law",
+        "XPath": "/html[1]/body[1]/sectionheader[102]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 86 - Parable of The Wheat And The Tares",
+        "XPath": "/html[1]/body[1]/sectionheader[103]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 87 - Prophecy On War",
+        "XPath": "/html[1]/body[1]/sectionheader[104]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 88 - The Olive Leaf",
+        "XPath": "/html[1]/body[1]/sectionheader[105]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Letter To Noah Saxton",
+        "XPath": "/html[1]/body[1]/sectionheader[106]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "School of The Prophets Begins",
+        "XPath": "/html[1]/body[1]/sectionheader[107]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 89 - A Word of Wisdom",
+        "XPath": "/html[1]/body[1]/sectionheader[108]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 90 - Equal In Holding The Keys",
+        "XPath": "/html[1]/body[1]/sectionheader[109]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 91 - The Apocrypha",
+        "XPath": "/html[1]/body[1]/sectionheader[110]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 92 - Joining The United Firm",
+        "XPath": "/html[1]/body[1]/sectionheader[111]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Presidents of The High Priesthood",
+        "XPath": "/html[1]/body[1]/sectionheader[112]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 93 - Light And Truth",
+        "XPath": "/html[1]/body[1]/sectionheader[113]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 94 - Received On",
+        "XPath": "/html[1]/body[1]/sectionheader[114]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 95 - Building God\u0027s House In Ohio",
+        "XPath": "/html[1]/body[1]/sectionheader[115]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 96 - Bringing Forth The Word",
+        "XPath": "/html[1]/body[1]/sectionheader[116]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Kirtland House Cornerstone Laid",
+        "XPath": "/html[1]/body[1]/sectionheader[117]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 97 - School In Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[118]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 94 - Building Committee In Kirtland",
+        "XPath": "/html[1]/body[1]/sectionheader[119]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 98 - Laws of Vengeance And Forgiveness",
+        "XPath": "/html[1]/body[1]/sectionheader[120]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 99 - Received On",
+        "XPath": "/html[1]/body[1]/sectionheader[121]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 100 - Sidney To Be A Spokesman",
+        "XPath": "/html[1]/body[1]/sectionheader[122]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Days of Zion\u0027s Purification",
+        "XPath": "/html[1]/body[1]/sectionheader[123]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 101 - Why Zion Is Persecuted",
+        "XPath": "/html[1]/body[1]/sectionheader[124]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 102 - High Council",
+        "XPath": "/html[1]/body[1]/sectionheader[125]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 103 - Organizing The Camp of Israel",
+        "XPath": "/html[1]/body[1]/sectionheader[126]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 104 - The Broken Covenant",
+        "XPath": "/html[1]/body[1]/sectionheader[127]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "The Church of The Latter Day Saints",
+        "XPath": "/html[1]/body[1]/sectionheader[128]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Camp of Israel Departs",
+        "XPath": "/html[1]/body[1]/sectionheader[129]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 105 - Disbanding Camp of Israel",
+        "XPath": "/html[1]/body[1]/sectionheader[130]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "15 Elders To Receive Endowment",
+        "XPath": "/html[1]/body[1]/sectionheader[131]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Appointed Time For Redemption of Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[132]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Committee To Arrange The Doctrine",
+        "XPath": "/html[1]/body[1]/sectionheader[133]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "School of The Elders Held",
+        "XPath": "/html[1]/body[1]/sectionheader[134]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 106 - Warren Cowdery",
+        "XPath": "/html[1]/body[1]/sectionheader[135]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Covenant of Tithing",
+        "XPath": "/html[1]/body[1]/sectionheader[136]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Condemnation",
+        "XPath": "/html[1]/body[1]/sectionheader[137]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Oliver Ordained A President",
+        "XPath": "/html[1]/body[1]/sectionheader[138]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Presiding Patriarch",
+        "XPath": "/html[1]/body[1]/sectionheader[139]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Twelve Apostles Called",
+        "XPath": "/html[1]/body[1]/sectionheader[140]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Apostolic Charge",
+        "XPath": "/html[1]/body[1]/sectionheader[141]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Apostolic Instructions",
+        "XPath": "/html[1]/body[1]/sectionheader[142]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Quorum of The Seventy Called",
+        "XPath": "/html[1]/body[1]/sectionheader[143]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 107 - Orders And Offices",
+        "XPath": "/html[1]/body[1]/sectionheader[144]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Limitations On The Twelve",
+        "XPath": "/html[1]/body[1]/sectionheader[145]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Doctrine \u0026amp; Covenants Canonized",
+        "XPath": "/html[1]/body[1]/sectionheader[146]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Doctrine \u0026amp; Covenants Canonized",
+        "XPath": "/html[1]/body[1]/sectionheader[147]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Article On Marriage",
+        "XPath": "/html[1]/body[1]/sectionheader[148]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 134 - Governments And Laws",
+        "XPath": "/html[1]/body[1]/sectionheader[149]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Blessing From Oliver Cowdery",
+        "XPath": "/html[1]/body[1]/sectionheader[150]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "The Twelve Under Condemnation",
+        "XPath": "/html[1]/body[1]/sectionheader[151]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Second Commission",
+        "XPath": "/html[1]/body[1]/sectionheader[152]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "1835 History Written",
+        "XPath": "/html[1]/body[1]/sectionheader[153]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Endowment Needed To Preach",
+        "XPath": "/html[1]/body[1]/sectionheader[154]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Abraham 1:1\u20132:18 Written",
+        "XPath": "/html[1]/body[1]/sectionheader[155]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 108 - Lyman Sherman",
+        "XPath": "/html[1]/body[1]/sectionheader[156]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 137 - Dying Without The Gospel",
+        "XPath": "/html[1]/body[1]/sectionheader[157]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Continuation of Visions",
+        "XPath": "/html[1]/body[1]/sectionheader[158]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 109 - Dedication of The Kirtland House",
+        "XPath": "/html[1]/body[1]/sectionheader[159]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 110 - Acceptance of The Kirtland House",
+        "XPath": "/html[1]/body[1]/sectionheader[160]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 111 - Treasure In Salem",
+        "XPath": "/html[1]/body[1]/sectionheader[161]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "High Priesthood Conferred On Elders",
+        "XPath": "/html[1]/body[1]/sectionheader[162]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Spirit of Speculation",
+        "XPath": "/html[1]/body[1]/sectionheader[163]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Something New Must Be Done",
+        "XPath": "/html[1]/body[1]/sectionheader[164]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 112 - Among All Nations",
+        "XPath": "/html[1]/body[1]/sectionheader[165]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Joseph And Sidney Flee Kirtland",
+        "XPath": "/html[1]/body[1]/sectionheader[166]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 113 - Explaining Isaiah",
+        "XPath": "/html[1]/body[1]/sectionheader[167]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 114 - David Patten",
+        "XPath": "/html[1]/body[1]/sectionheader[168]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 115 - House Unto The Lord In Far West",
+        "XPath": "/html[1]/body[1]/sectionheader[169]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 116 - Adam-ondi-ahman",
+        "XPath": "/html[1]/body[1]/sectionheader[170]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 117 - Come Up To Zion",
+        "XPath": "/html[1]/body[1]/sectionheader[171]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 118 - Mission of The Twelve",
+        "XPath": "/html[1]/body[1]/sectionheader[172]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 119 - Tithing",
+        "XPath": "/html[1]/body[1]/sectionheader[173]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 120 - Disposition of Tithes",
+        "XPath": "/html[1]/body[1]/sectionheader[174]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "1838 History Written",
+        "XPath": "/html[1]/body[1]/sectionheader[175]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Violence In Missouri",
+        "XPath": "/html[1]/body[1]/sectionheader[176]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Surrender At Far West",
+        "XPath": "/html[1]/body[1]/sectionheader[177]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 121 - Joseph\u0027s Lament",
+        "XPath": "/html[1]/body[1]/sectionheader[178]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 122 - The Lord\u0027s Comfort",
+        "XPath": "/html[1]/body[1]/sectionheader[179]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 123 - Joseph\u0027s Directions To The Church",
+        "XPath": "/html[1]/body[1]/sectionheader[180]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Joseph Escapes Custody",
+        "XPath": "/html[1]/body[1]/sectionheader[181]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Joseph Settles In Nauvoo",
+        "XPath": "/html[1]/body[1]/sectionheader[182]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Consecration",
+        "XPath": "/html[1]/body[1]/sectionheader[183]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Prophecy of A Tower",
+        "XPath": "/html[1]/body[1]/sectionheader[184]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Jews To Gather In America",
+        "XPath": "/html[1]/body[1]/sectionheader[185]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 124 - Command To Build A House",
+        "XPath": "/html[1]/body[1]/sectionheader[186]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo House",
+        "XPath": "/html[1]/body[1]/sectionheader[187]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 125 - Saints In Iowa",
+        "XPath": "/html[1]/body[1]/sectionheader[188]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo Temple Cornerstones Laid",
+        "XPath": "/html[1]/body[1]/sectionheader[189]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Sidney: Prophet, Seer, And Revelator",
+        "XPath": "/html[1]/body[1]/sectionheader[190]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 126 - Brigham Young",
+        "XPath": "/html[1]/body[1]/sectionheader[191]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo House Cornerstones Laid",
+        "XPath": "/html[1]/body[1]/sectionheader[192]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "No More Baptisms For The Dead",
+        "XPath": "/html[1]/body[1]/sectionheader[193]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Instructions For Kirtland",
+        "XPath": "/html[1]/body[1]/sectionheader[194]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Wentworth Letter",
+        "XPath": "/html[1]/body[1]/sectionheader[195]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Book of Abraham Published",
+        "XPath": "/html[1]/body[1]/sectionheader[196]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Depend On No Man",
+        "XPath": "/html[1]/body[1]/sectionheader[197]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Chastened For Not Obeying",
+        "XPath": "/html[1]/body[1]/sectionheader[198]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 127 - Recording Baptisms",
+        "XPath": "/html[1]/body[1]/sectionheader[199]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 128 - Baptism For The Dead",
+        "XPath": "/html[1]/body[1]/sectionheader[200]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 129 - Discerning Messengers",
+        "XPath": "/html[1]/body[1]/sectionheader[201]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Necessary To Build Two Buildings",
+        "XPath": "/html[1]/body[1]/sectionheader[202]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "If Both Not Built, Must Run Away",
+        "XPath": "/html[1]/body[1]/sectionheader[203]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 130 - Various Topics",
+        "XPath": "/html[1]/body[1]/sectionheader[204]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 131 - Various Topics",
+        "XPath": "/html[1]/body[1]/sectionheader[205]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Highest Office In The Church",
+        "XPath": "/html[1]/body[1]/sectionheader[206]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Joseph To Not Prophesy Anymore",
+        "XPath": "/html[1]/body[1]/sectionheader[207]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Orders of Priesthood",
+        "XPath": "/html[1]/body[1]/sectionheader[208]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "King Follett Discourse Delivered",
+        "XPath": "/html[1]/body[1]/sectionheader[209]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo Expositor Published",
+        "XPath": "/html[1]/body[1]/sectionheader[210]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Many Will Seek For High Positions",
+        "XPath": "/html[1]/body[1]/sectionheader[211]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 132 - Polygamy",
+        "XPath": "/html[1]/body[1]/sectionheader[212]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 135 - The Martyrdom",
+        "XPath": "/html[1]/body[1]/sectionheader[215]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Brigham Tries To Sell The Temple",
+        "XPath": "/html[1]/body[1]/sectionheader[216]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo Temple Preliminary Dedication",
+        "XPath": "/html[1]/body[1]/sectionheader[217]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Church Moves Out of Nauvoo",
+        "XPath": "/html[1]/body[1]/sectionheader[218]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Twelve Vote To Sell Both Temples",
+        "XPath": "/html[1]/body[1]/sectionheader[219]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo Temple Dedicated",
+        "XPath": "/html[1]/body[1]/sectionheader[220]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 136 - The Camp of Israel",
+        "XPath": "/html[1]/body[1]/sectionheader[221]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo Temple Destroyed By Fire",
+        "XPath": "/html[1]/body[1]/sectionheader[223]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Nauvoo Temple Walls Collapsed By Wind",
+        "XPath": "/html[1]/body[1]/sectionheader[224]/sectiontitle[1]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Section 138 - Joseph F Smith\u0027s Vision",
+        "XPath": "/html[1]/body[1]/sectionheader[225]/sectionnumber[1]",
+        "Parent": null,
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Name": "The Book of Moses",
+    "XPath": "/html[1]/body[1]/book[4]",
+    "Parent": null,
+    "Children": [
+      {
+        "IsVisible": true,
+        "Name": "Moses 1",
+        "XPath": "/html[1]/body[1]/chapter[233]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 2",
+        "XPath": "/html[1]/body[1]/chapter[234]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 3",
+        "XPath": "/html[1]/body[1]/chapter[235]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 4",
+        "XPath": "/html[1]/body[1]/chapter[236]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 5",
+        "XPath": "/html[1]/body[1]/chapter[237]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 6",
+        "XPath": "/html[1]/body[1]/chapter[238]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 7",
+        "XPath": "/html[1]/body[1]/chapter[239]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Moses 8",
+        "XPath": "/html[1]/body[1]/block[1983]/chapter[1]",
+        "Parent": null,
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Name": "The Book of Abraham",
+    "XPath": "/html[1]/body[1]/book[5]",
+    "Parent": null,
+    "Children": [
+      {
+        "IsVisible": true,
+        "Name": "Abraham 1",
+        "XPath": "/html[1]/body[1]/chapter[240]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Abraham 2",
+        "XPath": "/html[1]/body[1]/chapter[241]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Abraham 3",
+        "XPath": "/html[1]/body[1]/chapter[242]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Abraham 4",
+        "XPath": "/html[1]/body[1]/chapter[243]",
+        "Parent": null,
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Name": "Abraham 5",
+        "XPath": "/html[1]/body[1]/chapter[244]",
+        "Parent": null,
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Name": "Matthew 25 \u2013 Inspired Version",
+    "XPath": "/html[1]/body[1]/book[6]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Articles of Faith",
+    "XPath": "/html[1]/body[1]/book[7]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Joseph Smith History \u2013 1832 Account",
+    "XPath": "/html[1]/body[1]/book[9]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Joseph Smith History \u2013 1835 Account",
+    "XPath": "/html[1]/body[1]/book[10]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Joseph Smith History \u2013 1838 Account",
+    "XPath": "/html[1]/body[1]/book[11]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Joseph Smith History \u2013 1842 Account",
+    "XPath": "/html[1]/body[1]/book[12]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Account of Moroni\u0027s Visit In 1823",
+    "XPath": "/html[1]/body[1]/book[13]",
+    "Parent": null,
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Name": "Letter To The Church From Liberty Jail",
+    "XPath": "/html[1]/body[1]/book[14]",
+    "Parent": null,
+    "Children": []
+  }
+]
