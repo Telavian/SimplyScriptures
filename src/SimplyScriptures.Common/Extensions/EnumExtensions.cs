@@ -196,7 +196,17 @@ public static class EnumExtensions
     public static string ToHtmlPath(this ScriptureBook book, bool isUnknownBookError = true)
     {
         var text = book.ToString();
-        //if (book == ScriptureBook.BM) return "./Scriptures/BM/BM.html";
+
+        if (text.StartsWith("DC_Lecture"))
+        {
+            return "./Scriptures/DC/DC_Lectures.html";
+        }
+
+        if (text.StartsWith("DC_Section"))
+        {
+            return "./Scriptures/DC/DC_Sections.html";
+        }
+
         switch (book)
         {
             case ScriptureBook.BM_1Nephi:
@@ -269,16 +279,6 @@ public static class EnumExtensions
                 return "./Scriptures/DC/DC_Reception.html";
             case ScriptureBook.DC_Sections:
                 return "./Scriptures/DC/DC_Sections.html";
-        }
-
-        if (text.StartsWith("DC_Lecture"))
-        {
-            return "./Scriptures/DC/DC_Sections.html";
-        }
-
-        if (text.StartsWith("DC_Section"))
-        {
-            return "./Scriptures/DC/DC_Sections.html";
         }
 
         //if (book == ScriptureBook.NT) return "./Scriptures/NT/NT.html";

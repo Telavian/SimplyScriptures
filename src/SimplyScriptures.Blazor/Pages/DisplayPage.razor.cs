@@ -516,21 +516,17 @@ public class DisplayPageBase : ViewModelBase
             {
                 Console.WriteLine("First render initialization");
 
-                await _applicationState!.LoadCurrentStateAsync()
-                    ;
+                await _applicationState!.LoadCurrentStateAsync();
 
                 SetPageState();
 
-                await RefreshAsync()
-                    ;
+                await RefreshAsync();
 
                 Console.WriteLine("Initializing search");
-                await InitializeSearchAsync()
-                    ;
+                await InitializeSearchAsync();
 
                 Console.WriteLine("Processing page parameters");
-                await ProcessPageParametersAsync()
-                    ;
+                await ProcessPageParametersAsync();
 
                 Console.WriteLine("Loading highlights");
                 await LoadHighlightsAsync()
@@ -714,8 +710,7 @@ public class DisplayPageBase : ViewModelBase
         var jsonPath = book.ToMenuContentPath();
 
         Console.WriteLine($"jsonPath: {jsonPath}");
-        var contentData = await _fileService!.LoadDataAsync(jsonPath)
-            ;
+        var contentData = await _fileService!.LoadDataAsync(jsonPath);
 
         var contentItems = contentData.DeserializeFromJson<ContentItem[]>()
                            ?? [];
@@ -824,13 +819,11 @@ public class DisplayPageBase : ViewModelBase
 
     private async Task SearchMatchSelectedAsync(SearchMatch item)
     {
-        await LoadCurrentBookAsync(item.Book)
-            ;
+        await LoadCurrentBookAsync(item.Book);
 
         await Task.Yield();
 
-        await HighlightXPathLocationsAsync([item.XPath], true)
-            ;
+        await HighlightXPathLocationsAsync([item.XPath], true);
 
         SelectedSearchMatch = item;
     }
@@ -938,24 +931,19 @@ public class DisplayPageBase : ViewModelBase
             SearchText = queryParameters.SearchText;
             isSearchQuery = true;
 
-            isBookLoaded = await SearchForTextAsync(queryParameters.SearchText)
-                ;
+            isBookLoaded = await SearchForTextAsync(queryParameters.SearchText);
         }
 
         if (isBookLoaded == false)
         {
-            await ProcessBookParameterAsync(queryParameters.ScriptureParam, isSearchQuery)
-                ;
+            await ProcessBookParameterAsync(queryParameters.ScriptureParam, isSearchQuery);
         }
 
-        await ProcessLocationParameterAsync(queryParameters.LocationParam)
-            ;
+        await ProcessLocationParameterAsync(queryParameters.LocationParam);
 
-        await ProcessXPathsParameterAsync(queryParameters.XPathsParam)
-            ;
+        await ProcessXPathsParameterAsync(queryParameters.XPathsParam);
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private async Task ProcessBookParameterAsync(ScriptureBook book, bool isSearchQuery)
