@@ -1,10 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Text.Json;
-using CommunityToolkit.Mvvm.Input;
-using SimplyScriptures.Common.Extensions;
-using SimplyScriptures.Common.Models;
-using SimplyScriptures.Common.Services.FileService.Interfaces;
-using SimplyScriptures.Models;
+﻿using SimplyScriptures.Models;
 using SimplyScriptures.Pages;
 
 namespace SimplyScriptures.ViewModels;
@@ -230,9 +224,6 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
     public AsyncRelayCommand<ContentTopicItem?> TopicItemSelectedAsyncCommand => _topicItemSelectedAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(TopicItemSelectedAsync, "Unable to process topic item");
 
     #endregion TopicItemSelectedAsyncCommand
-    #endregion
-    #region Constructors
-
     #endregion
 
     #region Public Methods

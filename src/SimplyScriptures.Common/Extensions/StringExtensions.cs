@@ -321,7 +321,4 @@ public static partial class StringExtensions
 
     [GeneratedRegex(@"\d{1,}")]
     private static partial Regex MyRegex();
-
-    [GeneratedRegex("\\d{1,}")]
-    private static partial Regex MyRegex();
 }

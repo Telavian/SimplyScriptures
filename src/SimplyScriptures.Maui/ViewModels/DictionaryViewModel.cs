@@ -1,11 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using CommunityToolkit.Mvvm.Input;
-using SimplyScriptures.Common.Extensions;
-using SimplyScriptures.Common.Models;
-using SimplyScriptures.Common.Services.FileService.Interfaces;
-using SimplyScriptures.Models;
+﻿using SimplyScriptures.Models;
 using SimplyScriptures.Pages;
 
 namespace SimplyScriptures.ViewModels;
@@ -99,8 +92,6 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
     public AsyncRelayCommand<ListItem<DictionaryWord>> WordSelectedAsyncCommand => _wordSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<DictionaryWord>>(WordSelectedAsync, "Unable to process word");
 
     #endregion WordSelectedAsyncCommand
-    #endregion
-    #region Constructors
 
     #endregion
 

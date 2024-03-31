@@ -411,3 +411,4 @@ nuget.config
 /src/.DotnetFormat.cmd
 
 /src/SimplyScriptures.Maui/simplyscriptures.keystore
+/src/SimplyScriptures.Maui/SimplyScriptures.Maui.Publish.csproj

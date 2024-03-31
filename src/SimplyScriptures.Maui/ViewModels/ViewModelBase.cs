@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.Maui.Dispatching;
-using SimplyScriptures.Common.Extensions;
-using SimplyScriptures.Pages;
+﻿using SimplyScriptures.Pages;
 
 namespace SimplyScriptures.ViewModels;
 

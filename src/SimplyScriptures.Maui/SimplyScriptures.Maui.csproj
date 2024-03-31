@@ -33,28 +33,6 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-  <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
-    <AndroidKeyStore>True</AndroidKeyStore>
-    <AndroidSigningKeyStore>simplyscriptures.keystore</AndroidSigningKeyStore>
-    <AndroidSigningKeyAlias>key</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>53AB0F9340B535577B8CCE1AE6A66FC3A6E8721C19A3012A20BFA37AF41272DA</AndroidSigningKeyPass>
-    <AndroidSigningStorePass>53AB0F9340B535577B8CCE1AE6A66FC3A6E8721C19A3012A20BFA37AF41272DA</AndroidSigningStorePass>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
-    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-    <CodesignKey>iPhone Distribution: Patrick Morris (J8XMH3XT7Q)</CodesignKey>
-    <CodesignProvision>Simply Scriptures</CodesignProvision>
-    <ArchiveOnBuild>true</ArchiveOnBuild>
-    <TcpPort>58181</TcpPort>
-    <ResolveAssemblyConflicts>true</ResolveAssemblyConflicts>
-    <ErrorReport>prompt</ErrorReport>
-    <MtouchUseLlvm>true</MtouchUseLlvm>
-    <UseInterpreter>true</UseInterpreter>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <MtouchExtraArgs>--linkskip=SimplyScriptures.Common</MtouchExtraArgs>
-  </PropertyGroup>
-
   <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
     <EnableSGenConc>True</EnableSGenConc>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -116,10 +94,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.3" />
-    <PackageReference Include="CommunityToolkit.Maui" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="8.0.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
     <PackageReference Include="Telerik.UI.for.Maui" Version="5.1.0" />
     <PackageReference Include="ThrottleDebounce" Version="2.0.0" />
@@ -165,4 +143,8 @@
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionSimplyScripturesMauiHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSimplyScripturesMauiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" />
+  </ItemGroup>
 </Project>

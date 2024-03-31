@@ -1,7 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
-using SimplyScriptures.Common.Enums;
-using SimplyScriptures.Common.Extensions;
-using SimplyScriptures.Pages;
+﻿using SimplyScriptures.Pages;
 
 namespace SimplyScriptures.ViewModels;
 
