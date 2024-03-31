@@ -29,7 +29,7 @@ public static class HtmlExtensions
                         if (actualText.Length > 0)
                         {
                             text.Append(actualText.Trim());
-                            text.Append(" ");
+                            text.Append(' ');
                         }
 
                         break;
@@ -66,10 +66,7 @@ public static class HtmlExtensions
     /// </summary>
     public static IEnumerable<HtmlNode> SelectXPathNodes(this XPathNavigator navigator, string xpath)
     {
-        if (navigator == null)
-        {
-            throw new ArgumentNullException(nameof(navigator));
-        }
+        ArgumentNullException.ThrowIfNull(navigator);
 
         var expr = navigator.Compile(xpath);
         expr.SetContext(new HtmlXsltContext());

@@ -13,7 +13,7 @@ public class ContentTopicItem
     public ScriptureBook Book { get; set; } = ScriptureBook.None;
     public string Text { get; set; } = "";
     public string Verse { get; set; } = "";
-    public FormattedTextItem[] FormattedItems { get; set; } = Array.Empty<FormattedTextItem>();
+    public FormattedTextItem[] FormattedItems { get; set; } = [];
 
     public void BuildFormattedItems()
     {
@@ -35,7 +35,7 @@ public class ContentTopicItem
             .Replace("</bq>", "</blockquote>");
 
         // Force uppercase
-        return char.ToUpper(processedText[0]) + processedText.Substring(1);
+        return char.ToUpper(processedText[0]) + processedText[1..];
     }
 
     public string ConvertToFormattedText()
@@ -49,7 +49,7 @@ public class ContentTopicItem
             .Replace("</bq>", "\r\n    ");
 
         // Force uppercase
-        var bodyText = char.ToUpper(processedText[0]) + processedText.Substring(1);
+        var bodyText = char.ToUpper(processedText[0]) + processedText[1..];
         return $"{bodyText}\r\n- {Verse}";
     }
 }

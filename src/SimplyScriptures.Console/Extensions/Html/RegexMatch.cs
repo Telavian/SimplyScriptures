@@ -4,14 +4,9 @@ using System.Xml.Xsl;
 
 namespace SimplyScriptures.Console.Extensions.Html;
 
-internal class RegexMatch : HtmlXsltFunction
+internal class RegexMatch(HtmlXsltContext context, string name) : HtmlXsltFunction(context, null, name, Array.Empty<XPathResultType>())
 {
-    private readonly Dictionary<string, Regex> _regexLookup = new Dictionary<string, Regex>();
-
-    public RegexMatch(HtmlXsltContext context, string name)
-        : base(context, null, name, Array.Empty<XPathResultType>())
-    {
-    }
+    private readonly Dictionary<string, Regex> _regexLookup = [];
 
     public override XPathResultType ReturnType => XPathResultType.Boolean;
     public override int Minargs => 2;

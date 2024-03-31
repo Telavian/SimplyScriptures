@@ -12,23 +12,18 @@ namespace SimplyScriptures.Converters;
 
 public class TopicItemToTextColorConverter : IValueConverter
 {
-    public object? Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object? Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value is null || value is ContentTopicItem item == false)
-        {
-            return value;
-        }
-
-        switch (item.Book)
-        {
-            case ScriptureBook.DC:
-                return Colors.Black;
-            default:
-                return Colors.White;
-        }
+        return value is null || value is ContentTopicItem item == false
+            ? value
+            : item.Book switch
+            {
+                ScriptureBook.DC => Colors.Black,
+                _ => Colors.White,
+            };
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

@@ -7,11 +7,9 @@ public class FileSystemFileService : IFileService
 {
     #region Private Variables
 
-    private readonly string _rootPath;
-
     #endregion
 
-    public string DataRootDirectory => _rootPath;
+    public string DataRootDirectory { get; }
 
     #region Constructors
 
@@ -22,7 +20,7 @@ public class FileSystemFileService : IFileService
             rootPath += "/";
         }
 
-        _rootPath = rootPath;
+        DataRootDirectory = rootPath;
     }
 
     #endregion
@@ -31,7 +29,7 @@ public class FileSystemFileService : IFileService
 
     public Task<byte[]> LoadDataAsync(string path)
     {
-        path = path.Replace("./", _rootPath);
+        path = path.Replace("./", DataRootDirectory);
         return File.ReadAllBytesAsync(path)
             ;
     }

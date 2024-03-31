@@ -2,22 +2,17 @@
 
 namespace SimplyScriptures.Common.Services.FileService;
 
-public class NetworkFileService : IFileService
+public class NetworkFileService(HttpClient httpClient) : IFileService
 {
     #region Private Variables
 
-    private readonly HttpClient _httpClient;
+    private readonly HttpClient _httpClient = httpClient;
 
     #endregion
 
     public string DataRootDirectory => ""; // Application root
 
     #region Constructors
-
-    public NetworkFileService(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
 
     #endregion
 
@@ -41,7 +36,7 @@ public class NetworkFileService : IFileService
         //            ;
         //    }
         //}
-            
+
         return _httpClient.GetByteArrayAsync(path);
     }
 

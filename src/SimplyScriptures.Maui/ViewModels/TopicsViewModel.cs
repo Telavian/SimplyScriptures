@@ -10,12 +10,12 @@ using SimplyScriptures.Pages;
 namespace SimplyScriptures.ViewModels;
 
 [SuppressMessage("ReSharper", "InconsistentNaming")]
-public class TopicsViewModel : ViewModelBase
+public class TopicsViewModel(IFileService fileService) : ViewModelBase
 {
     #region Private Variables
 
-    private readonly IFileService _fileService;
-    private ContentTopic[] _allLoadedTopics = Array.Empty<ContentTopic>();
+    private readonly IFileService _fileService = fileService;
+    private ContentTopic[] _allLoadedTopics = [];
 
     #endregion
 
@@ -35,7 +35,7 @@ public class TopicsViewModel : ViewModelBase
 
     #region IsTopicsInitializing
 
-    private bool _isTopicsInitializing;
+    private readonly bool _isTopicsInitializing;
 
     public bool IsTopicsInitializing
     {
@@ -109,7 +109,7 @@ public class TopicsViewModel : ViewModelBase
     {
         get => _topicsFilterText;
         set => SetProperty(ref _topicsFilterText, value,
-            async x => await FilterTopicsAsync(x)
+            FilterTopicsAsync
                 );
     }
 
@@ -119,13 +119,7 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand? _showTopicsMenuAsyncCommand;
 
-    public AsyncRelayCommand ShowTopicsMenuAsyncCommand
-    {
-        get
-        {
-            return _showTopicsMenuAsyncCommand ??= CreateAsyncCommand(() => ShowTopicsMenuAsync(), "Unable to show topics menu");
-        }
-    }
+    public AsyncRelayCommand ShowTopicsMenuAsyncCommand => _showTopicsMenuAsyncCommand ??= CreateAsyncCommand(ShowTopicsMenuAsync, "Unable to show topics menu");
 
     #endregion ShowTopicsMenuAsyncCommand
 
@@ -133,13 +127,7 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand? _toggleOTVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleOTVisibilityAsyncCommand
-    {
-        get
-        {
-            return _toggleOTVisibilityAsyncCommand ??= CreateAsyncCommand(() => ToggleOTVisibilityAsync(), "Unable to toggle visibility");
-        }
-    }
+    public AsyncRelayCommand ToggleOTVisibilityAsyncCommand => _toggleOTVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleOTVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleOTVisibilityAsyncCommand
 
@@ -147,13 +135,7 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand? _toggleNTVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleNTVisibilityAsyncCommand
-    {
-        get
-        {
-            return _toggleNTVisibilityAsyncCommand ??= CreateAsyncCommand(() => ToggleNTVisibilityAsync(), "Unable to toggle visibility");
-        }
-    }
+    public AsyncRelayCommand ToggleNTVisibilityAsyncCommand => _toggleNTVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleNTVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleNTVisibilityAsyncCommand
 
@@ -161,13 +143,7 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand? _toggleBMVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleBMVisibilityAsyncCommand
-    {
-        get
-        {
-            return _toggleBMVisibilityAsyncCommand ??= CreateAsyncCommand(() => ToggleBMVisibilityAsync(), "Unable to toggle visibility");
-        }
-    }
+    public AsyncRelayCommand ToggleBMVisibilityAsyncCommand => _toggleBMVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleBMVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleBMVisibilityAsyncCommand
 
@@ -175,19 +151,13 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand? _toggleDCVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleDCVisibilityAsyncCommand
-    {
-        get
-        {
-            return _toggleDCVisibilityAsyncCommand ??= CreateAsyncCommand(() => ToggleDCVisibilityAsync(), "Unable to toggle visibility");
-        }
-    }
+    public AsyncRelayCommand ToggleDCVisibilityAsyncCommand => _toggleDCVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleDCVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleNTVisibilityAsyncCommand
 
     #region AllTopics
 
-    private ListItem<ContentTopic>[] _allTopics = Array.Empty<ListItem<ContentTopic>>();
+    private ListItem<ContentTopic>[] _allTopics = [];
 
     public ListItem<ContentTopic>[] AllTopics
     {
@@ -199,7 +169,7 @@ public class TopicsViewModel : ViewModelBase
 
     #region AllTopicItems
 
-    private ContentTopicItem[] _allTopicItems = Array.Empty<ContentTopicItem>();
+    private ContentTopicItem[] _allTopicItems = [];
 
     public ContentTopicItem[] AllTopicItems
     {
@@ -231,7 +201,7 @@ public class TopicsViewModel : ViewModelBase
     {
         get => _topicItemsFilterText;
         set => SetProperty(ref _topicItemsFilterText, value,
-            async x => await FilterTopicItemsAsync(x)
+            FilterTopicItemsAsync
                 );
     }
 
@@ -241,13 +211,7 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand<ContentTopicItem?>? _copyTopicItemAsyncCommand;
 
-    public AsyncRelayCommand<ContentTopicItem?> CopyTopicItemAsyncCommand
-    {
-        get
-        {
-            return _copyTopicItemAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(item => CopyTopicItemAsync(item), "Unable to copy topic item");
-        }
-    }
+    public AsyncRelayCommand<ContentTopicItem?> CopyTopicItemAsyncCommand => _copyTopicItemAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(CopyTopicItemAsync, "Unable to copy topic item");
 
     #endregion CopyTopicItemAsyncCommand
 
@@ -255,13 +219,7 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand<ListItem<ContentTopic>>? _topicSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ListItem<ContentTopic>> TopicSelectedAsyncCommand
-    {
-        get
-        {
-            return _topicSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<ContentTopic>>(item => TopicSelectedAsync(item), "Unable to process topic");
-        }
-    }
+    public AsyncRelayCommand<ListItem<ContentTopic>> TopicSelectedAsyncCommand => _topicSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<ContentTopic>>(TopicSelectedAsync, "Unable to process topic");
 
     #endregion TopicSelectedAsyncCommand
 
@@ -269,24 +227,11 @@ public class TopicsViewModel : ViewModelBase
 
     private AsyncRelayCommand<ContentTopicItem?>? _topicItemSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ContentTopicItem?> TopicItemSelectedAsyncCommand
-    {
-        get
-        {
-            return _topicItemSelectedAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(item => TopicItemSelectedAsync(item), "Unable to process topic item");
-        }
-    }
+    public AsyncRelayCommand<ContentTopicItem?> TopicItemSelectedAsyncCommand => _topicItemSelectedAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(TopicItemSelectedAsync, "Unable to process topic item");
 
     #endregion TopicItemSelectedAsyncCommand
-
     #endregion
-
     #region Constructors
-
-    public TopicsViewModel(IFileService fileService)
-    {
-        _fileService = fileService;
-    }
 
     #endregion
 
@@ -307,10 +252,7 @@ public class TopicsViewModel : ViewModelBase
 
     private async Task ShowTopicsMenuAsync()
     {
-        await DispatchAsync(() =>
-            {
-                IsMenuOpen = !IsMenuOpen;
-            })
+        await DispatchAsync(() => IsMenuOpen = !IsMenuOpen)
             ;
 
         if (AllTopics.Length == 0 && TopicsFilterText == "")
@@ -322,10 +264,7 @@ public class TopicsViewModel : ViewModelBase
 
     private async Task InitializeTopicsAsync()
     {
-        await DispatchAsync(() =>
-            {
-                IsTopicsInitializing = true;
-            })
+        await DispatchAsync(() => IsTopicsInitializing = true)
             ;
 
         await Task.Delay(250)
@@ -340,10 +279,7 @@ public class TopicsViewModel : ViewModelBase
         await Task.Delay(250)
             ;
 
-        await DispatchAsync(() =>
-            {
-                IsTopicsInitializing = false;
-            })
+        await DispatchAsync(() => IsTopicsInitializing = false)
             ;
     }
 
@@ -362,10 +298,7 @@ public class TopicsViewModel : ViewModelBase
             .Select(x => new ListItem<ContentTopic>(x, x.Topic))
             .ToArray();
 
-        await DispatchAsync(() =>
-            {
-                AllTopics = items;
-            })
+        await DispatchAsync(() => AllTopics = items)
             ;
 
         await SelectTopicAsync()
@@ -381,10 +314,7 @@ public class TopicsViewModel : ViewModelBase
 
         var item = AllTopics.FirstOrDefault();
 
-        await DispatchAsync(() =>
-            {
-                SelectedTopic = item;
-            })
+        await DispatchAsync(() => SelectedTopic = item)
             ;
 
         if (item != null)
@@ -402,7 +332,7 @@ public class TopicsViewModel : ViewModelBase
         var data = await _fileService.LoadDataAsync("Topics/topics.json")
             ;
         var items = data.DeserializeFromJson<ContentTopic[]>()
-                    ?? Array.Empty<ContentTopic>();
+                    ?? [];
 
         _allLoadedTopics = items;
     }
@@ -434,10 +364,7 @@ public class TopicsViewModel : ViewModelBase
             .OrderByDescending(x => x.Book)
             .ToArray();
 
-        await DispatchAsync(() =>
-            {
-                AllTopicItems = matches;
-            })
+        await DispatchAsync(() => AllTopicItems = matches)
         ;
     }
 

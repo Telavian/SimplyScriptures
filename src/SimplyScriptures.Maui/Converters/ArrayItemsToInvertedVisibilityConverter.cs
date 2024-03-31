@@ -10,17 +10,12 @@ namespace SimplyScriptures.Converters;
 
 public class ArrayItemsToInvertedVisibilityConverter : IValueConverter
 {
-    public object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
+    public static object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value == null || value is Array items == false)
-        {
-            return false;
-        }
-
-        return items.Length <= 0;
+        return value == null || value is Array items == false ? false : (object)(items.Length <= 0);
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

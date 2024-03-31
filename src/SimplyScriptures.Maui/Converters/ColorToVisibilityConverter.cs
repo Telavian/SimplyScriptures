@@ -9,22 +9,12 @@ namespace SimplyScriptures.Converters;
 
 public class ColorToVisibilityConverter : IValueConverter
 {
-    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public static object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
-        if (value == null || value is Color c == false)
-        {
-            return false;
-        }
-
-        if (c.Equals(Colors.Transparent))
-        {
-            return true;
-        }
-
-        return false;
+        return value == null || value is Color c == false ? false : c.Equals(Colors.Transparent) ? true : (object)false;
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

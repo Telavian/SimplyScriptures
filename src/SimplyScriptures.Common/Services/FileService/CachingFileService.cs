@@ -5,18 +5,12 @@ using SimplyScriptures.Common.Services.FileService.Interfaces;
 
 namespace SimplyScriptures.Common.Services.FileService;
 
-public class CachingFileService : IFileService
+public class CachingFileService(IMemoryCache cache, IFileService innerService) : IFileService
 {
-    private readonly IMemoryCache _cache;
-    private readonly IFileService _innerService;
+    private readonly IMemoryCache _cache = cache;
+    private readonly IFileService _innerService = innerService;
 
     public string DataRootDirectory => _innerService.DataRootDirectory;
-
-    public CachingFileService(IMemoryCache cache, IFileService innerService)
-    {
-        _cache = cache;
-        _innerService = innerService;
-    }
 
     public async Task<byte[]> LoadDataAsync(string path)
     {

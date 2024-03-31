@@ -4,7 +4,7 @@ namespace SimplyScriptures;
 
 public partial class App : Application
 {
-    public static bool IsDarkTheme => Application.Current != null && 
+    public static bool IsDarkTheme => Application.Current != null &&
                                       Application.Current.UserAppTheme != AppTheme.Light && Application.Current.RequestedTheme != AppTheme.Light &&
                                       Application.Current.PlatformAppTheme != AppTheme.Light;
 
@@ -19,7 +19,7 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new AppShell(); 
+        MainPage = new AppShell();
         //Application.Current.UserAppTheme = AppTheme.Light;
     }
 }

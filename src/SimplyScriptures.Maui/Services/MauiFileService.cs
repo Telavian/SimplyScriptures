@@ -13,16 +13,14 @@ public class MauiFileService : IFileService
         // Root path is Resources/Raw
         path = path.Replace("./", "");
 
-        using (var memStream = new MemoryStream())
-        {
-            var fileStream = await FileSystem.OpenAppPackageFileAsync(path)
-                ;
+        using var memStream = new MemoryStream();
+        var fileStream = await FileSystem.OpenAppPackageFileAsync(path)
+            ;
 
-            await fileStream.CopyToAsync(memStream)
-                ;
+        await fileStream.CopyToAsync(memStream)
+            ;
 
-            memStream.Position = 0;
-            return memStream.ToArray();
-        }
+        memStream.Position = 0;
+        return memStream.ToArray();
     }
 }

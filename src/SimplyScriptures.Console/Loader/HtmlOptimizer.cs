@@ -4,7 +4,7 @@ public class HtmlOptimizer
 {
     #region Public Methods
 
-    public async Task OptimizeHtmlFilesAsync()
+    public static async Task OptimizeHtmlFilesAsync()
     {
         var files = Directory.GetFiles(@"C:\Source\SimplyScriptures\SimplyScriptures\SimplyScriptures\wwwroot\Scriptures");
 

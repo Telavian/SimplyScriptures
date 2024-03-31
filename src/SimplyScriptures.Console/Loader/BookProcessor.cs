@@ -16,7 +16,7 @@ using SimplyScriptures.Console.Models;
 
 namespace SimplyScriptures.Console.Loader;
 
-public class BookProcessor
+public partial class BookProcessor
 {
     #region Private Methods
 
@@ -53,10 +53,8 @@ public class BookProcessor
         }
 
         var path = Path.Combine(_rootPath, @"Scriptures\_Index");
-        using (var directory = FSDirectory.Open(path))
-        {
-            IndexBookData(items, directory);
-        }
+        using var directory = FSDirectory.Open(path);
+        IndexBookData(items, directory);
     }
 
     public async Task<SearchMatch[]> ProcessAllBookExactSearchAsync(string text)
@@ -70,8 +68,8 @@ public class BookProcessor
             ;
         allMatches.AddRange(matches);
 
-        return allMatches
-            .ToArray();
+        return [.. allMatches
+];
     }
 
     public async Task<SearchMatch[]> ProcessAllBookPhraseSearchAsync(string text)
@@ -85,8 +83,8 @@ public class BookProcessor
             ;
         allMatches.AddRange(matches);
 
-        return allMatches
-            .ToArray();
+        return [.. allMatches
+];
     }
 
     public async Task<SearchMatch[]> ProcessAllBookScriptureSearchAsync(string text)
@@ -100,8 +98,8 @@ public class BookProcessor
             ;
         allMatches.AddRange(matches);
 
-        return allMatches
-            .ToArray();
+        return [.. allMatches
+];
     }
 
     #endregion
@@ -119,7 +117,7 @@ public class BookProcessor
     {
         var htmlFilename = book.ToHtmlPath(false);
 
-        if (string.IsNullOrWhiteSpace(htmlFilename) || 
+        if (string.IsNullOrWhiteSpace(htmlFilename) ||
             (book != ScriptureBook.DC_Sections && book.ToString().StartsWith("DC_Section")) ||
             (book != ScriptureBook.DC_Lectures && book.ToString().StartsWith("DC_Lecture")))
         {
@@ -134,7 +132,7 @@ public class BookProcessor
 
         var info = new BookPositionInfo();
 
-        var startCount = items.Count();
+        var startCount = items.Count;
         foreach (var child in doc.DocumentNode.ChildNodes)
         {
             ProcessBookNode(book, items, child, info);
@@ -144,7 +142,7 @@ public class BookProcessor
         System.Console.WriteLine($"Added {endCount - startCount} items for book {book}");
     }
 
-    private void ProcessBookNode(ScriptureBook book, List<SearchItem> items, HtmlNode node, BookPositionInfo info)
+    private static void ProcessBookNode(ScriptureBook book, List<SearchItem> items, HtmlNode node, BookPositionInfo info)
     {
         if (node.Name == "head")
         {
@@ -156,6 +154,7 @@ public class BookProcessor
         {
             info.Book = ParseScriptureBook(book, nodeText);
         }
+
         switch (node.Name)
         {
             case "sectionnumber" when nodeText.Length > 0:
@@ -213,7 +212,7 @@ public class BookProcessor
         }
     }
 
-    private string BuildNodeXPath(ScriptureBook book, HtmlNode node)
+    private static string BuildNodeXPath(ScriptureBook book, HtmlNode node)
     {
         var xpath = node.XPath;
 
@@ -222,7 +221,7 @@ public class BookProcessor
             .Replace("#text", "text()");
     }
 
-    private ScriptureBook ParseScriptureBook(ScriptureBook scripture, string name)
+    private static ScriptureBook ParseScriptureBook(ScriptureBook scripture, string name)
     {
         if (scripture.IsOldTestament1())
         {
@@ -1525,17 +1524,18 @@ public class BookProcessor
     private static void IndexBookData(IReadOnlyCollection<SearchItem> bookItems, FSDirectory directory)
     {
         System.Console.WriteLine($"Indexing {bookItems.Count} documents");
-        var config = new IndexWriterConfig(_luceneVersion, _analyzer);
-        config.OpenMode = OpenMode.CREATE;
-
-        using (var writer = new IndexWriter(directory, config))
+        var config = new IndexWriterConfig(_luceneVersion, _analyzer)
         {
-            foreach (var item in bookItems)
-            {
-                var text = item.Text;
-                text = Regex.Replace(text, @"\d{1,}", @" $& ");
+            OpenMode = OpenMode.CREATE
+        };
 
-                var doc = new Document
+        using var writer = new IndexWriter(directory, config);
+        foreach (var item in bookItems)
+        {
+            var text = item.Text;
+            text = MyRegex().Replace(text, @" $& ");
+
+            var doc = new Document
                 {
                     new TextField(nameof(SearchItem.Text), text, Field.Store.YES),
                     new StringField($"{nameof(SearchItem.XPath)}", item.XPath, Field.Store.YES),
@@ -1543,13 +1543,15 @@ public class BookProcessor
                     new Int32Field($"{nameof(SearchItem.Chapter)}", item.Chapter, Field.Store.YES),
                     new Int32Field($"{nameof(SearchItem.Verse)}", item.Verse, Field.Store.YES),
                 };
-                writer.AddDocument(doc);
-            }
-
-            writer.Flush(true, true);
-            writer.Commit();
+            writer.AddDocument(doc);
         }
+
+        writer.Flush(true, true);
+        writer.Commit();
     }
+
+    [GeneratedRegex(@"\d{1,}")]
+    private static partial Regex MyRegex();
 
     #endregion
 }

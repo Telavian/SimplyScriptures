@@ -5,12 +5,12 @@ using SimplyScriptures.Models.Interfaces;
 
 namespace SimplyScriptures.Models;
 
-public class MenuContentItem<T> : ModelBase, IMenuContentItem
+public class MenuContentItem<T>(T item) : ModelBase, IMenuContentItem
 {
     IMenuContentItem IMenuContentItem.Self => Self;
     public MenuContentItem<T> Self => this;
 
-    public T Item { get; }
+    public T Item { get; } = item;
 
     #region HasChildren
 
@@ -122,7 +122,7 @@ public class MenuContentItem<T> : ModelBase, IMenuContentItem
         set => AllChildren = value.Select(x => (MenuContentItem<T>)x).ToArray();
     }
 
-    private MenuContentItem<T>[] _allChildren = Array.Empty<MenuContentItem<T>>();
+    private MenuContentItem<T>[] _allChildren = [];
 
     public MenuContentItem<T>[] AllChildren
     {
@@ -140,7 +140,7 @@ public class MenuContentItem<T> : ModelBase, IMenuContentItem
         set => Children = value.Select(x => (MenuContentItem<T>)x).ToArray();
     }
 
-    private MenuContentItem<T>[] _children = Array.Empty<MenuContentItem<T>>();
+    private MenuContentItem<T>[] _children = [];
 
     public MenuContentItem<T>[] Children
     {
@@ -164,12 +164,9 @@ public class MenuContentItem<T> : ModelBase, IMenuContentItem
 
     #region Handler
 
-    AsyncRelayCommand<IMenuContentItem> IMenuContentItem.Handler
-    {
-        get => new AsyncRelayCommand<IMenuContentItem>(x => Handler.ExecuteAsync(x));
-    }
+    AsyncRelayCommand<IMenuContentItem> IMenuContentItem.Handler => new(Handler.ExecuteAsync);
 
-    private AsyncRelayCommand<MenuContentItem<T>> _handler = new AsyncRelayCommand<MenuContentItem<T>>(x => Task.CompletedTask);
+    private AsyncRelayCommand<MenuContentItem<T>> _handler = new(x => Task.CompletedTask);
 
     public AsyncRelayCommand<MenuContentItem<T>> Handler
     {
@@ -178,11 +175,6 @@ public class MenuContentItem<T> : ModelBase, IMenuContentItem
     }
 
     #endregion Handler
-
-    public MenuContentItem(T item)
-    {
-        Item = item;
-    }
 
     public override string ToString()
     {
@@ -209,17 +201,38 @@ public class MenuContentItem<T> : ModelBase, IMenuContentItem
 
     public void AddChild(MenuContentItem<T> child)
     {
-        AllChildren = AllChildren.Concat(new [] { child }).ToArray();
-        
+
+        /* Unmerged change from project 'SimplyScriptures.Maui(net8.0-ios)'
+        Before:
+                AllChildren = AllChildren.Concat(new [] { child }).ToArray();
+        After:
+                AllChildren = [.. AllChildren, .. new [] { child }];
+        */
+
+        /* Unmerged change from project 'SimplyScriptures.Maui(net8.0-maccatalyst)'
+        Before:
+                AllChildren = AllChildren.Concat(new [] { child }).ToArray();
+        After:
+                AllChildren = [.. AllChildren, .. new [] { child }];
+        */
+
+        /* Unmerged change from project 'SimplyScriptures.Maui(net8.0-windows10.0.19041.0)'
+        Before:
+                AllChildren = AllChildren.Concat(new [] { child }).ToArray();
+        After:
+                AllChildren = [.. AllChildren, .. new [] { child }];
+        */
+        AllChildren = [.. AllChildren, .. new[] { child }];
+
         if (child.IsVisible)
         {
-            Children = Children.Concat(new[] { child }).ToArray();
-        }            
+            Children = [.. Children, .. new[] { child }];
+        }
     }
 
     public void RemoveChild(MenuContentItem<T> child)
     {
-        AllChildren = AllChildren.Except(new [] { child }).ToArray();
+        AllChildren = AllChildren.Except(new[] { child }).ToArray();
         Children = Children.Except(new[] { child }).ToArray();
     }
 }

@@ -31,15 +31,11 @@ internal abstract class HtmlXsltFunction : IXsltContextFunction
 
     public static IXsltContextFunction? GetBuiltIn(HtmlXsltContext context, string? prefix, string? name, XPathResultType[] argTypes)
     {
-        switch (name)
+        return name switch
         {
-            case "regex-match":
-                return new RegexMatch(context, name);
-            default:
-
-                // TODO: create other functions here
-                return null;
-        }
+            "regex-match" => new RegexMatch(context, name),
+            _ => null,// TODO: create other functions here
+        };
     }
 
     public static string? ConvertToString(object? argument, bool outer, string? separator)
@@ -79,10 +75,7 @@ internal abstract class HtmlXsltFunction : IXsltContextFunction
                     var sb = (StringBuilder?)null;
                     foreach (var arg in enumerable)
                     {
-                        if (sb == null)
-                        {
-                            sb = new StringBuilder();
-                        }
+                        sb ??= new StringBuilder();
 
                         if (sb.Length > 0 && separator != null)
                         {

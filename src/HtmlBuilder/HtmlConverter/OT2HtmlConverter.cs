@@ -21,17 +21,9 @@ public class OT2HtmlConverter : HtmlConverter
                 return null;
             }
 
-            if (parent!.Name != "verse" && node.InheritsClass("s137", "s144"))
-            {
-                return CreatePlaceholderNode("verse", node);
-            }
-
-            if (parent!.Name != "chapter" && node.InheritsClass("s143"))
-            {
-                return CreatePlaceholderNode("chapter", node);
-            }
-
-            return node;
+            return parent!.Name != "verse" && node.InheritsClass("s137", "s144")
+                ? CreatePlaceholderNode("verse", node)
+                : parent!.Name != "chapter" && node.InheritsClass("s143") ? CreatePlaceholderNode("chapter", node) : node;
         }
 
         if (node.HasClass("s135"))

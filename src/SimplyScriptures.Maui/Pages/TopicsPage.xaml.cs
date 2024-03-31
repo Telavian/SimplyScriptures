@@ -18,7 +18,7 @@ public partial class TopicsPage : ContentPage
     public TopicsPage(TopicsViewModel vm)
     {
         _viewModel = vm;
-        
+
         InitializeComponent();
         BindingContext = vm;
         NavigationPage.SetHasBackButton(this, false);

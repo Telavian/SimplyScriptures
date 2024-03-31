@@ -21,17 +21,9 @@ public class OT1HtmlConverter : HtmlConverter
                 return null;
             }
 
-            if (parent!.Name != "verse" && node.InheritsClass("s18", "s29"))
-            {
-                return CreatePlaceholderNode("verse", node);
-            }
-
-            if (parent!.Name != "chapter" && node.InheritsClass("s17", "s28"))
-            {
-                return CreatePlaceholderNode("chapter", node);
-            }
-
-            return node;
+            return parent!.Name != "verse" && node.InheritsClass("s18", "s29")
+                ? CreatePlaceholderNode("verse", node)
+                : parent!.Name != "chapter" && node.InheritsClass("s17", "s28") ? CreatePlaceholderNode("chapter", node) : node;
         }
 
         if (node.HasClass("s15"))
@@ -102,12 +94,7 @@ public class OT1HtmlConverter : HtmlConverter
                         ? $" href=\"{href}\""
                         : "";
 
-                    if (string.IsNullOrWhiteSpace(href))
-                    {
-                        return null;
-                    }
-
-                    return HtmlNode.CreateNode($"<a{attributes}></a>");
+                    return string.IsNullOrWhiteSpace(href) ? null : HtmlNode.CreateNode($"<a{attributes}></a>");
                 }
 
             case "p":

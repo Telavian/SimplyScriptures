@@ -32,7 +32,7 @@ public abstract class HtmlConverter
 
     protected abstract HtmlNode? CreateNewNode(HtmlNode? parent, HtmlNode node, List<HtmlNode> blocks);
 
-    protected HtmlNode CreatePlaceholderNode(string name, HtmlNode node)
+    protected static HtmlNode CreatePlaceholderNode(string name, HtmlNode node)
     {
         var styleAttributes = node.GetAttributeValue("style", "");
         var singleItems = styleAttributes.Split(";");
@@ -171,7 +171,7 @@ public abstract class HtmlConverter
         }
     }
 
-    private void TrimEmptyBlocks(List<HtmlNode> blocks)
+    private static void TrimEmptyBlocks(List<HtmlNode> blocks)
     {
         if (blocks.Count == 0)
         {
@@ -186,7 +186,7 @@ public abstract class HtmlConverter
         }
     }
 
-    private string ConvertBlocksToHtml(IReadOnlyCollection<HtmlNode> blocks)
+    private static string ConvertBlocksToHtml(IReadOnlyCollection<HtmlNode> blocks)
     {
         var html = blocks
             .Select(x => ConvertToString(null, x))
@@ -220,7 +220,7 @@ public abstract class HtmlConverter
         return $"<html><head>\r\n{_styles}\r\n</head><body>\r\n{html}\r\n<body></html>";
     }
 
-    private string ConvertToString(HtmlNode? parent, HtmlNode node, int depth = 0)
+    private static string ConvertToString(HtmlNode? parent, HtmlNode node, int depth = 0)
     {
         var attributes = node.Name != "a"
          ? ""
@@ -236,19 +236,13 @@ public abstract class HtmlConverter
 
         if (node.Name == "#text")
         {
-            if (string.IsNullOrWhiteSpace(node.InnerText))
-            {
-                return "";
-            }
-
-            switch (parent!.Name)
-            {
-                case "verse":
-                case "chapter":
-                    return node.InnerText.Trim();
-                default:
-                    return node.InnerText;
-            }
+            return string.IsNullOrWhiteSpace(node.InnerText)
+                ? ""
+                : parent!.Name switch
+                {
+                    "verse" or "chapter" => node.InnerText.Trim(),
+                    _ => node.InnerText,
+                };
         }
 
         var text = "";

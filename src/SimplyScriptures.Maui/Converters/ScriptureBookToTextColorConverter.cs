@@ -12,19 +12,16 @@ namespace SimplyScriptures.Converters;
 
 public class ScriptureBookToTextColorConverter : IValueConverter
 {
-    public object? Convert(object? value, Type targetType, object parameter, CultureInfo culture)
+    public static object? Convert(object? value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value is null || value is ScriptureBook book == false)
-        {
-            return value;
-        }
-
-        return book.IsDoctrineAndCovenants()
-            ? Colors.Black 
+        return value is null || value is ScriptureBook book == false
+            ? value
+            : book.IsDoctrineAndCovenants()
+            ? Colors.Black
             : Colors.White;
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

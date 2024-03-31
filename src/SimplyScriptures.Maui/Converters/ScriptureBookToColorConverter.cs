@@ -23,20 +23,10 @@ public class ScriptureBookToColorConverter : IValueConverter
             return Color.FromRgb(33, 150, 243);
         }
 
-        if (book.IsBookOfMormon())
-        {
-            return Color.FromRgb(0, 200, 83);
-        }
-
-        if (book.IsDoctrineAndCovenants())
-        {
-            return Colors.DarkGray;
-        }
-
-        return Colors.White;
+        return book.IsBookOfMormon() ? Color.FromRgb(0, 200, 83) : (object)(book.IsDoctrineAndCovenants() ? Colors.DarkGray : Colors.White);
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

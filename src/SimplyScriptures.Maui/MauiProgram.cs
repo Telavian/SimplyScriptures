@@ -1,11 +1,11 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Caching.Memory;
 using SimplyScriptures.Common.Services.FileService;
-using Telerik.Maui.Controls.Compatibility;
 using SimplyScriptures.Common.Services.FileService.Interfaces;
 using SimplyScriptures.Pages;
 using SimplyScriptures.Services;
 using SimplyScriptures.ViewModels;
+using Telerik.Maui.Controls.Compatibility;
 
 namespace SimplyScriptures;
 

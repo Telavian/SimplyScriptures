@@ -11,17 +11,12 @@ namespace SimplyScriptures.Converters;
 
 public class ScriptureBookToAbbreviationConverter : IValueConverter
 {
-    public object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
+    public static object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value == null || value is ScriptureBook book == false)
-        {
-            return "";
-        }
-
-        return book.ToAbbreviatedDisplayString();
+        return value == null || value is ScriptureBook book == false ? "" : (object)book.ToAbbreviatedDisplayString();
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

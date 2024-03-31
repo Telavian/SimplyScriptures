@@ -10,7 +10,7 @@ public class ContentItem
     public string XPath { get; set; } = "";
     public ContentItem? Parent { get; set; }
 
-    public ContentItem[] Children { get; set; } = Array.Empty<ContentItem>();
+    public ContentItem[] Children { get; set; } = [];
 
     public override string ToString()
     {

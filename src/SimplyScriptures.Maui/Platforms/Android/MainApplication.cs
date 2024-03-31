@@ -1,17 +1,13 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SimplyScriptures
+namespace SimplyScriptures;
+
+[Application]
+public class MainApplication(IntPtr handle, JniHandleOwnership ownership) : MauiApplication
 {
-    [Application]
-    public class MainApplication : MauiApplication
+    protected override MauiApp CreateMauiApp()
     {
-        public MainApplication(IntPtr handle, JniHandleOwnership ownership)
-            : base(handle, ownership)
-        {
-
-        }
-
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        return MauiProgram.CreateMauiApp();
     }
 }

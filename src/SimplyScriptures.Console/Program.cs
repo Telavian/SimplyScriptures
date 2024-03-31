@@ -18,7 +18,6 @@ using SimplyScriptures.Console.Loader;
 
 //**********************************
 
-
 //var files = Directory.GetFiles(@"G:\SimplyScriptures\SimplyScriptures\SimplyScriptures.Blazor\wwwroot\Scriptures", "*.html",  SearchOption.AllDirectories);
 
 //foreach (var file in files)
@@ -184,7 +183,6 @@ Console.WriteLine($"Matches found: {matches.Length}");
 //        Console.WriteLine($"{x}: {matches.Length} total");
 //    }
 //}
-
 
 //var options = new JsonSerializerOptions()
 //{

@@ -96,8 +96,8 @@ public class HtmlFormatter
             }
         }
 
-        return items
-            .ToArray();
+        return [.. items
+];
     }
 
     private static string[] BreakIntoSegments(string? html)
@@ -106,7 +106,7 @@ public class HtmlFormatter
             .Replace("\r\n", "<br />")
             .Replace("\n", "<br />");
 
-        text = char.ToUpper(text[0]) + text.Substring(1);
+        text = char.ToUpper(text[0]) + text[1..];
 
         var index = 0;
         var segments = new List<string>();
@@ -118,7 +118,7 @@ public class HtmlFormatter
 
             if (tagStart == -1)
             {
-                fragment = text.Substring(index).Trim();
+                fragment = text[index..].Trim();
                 if (string.IsNullOrWhiteSpace(fragment) == false)
                 {
                     segments.Add(fragment);
@@ -129,7 +129,7 @@ public class HtmlFormatter
 
             var tagEnd = text.IndexOf('>', tagStart);
 
-            fragment = text.Substring(index, tagStart - index).Trim();
+            fragment = text[index..tagStart].Trim();
 
             if (string.IsNullOrWhiteSpace(fragment) == false)
             {
@@ -140,7 +140,7 @@ public class HtmlFormatter
             index = tagEnd + 1;
         }
 
-        return segments
-            .ToArray();
+        return [.. segments
+];
     }
 }

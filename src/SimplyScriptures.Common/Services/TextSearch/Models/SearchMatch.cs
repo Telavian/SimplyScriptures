@@ -1,6 +1,6 @@
-﻿using SimplyScriptures.Common.Enums;
+﻿using System.Runtime.CompilerServices;
+using SimplyScriptures.Common.Enums;
 using SimplyScriptures.Common.Extensions;
-using System.Runtime.CompilerServices;
 
 namespace SimplyScriptures.Common.Services.TextSearch.Models;
 
@@ -12,7 +12,7 @@ public class SearchMatch
 
     public string FormattedText { get; set; } = "";
 
-    public string[] Keywords { get; set; } = Array.Empty<string>();
+    public string[] Keywords { get; set; } = [];
 
     public SearchMode Mode { get; set; }
 
@@ -42,12 +42,10 @@ public class SearchMatch
                 break;
         }
 
-        switch (Verse)
+        return Verse switch
         {
-            case > 0:
-                return $"{displayString}:{Verse}";
-            default:
-                return displayString;
-        }
+            > 0 => $"{displayString}:{Verse}",
+            _ => displayString,
+        };
     }
 }

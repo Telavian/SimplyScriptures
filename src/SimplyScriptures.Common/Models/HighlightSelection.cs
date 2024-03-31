@@ -11,5 +11,5 @@ public class HighlightSelection
 {
     public ScriptureBook Book { get; set; } = ScriptureBook.None;
     public string Color { get; set; } = "";
-    public string[] XPath { get; set; } = Array.Empty<string>();
+    public string[] XPath { get; set; } = [];
 }

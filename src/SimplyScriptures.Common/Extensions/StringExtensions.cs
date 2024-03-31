@@ -6,7 +6,7 @@ using static Lucene.Net.Queries.Function.ValueSources.MultiFunction;
 
 namespace SimplyScriptures.Common.Extensions;
 
-public static class StringExtensions
+public static partial class StringExtensions
 {
     /// <summary>
     /// Limits string to closest word boundary after max length
@@ -25,9 +25,9 @@ public static class StringExtensions
 
         var end = value.IndexOf(' ', limit);
 
-        return end == -1 
-            ? value 
-            : value.Substring(0, end)
+        return end == -1
+            ? value
+            : value[..end]
                 .Trim();
     }
 
@@ -101,7 +101,7 @@ public static class StringExtensions
         }
 
         index++;
-        
+
         while (index < text.Length - 1)
         {
             if (char.IsWhiteSpace(text[index]))
@@ -159,12 +159,9 @@ public static class StringExtensions
 
     public static string SeparateAlphaNumeric(this string? text)
     {
-        if (text == null)
-        {
-            text = "";
-        }
+        text ??= "";
 
-        return Regex.Replace(text, "\\d{1,}", " $& ").Trim();
+        return MyRegex().Replace(text, " $& ").Trim();
     }
 
     public static string EncodeUrlString(this string text)
@@ -220,61 +217,43 @@ public static class StringExtensions
     public static async Task<string> CompressTextAsync(this string text)
     {
         var bytes = Encoding.Unicode.GetBytes(text);
-        await using (var input = new MemoryStream(bytes))
-        {
-            await using (var output = new MemoryStream())
-            {
-                await using (var stream = new GZipStream(output, CompressionLevel.Optimal))
-                {
+        await using var input = new MemoryStream(bytes);
+        await using var output = new MemoryStream();
+        await using var stream = new GZipStream(output, CompressionLevel.Optimal);
 
-                    await input.CopyToAsync(stream)
-                        ;
-                    await stream.FlushAsync()
-                        ;
+        await input.CopyToAsync(stream)
+            ;
+        await stream.FlushAsync()
+            ;
 
-                    return Convert.ToBase64String(output.ToArray());
-                }
-            }
-        }
+        return Convert.ToBase64String(output.ToArray());
     }
 
     public static string CompressText(this string text)
     {
         var bytes = Encoding.Unicode.GetBytes(text);
-        using (var input = new MemoryStream(bytes))
-        {
-            using (var output = new MemoryStream())
-            {
-                using (var stream = new GZipStream(output, CompressionLevel.Optimal))
-                {
+        using var input = new MemoryStream(bytes);
+        using var output = new MemoryStream();
+        using var stream = new GZipStream(output, CompressionLevel.Optimal);
 
-                    input.CopyTo(stream);
-                    stream.Flush();
+        input.CopyTo(stream);
+        stream.Flush();
 
-                    return Convert.ToBase64String(output.ToArray());
-                }
-            }
-        }
+        return Convert.ToBase64String(output.ToArray());
     }
 
     public static async Task<string> DecompressTextAsync(this string text)
     {
         var bytes = Convert.FromBase64String(text);
-        await using (var input = new MemoryStream(bytes))
-        {
-            await using (var output = new MemoryStream())
-            {
-                await using (var stream = new GZipStream(input, CompressionMode.Decompress))
-                {
-                    await stream.CopyToAsync(output)
-                        ;
-                    await output.FlushAsync()
-                        ;
+        await using var input = new MemoryStream(bytes);
+        await using var output = new MemoryStream();
+        await using var stream = new GZipStream(input, CompressionMode.Decompress);
+        await stream.CopyToAsync(output)
+            ;
+        await output.FlushAsync()
+            ;
 
-                    return Encoding.Unicode.GetString(output.ToArray());
-                }
-            }
-        }
+        return Encoding.Unicode.GetString(output.ToArray());
     }
 
     public static string ToInverseColor(this string color)
@@ -324,19 +303,25 @@ public static class StringExtensions
 
     public static string TrimToAlphaNumeric(this string? text)
     {
-        return text.TrimText(x => char.IsLetterOrDigit(x));
+        return text.TrimText(char.IsLetterOrDigit);
     }
 
     public static string[] TrimToAlphaNumericParts(this string? text)
     {
-        return text.TrimTextToParts(x => char.IsLetterOrDigit(x));
+        return text.TrimTextToParts(char.IsLetterOrDigit);
     }
 
     public static string[] SplitAlphaNumeric(this string? text)
     {
         text ??= "";
 
-        text = Regex.Replace(text, @"\d{1,}", " $& ");
+        text = MyRegex().Replace(text, " $& ");
         return text.Split(Array.Empty<char>(), StringSplitOptions.RemoveEmptyEntries);
     }
+
+    [GeneratedRegex(@"\d{1,}")]
+    private static partial Regex MyRegex();
+
+    [GeneratedRegex("\\d{1,}")]
+    private static partial Regex MyRegex();
 }

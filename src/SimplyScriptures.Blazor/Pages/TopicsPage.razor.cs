@@ -286,17 +286,11 @@ public class TopicsPageBase : ViewModelBase
                           item.Text.Contains(filterText, StringComparison.OrdinalIgnoreCase) ||
                           item.Verse.Contains(filterText, StringComparison.OrdinalIgnoreCase);
 
-        if (item.Book.IsOldTestament())
-        {
-            return filterMatch && IsOTVisible;
-        }
-
-        if (item.Book.IsNewTestament())
-        {
-            return filterMatch && IsNTVisible;
-        }
-
-        return item.Book.IsBookOfMormon() ? filterMatch && IsBMVisible : item.Book.IsDoctrineAndCovenants() && filterMatch && IsDCVisible;
+        return item.Book.IsOldTestament()
+            ? filterMatch && IsOTVisible
+            : item.Book.IsNewTestament()
+            ? filterMatch && IsNTVisible
+            : item.Book.IsBookOfMormon() ? filterMatch && IsBMVisible : item.Book.IsDoctrineAndCovenants() && filterMatch && IsDCVisible;
     }
 
     protected MarkupString ProcessItemText(ContentTopicItem item)

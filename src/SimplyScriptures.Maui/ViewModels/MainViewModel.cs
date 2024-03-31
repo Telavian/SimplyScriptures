@@ -11,7 +11,7 @@ public class MainViewModel : ViewModelBase
 
     #region SearchText
 
-    private string _searchText = "";
+    private readonly string _searchText = "";
 
     public string SearchText
     {
@@ -25,13 +25,7 @@ public class MainViewModel : ViewModelBase
 
     private AsyncRelayCommand? _searchAsyncCommand;
 
-    public AsyncRelayCommand SearchAsyncCommand
-    {
-        get
-        {
-            return _searchAsyncCommand ??= CreateAsyncCommand(() => SearchAsync(), "Unable to search");
-        }
-    }
+    public AsyncRelayCommand SearchAsyncCommand => _searchAsyncCommand ??= CreateAsyncCommand(SearchAsync, "Unable to search");
 
     #endregion SearchAsyncCommand
 
@@ -47,7 +41,7 @@ public class MainViewModel : ViewModelBase
             {
                 case null:
                     {
-                        return _selectScriptureBookAsyncCommand ??= CreateAsyncCommand<ScriptureBook>(item => SelectScriptureBookAsync(item), "Unable to select scripture book");
+                        return _selectScriptureBookAsyncCommand ??= CreateAsyncCommand<ScriptureBook>(SelectScriptureBookAsync, "Unable to select scripture book");
                     }
 
                 default:

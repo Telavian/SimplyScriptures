@@ -88,11 +88,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private void LoadButton_OnClick(object sender, RoutedEventArgs e)
     {
-        var dialog = new Microsoft.Win32.OpenFileDialog();
-        dialog.Filter = "Html files (*.html)|*.html";
-        dialog.Title = "Select file";
-        dialog.CheckFileExists = true;
-        dialog.CheckPathExists = true;
+        var dialog = new Microsoft.Win32.OpenFileDialog
+        {
+            Filter = "Html files (*.html)|*.html",
+            Title = "Select file",
+            CheckFileExists = true,
+            CheckPathExists = true
+        };
         var result = dialog.ShowDialog();
 
         if (result != true)
@@ -101,13 +103,11 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
 
         FilePath = dialog.FileName;
-        using (var reader = new StreamReader(dialog.OpenFile()))
-        {
-            var html = reader.ReadToEnd();
-            html = FormatHtml(html);
+        using var reader = new StreamReader(dialog.OpenFile());
+        var html = reader.ReadToEnd();
+        html = FormatHtml(html);
 
-            SyntaxEditor.Document = new TextDocument(html);
-        }
+        SyntaxEditor.Document = new TextDocument(html);
     }
 
     private void SaveButton_OnClick(object sender, RoutedEventArgs e)
@@ -118,11 +118,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private void ProcessButton_OnClick(object sender, RoutedEventArgs e)
     {
-        var dialog = new Microsoft.Win32.OpenFileDialog();
-        dialog.Filter = "Htm files (*.htm)|*.htm";
-        dialog.Title = "Select file";
-        dialog.CheckFileExists = true;
-        dialog.CheckPathExists = true;
+        var dialog = new Microsoft.Win32.OpenFileDialog
+        {
+            Filter = "Htm files (*.htm)|*.htm",
+            Title = "Select file",
+            CheckFileExists = true,
+            CheckPathExists = true
+        };
         var result = dialog.ShowDialog();
 
         if (result != true)
@@ -137,7 +139,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         SyntaxEditor.Document = new TextDocument(html);
     }
 
-    private HtmlConverter.HtmlConverter DetermineConverter(string filename)
+    private static HtmlConverter.HtmlConverter DetermineConverter(string filename)
     {
         if (filename.IsRegexMatch("lof.*dc"))
         {
@@ -159,17 +161,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             return new OT1HtmlConverter();
         }
 
-        if (filename.IsRegexMatch("old.*testament.*2"))
-        {
-            return new OT2HtmlConverter();
-        }
-
-        if (filename.IsRegexMatch("old.*testament.*3"))
-        {
-            return new OT3HtmlConverter();
-        }
-
-        throw new Exception($"Invalid filename: {filename}");
+        return filename.IsRegexMatch("old.*testament.*2")
+            ? new OT2HtmlConverter()
+            : filename.IsRegexMatch("old.*testament.*3") ? (HtmlConverter.HtmlConverter)new OT3HtmlConverter() : throw new Exception($"Invalid filename: {filename}");
     }
 
     private void PasteTagButton_OnClick(object sender, RadRoutedEventArgs e)
@@ -187,7 +181,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         while (index != -1 && index < text.Length)
         {
-            var start = text.IndexOfAny(new[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }, index);
+            var start = text.IndexOfAny(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'], index);
 
             if (start == -1)
             {
@@ -376,15 +370,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             .Select(x => x.TrimEnd())
             .Where(x => string.IsNullOrWhiteSpace(x) == false)
             .Select(x => x.Replace("  ", " ").Replace("  ", " ").Replace("  ", " "))
-            .Select(x =>
-            {
-                if (x.Contains("```"))
-                {
-                    return $"{x.Replace("```", "<indent>")}</indent>\n";
-                }
-
-                return $"{x}<break />\n";
-            })
+            .Select(x => x.Contains("```") ? $"{x.Replace("```", "<indent>")}</indent>\n" : $"{x}<break />\n")
             .StringJoin("");
 
         var indentationAmount = lines.Length - lines.TrimStart().Length;
@@ -411,13 +397,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                     chunk.Add(line);
                     break;
                 default:
-                    chunks.Add(chunk.ToArray());
+                    chunks.Add([.. chunk]);
                     chunk.Clear();
                     break;
             }
         }
 
-        chunks.Add(chunk.ToArray());
+        chunks.Add([.. chunk]);
 
         foreach (var c in chunks)
         {
@@ -427,7 +413,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         SyntaxEditor.Insert(finalText);
     }
 
-    private string ProcessPoeticBlock(string[] lines)
+    private static string ProcessPoeticBlock(string[] lines)
     {
         var finalLines = new List<string>();
 
@@ -450,7 +436,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                     start++;
                 }
 
-                var number = trimmedLine.Substring(0, start);
+                var number = trimmedLine[..start];
                 trimmedLine = trimmedLine.Replace(number, $"<verse>{number}</verse>");
             }
 
@@ -499,19 +485,15 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         var options = new HtmlParserOptions();
         var parser = new HtmlParser(options);
-        using (var document = parser.ParseDocument(html))
-        {
-            using (var writer = new StringWriter())
-            {
-                document.ToHtml(writer, new PrettyMarkupFormatter());
-                var formattedHtml = writer.ToString();
+        using var document = parser.ParseDocument(html);
+        using var writer = new StringWriter();
+        document.ToHtml(writer, new PrettyMarkupFormatter());
+        var formattedHtml = writer.ToString();
 
-                return CleanFormattedHtml(formattedHtml);
-            }
-        }
+        return CleanFormattedHtml(formattedHtml);
     }
 
-    private string RemoveDuplicateQuotes(string html)
+    private static string RemoveDuplicateQuotes(string html)
     {
         var document = new HtmlDocument();
         document.LoadHtml(html);
@@ -542,7 +524,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private string CleanFormattedHtml(string html)
     {
-        var lines = html.Split(new[] { '\n' })
+        var lines = html.Split(['\n'])
             .Where(x => x.Trim().Length > 0);
         var finalLines = new List<string>();
 

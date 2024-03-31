@@ -1,5 +1,5 @@
-﻿using SimplyScriptures.Common.Enums;
-using System.Text;
+﻿using System.Text;
+using SimplyScriptures.Common.Enums;
 
 namespace SimplyScriptures.Common.Extensions;
 
@@ -25,7 +25,7 @@ public static class EnumExtensions
 
         var str = book.ToString();
         var num = str.IndexOf('_');
-        var alphaNumeric = str.Substring(num + 1).SeparateAlphaNumeric().TrimToAlphaNumeric();
+        var alphaNumeric = str[(num + 1)..].SeparateAlphaNumeric().TrimToAlphaNumeric();
         var stringBuilder = new StringBuilder();
         var str1 = alphaNumeric;
 
@@ -54,17 +54,7 @@ public static class EnumExtensions
             return "NT";
         }
 
-        if (book.IsBookOfMormon())
-        {
-            return "BM";
-        }
-
-        if (book.IsDoctrineAndCovenants())
-        {
-            return "DC";
-        }
-
-        throw new Exception($"Invalid book: {book}");
+        return book.IsBookOfMormon() ? "BM" : book.IsDoctrineAndCovenants() ? "DC" : throw new Exception($"Invalid book: {book}");
     }
 
     public static string ToHtmlDisplayString(this ScriptureBook book)
@@ -130,38 +120,23 @@ public static class EnumExtensions
             return ScriptureBook.NT;
         }
 
-        if (book.IsBookOfMormon())
-        {
-            return ScriptureBook.BM;
-        }
-
-        if (book.IsDoctrineAndCovenants())
-        {
-            return ScriptureBook.DC;
-        }
-
-        throw new Exception($"Invalid book: {book}");
+        return book.IsBookOfMormon()
+            ? ScriptureBook.BM
+            : book.IsDoctrineAndCovenants() ? ScriptureBook.DC : throw new Exception($"Invalid book: {book}");
     }
 
     public static ScriptureBook ToSpecificBook(this ScriptureBook book)
     {
-        switch (book)
+        return book switch
         {
-            case ScriptureBook.OT1:
-                return ScriptureBook.OT1_About;
-            case ScriptureBook.OT2:
-                return ScriptureBook.OT2_About;
-            case ScriptureBook.OT3:
-                return ScriptureBook.OT3_About;
-            case ScriptureBook.NT:
-                return ScriptureBook.NT_About;
-            case ScriptureBook.BM:
-                return ScriptureBook.BM_About;
-            case ScriptureBook.DC:
-                return ScriptureBook.DC_About;
-            default:
-                return book;
-        }
+            ScriptureBook.OT1 => ScriptureBook.OT1_About,
+            ScriptureBook.OT2 => ScriptureBook.OT2_About,
+            ScriptureBook.OT3 => ScriptureBook.OT3_About,
+            ScriptureBook.NT => ScriptureBook.NT_About,
+            ScriptureBook.BM => ScriptureBook.BM_About,
+            ScriptureBook.DC => ScriptureBook.DC_About,
+            _ => book,
+        };
     }
 
     public static string ToPDFPath(this ScriptureBook book)
@@ -186,17 +161,9 @@ public static class EnumExtensions
             return "./Scriptures/PDF/NT.pdf";
         }
 
-        if (book.IsBookOfMormon())
-        {
-            return "./Scriptures/PDF/BM.pdf";
-        }
-
-        if (book.IsDoctrineAndCovenants())
-        {
-            return "./Scriptures/PDF/DC.pdf";
-        }
-
-        throw new Exception($"Invalid book: {book}");
+        return book.IsBookOfMormon()
+            ? "./Scriptures/PDF/BM.pdf"
+            : book.IsDoctrineAndCovenants() ? "./Scriptures/PDF/DC.pdf" : throw new Exception($"Invalid book: {book}");
     }
 
     public static string ToMenuContentPath(this ScriptureBook book)
@@ -221,17 +188,9 @@ public static class EnumExtensions
             return "./Scriptures/NT/NT.json";
         }
 
-        if (book.IsBookOfMormon())
-        {
-            return "./Scriptures/BM/BM.json";
-        }
-
-        if (book.IsDoctrineAndCovenants())
-        {
-            return "./Scriptures/DC/DC.json";
-        }
-
-        throw new Exception($"Invalid book: {book}");
+        return book.IsBookOfMormon()
+            ? "./Scriptures/BM/BM.json"
+            : book.IsDoctrineAndCovenants() ? "./Scriptures/DC/DC.json" : throw new Exception($"Invalid book: {book}");
     }
 
     public static string ToHtmlPath(this ScriptureBook book, bool isUnknownBookError = true)
@@ -323,163 +282,83 @@ public static class EnumExtensions
         }
 
         //if (book == ScriptureBook.NT) return "./Scriptures/NT/NT.html";
-        switch (book)
+        return book switch
         {
-            case ScriptureBook.NT_1Corinthians:
-                return "./Scriptures/NT/NT_1Corinthians.html";
-            case ScriptureBook.NT_1John:
-                return "./Scriptures/NT/NT_1John.html";
-            case ScriptureBook.NT_1Peter:
-                return "./Scriptures/NT/NT_1Peter.html";
-            case ScriptureBook.NT_1Thessalonians:
-                return "./Scriptures/NT/NT_1Thessalonians.html";
-            case ScriptureBook.NT_1Timothy:
-                return "./Scriptures/NT/NT_1Timothy.html";
-            case ScriptureBook.NT_2Corinthians:
-                return "./Scriptures/NT/NT_2Corinthians.html";
-            case ScriptureBook.NT_2John:
-                return "./Scriptures/NT/NT_2John.html";
-            case ScriptureBook.NT_2Peter:
-                return "./Scriptures/NT/NT_2Peter.html";
-            case ScriptureBook.NT_2Thessalonians:
-                return "./Scriptures/NT/NT_2Thessalonians.html";
-            case ScriptureBook.NT_2Timothy:
-                return "./Scriptures/NT/NT_2Timothy.html";
-            case ScriptureBook.NT_3John:
-                return "./Scriptures/NT/NT_3John.html";
-            case ScriptureBook.NT_About:
-                return "./Scriptures/NT/NT_About.html";
-            case ScriptureBook.NT_Acts:
-                return "./Scriptures/NT/NT_Acts.html";
-            case ScriptureBook.NT_Colossians:
-                return "./Scriptures/NT/NT_Colossians.html";
-            case ScriptureBook.NT_Ephesians:
-                return "./Scriptures/NT/NT_Ephesians.html";
-            case ScriptureBook.NT_Galatians:
-                return "./Scriptures/NT/NT_Galatians.html";
-            case ScriptureBook.NT_Hebrews:
-                return "./Scriptures/NT/NT_Hebrews.html";
-            case ScriptureBook.NT_James:
-                return "./Scriptures/NT/NT_James.html";
-            case ScriptureBook.NT_John:
-                return "./Scriptures/NT/NT_John.html";
-            case ScriptureBook.NT_Jude:
-                return "./Scriptures/NT/NT_Jude.html";
-            case ScriptureBook.NT_Luke:
-                return "./Scriptures/NT/NT_Luke.html";
-            case ScriptureBook.NT_Mark:
-                return "./Scriptures/NT/NT_Mark.html";
-            case ScriptureBook.NT_Matthew:
-                return "./Scriptures/NT/NT_Matthew.html";
-            case ScriptureBook.NT_Philemon:
-                return "./Scriptures/NT/NT_Philemon.html";
-            case ScriptureBook.NT_Philippians:
-                return "./Scriptures/NT/NT_Philippians.html";
-            case ScriptureBook.NT_Revelation:
-                return "./Scriptures/NT/NT_Revelation.html";
-            case ScriptureBook.NT_Romans:
-                return "./Scriptures/NT/NT_Romans.html";
-            case ScriptureBook.NT_Titus:
-                return "./Scriptures/NT/NT_Titus.html";
-            case ScriptureBook.OT1_About:
-                return "./Scriptures/OT1/OT1_About.html";
-            case ScriptureBook.OT1_DescendantsTerah:
-                return "./Scriptures/OT1/OT1_DescendantsTerah.html";
-            case ScriptureBook.OT1_Deuteronomy:
-                return "./Scriptures/OT1/OT1_Deuteronomy.html";
-            case ScriptureBook.OT1_Exodus:
-                return "./Scriptures/OT1/OT1_Exodus.html";
-            case ScriptureBook.OT1_Genesis:
-                return "./Scriptures/OT1/OT1_Genesis.html";
-            case ScriptureBook.OT1_Joshua:
-                return "./Scriptures/OT1/OT1_Joshua.html";
-            case ScriptureBook.OT1_Judges:
-                return "./Scriptures/OT1/OT1_Judges.html";
-            case ScriptureBook.OT1_Leviticus:
-                return "./Scriptures/OT1/OT1_Leviticus.html";
-            case ScriptureBook.OT1_MasoreticTimeline:
-                return "./Scriptures/OT1/OT1_MasoreticTimeline.html";
-            case ScriptureBook.OT1_Numbers:
-                return "./Scriptures/OT1/OT1_Numbers.html";
-            case ScriptureBook.OT1_Ruth:
-                return "./Scriptures/OT1/OT1_Ruth.html";
-            case ScriptureBook.OT1_SeptuagintTimeline:
-                return "./Scriptures/OT1/OT1_SeptuagintTimeline.html";
-            case ScriptureBook.OT2_1Chronicles:
-                return "./Scriptures/OT2/OT2_1Chronicles.html";
-            case ScriptureBook.OT2_1Kings:
-                return "./Scriptures/OT2/OT2_1Kings.html";
-            case ScriptureBook.OT2_1Samuel:
-                return "./Scriptures/OT2/OT2_1Samuel.html";
-            case ScriptureBook.OT2_2Chronicles:
-                return "./Scriptures/OT2/OT2_2Chronicles.html";
-            case ScriptureBook.OT2_2Kings:
-                return "./Scriptures/OT2/OT2_2Kings.html";
-            case ScriptureBook.OT2_2Samuel:
-                return "./Scriptures/OT2/OT2_2Samuel.html";
-            case ScriptureBook.OT2_About:
-                return "./Scriptures/OT2/OT2_About.html";
-            case ScriptureBook.OT2_ChronologyKings:
-                return "./Scriptures/OT2/OT2_ChronologyKings.html";
-            case ScriptureBook.OT2_Ecclesiastes:
-                return "./Scriptures/OT2/OT2_Ecclesiastes.html";
-            case ScriptureBook.OT2_Esther:
-                return "./Scriptures/OT2/OT2_Esther.html";
-            case ScriptureBook.OT2_Ezra:
-                return "./Scriptures/OT2/OT2_Ezra.html";
-            case ScriptureBook.OT2_Job:
-                return "./Scriptures/OT2/OT2_Job.html";
-            case ScriptureBook.OT2_Nehemiah:
-                return "./Scriptures/OT2/OT2_Nehemiah.html";
-            case ScriptureBook.OT2_Proverbs:
-                return "./Scriptures/OT2/OT2_Proverbs.html";
-            case ScriptureBook.OT2_Psalms:
-                return "./Scriptures/OT2/OT2_Psalms.html";
-            case ScriptureBook.OT3_About:
-                return "./Scriptures/OT3/OT3_About.html";
-            case ScriptureBook.OT3_Amos:
-                return "./Scriptures/OT3/OT3_Amos.html";
-            case ScriptureBook.OT3_ChronologyKings:
-                return "./Scriptures/OT3/OT3_ChronologyKings.html";
-            case ScriptureBook.OT3_Daniel:
-                return "./Scriptures/OT3/OT3_Daniel.html";
-            case ScriptureBook.OT3_Ezekiel:
-                return "./Scriptures/OT3/OT3_Ezekiel.html";
-            case ScriptureBook.OT3_Habakkuk:
-                return "./Scriptures/OT3/OT3_Habakkuk.html";
-            case ScriptureBook.OT3_Haggai:
-                return "./Scriptures/OT3/OT3_Haggai.html";
-            case ScriptureBook.OT3_Hosea:
-                return "./Scriptures/OT3/OT3_Hosea.html";
-            case ScriptureBook.OT3_Isaiah:
-                return "./Scriptures/OT3/OT3_Isaiah.html";
-            case ScriptureBook.OT3_Jeremiah:
-                return "./Scriptures/OT3/OT3_Jeremiah.html";
-            case ScriptureBook.OT3_Joel:
-                return "./Scriptures/OT3/OT3_Joel.html";
-            case ScriptureBook.OT3_Jonah:
-                return "./Scriptures/OT3/OT3_Jonah.html";
-            case ScriptureBook.OT3_Lamentations:
-                return "./Scriptures/OT3/OT3_Lamentations.html";
-            case ScriptureBook.OT3_Malachi:
-                return "./Scriptures/OT3/OT3_Malachi.html";
-            case ScriptureBook.OT3_Micah:
-                return "./Scriptures/OT3/OT3_Micah.html";
-            case ScriptureBook.OT3_Nahum:
-                return "./Scriptures/OT3/OT3_Nahum.html";
-            case ScriptureBook.OT3_Obadiah:
-                return "./Scriptures/OT3/OT3_Obadiah.html";
-            case ScriptureBook.OT3_Zechariah:
-                return "./Scriptures/OT3/OT3_Zechariah.html";
-            case ScriptureBook.OT3_Zephaniah:
-                return "./Scriptures/OT3/OT3_Zephaniah.html";
-        }
-
-        if (isUnknownBookError)
-        {
-            throw new Exception($"Invalid book: {book}");
-        }
-
-        return "";
+            ScriptureBook.NT_1Corinthians => "./Scriptures/NT/NT_1Corinthians.html",
+            ScriptureBook.NT_1John => "./Scriptures/NT/NT_1John.html",
+            ScriptureBook.NT_1Peter => "./Scriptures/NT/NT_1Peter.html",
+            ScriptureBook.NT_1Thessalonians => "./Scriptures/NT/NT_1Thessalonians.html",
+            ScriptureBook.NT_1Timothy => "./Scriptures/NT/NT_1Timothy.html",
+            ScriptureBook.NT_2Corinthians => "./Scriptures/NT/NT_2Corinthians.html",
+            ScriptureBook.NT_2John => "./Scriptures/NT/NT_2John.html",
+            ScriptureBook.NT_2Peter => "./Scriptures/NT/NT_2Peter.html",
+            ScriptureBook.NT_2Thessalonians => "./Scriptures/NT/NT_2Thessalonians.html",
+            ScriptureBook.NT_2Timothy => "./Scriptures/NT/NT_2Timothy.html",
+            ScriptureBook.NT_3John => "./Scriptures/NT/NT_3John.html",
+            ScriptureBook.NT_About => "./Scriptures/NT/NT_About.html",
+            ScriptureBook.NT_Acts => "./Scriptures/NT/NT_Acts.html",
+            ScriptureBook.NT_Colossians => "./Scriptures/NT/NT_Colossians.html",
+            ScriptureBook.NT_Ephesians => "./Scriptures/NT/NT_Ephesians.html",
+            ScriptureBook.NT_Galatians => "./Scriptures/NT/NT_Galatians.html",
+            ScriptureBook.NT_Hebrews => "./Scriptures/NT/NT_Hebrews.html",
+            ScriptureBook.NT_James => "./Scriptures/NT/NT_James.html",
+            ScriptureBook.NT_John => "./Scriptures/NT/NT_John.html",
+            ScriptureBook.NT_Jude => "./Scriptures/NT/NT_Jude.html",
+            ScriptureBook.NT_Luke => "./Scriptures/NT/NT_Luke.html",
+            ScriptureBook.NT_Mark => "./Scriptures/NT/NT_Mark.html",
+            ScriptureBook.NT_Matthew => "./Scriptures/NT/NT_Matthew.html",
+            ScriptureBook.NT_Philemon => "./Scriptures/NT/NT_Philemon.html",
+            ScriptureBook.NT_Philippians => "./Scriptures/NT/NT_Philippians.html",
+            ScriptureBook.NT_Revelation => "./Scriptures/NT/NT_Revelation.html",
+            ScriptureBook.NT_Romans => "./Scriptures/NT/NT_Romans.html",
+            ScriptureBook.NT_Titus => "./Scriptures/NT/NT_Titus.html",
+            ScriptureBook.OT1_About => "./Scriptures/OT1/OT1_About.html",
+            ScriptureBook.OT1_DescendantsTerah => "./Scriptures/OT1/OT1_DescendantsTerah.html",
+            ScriptureBook.OT1_Deuteronomy => "./Scriptures/OT1/OT1_Deuteronomy.html",
+            ScriptureBook.OT1_Exodus => "./Scriptures/OT1/OT1_Exodus.html",
+            ScriptureBook.OT1_Genesis => "./Scriptures/OT1/OT1_Genesis.html",
+            ScriptureBook.OT1_Joshua => "./Scriptures/OT1/OT1_Joshua.html",
+            ScriptureBook.OT1_Judges => "./Scriptures/OT1/OT1_Judges.html",
+            ScriptureBook.OT1_Leviticus => "./Scriptures/OT1/OT1_Leviticus.html",
+            ScriptureBook.OT1_MasoreticTimeline => "./Scriptures/OT1/OT1_MasoreticTimeline.html",
+            ScriptureBook.OT1_Numbers => "./Scriptures/OT1/OT1_Numbers.html",
+            ScriptureBook.OT1_Ruth => "./Scriptures/OT1/OT1_Ruth.html",
+            ScriptureBook.OT1_SeptuagintTimeline => "./Scriptures/OT1/OT1_SeptuagintTimeline.html",
+            ScriptureBook.OT2_1Chronicles => "./Scriptures/OT2/OT2_1Chronicles.html",
+            ScriptureBook.OT2_1Kings => "./Scriptures/OT2/OT2_1Kings.html",
+            ScriptureBook.OT2_1Samuel => "./Scriptures/OT2/OT2_1Samuel.html",
+            ScriptureBook.OT2_2Chronicles => "./Scriptures/OT2/OT2_2Chronicles.html",
+            ScriptureBook.OT2_2Kings => "./Scriptures/OT2/OT2_2Kings.html",
+            ScriptureBook.OT2_2Samuel => "./Scriptures/OT2/OT2_2Samuel.html",
+            ScriptureBook.OT2_About => "./Scriptures/OT2/OT2_About.html",
+            ScriptureBook.OT2_ChronologyKings => "./Scriptures/OT2/OT2_ChronologyKings.html",
+            ScriptureBook.OT2_Ecclesiastes => "./Scriptures/OT2/OT2_Ecclesiastes.html",
+            ScriptureBook.OT2_Esther => "./Scriptures/OT2/OT2_Esther.html",
+            ScriptureBook.OT2_Ezra => "./Scriptures/OT2/OT2_Ezra.html",
+            ScriptureBook.OT2_Job => "./Scriptures/OT2/OT2_Job.html",
+            ScriptureBook.OT2_Nehemiah => "./Scriptures/OT2/OT2_Nehemiah.html",
+            ScriptureBook.OT2_Proverbs => "./Scriptures/OT2/OT2_Proverbs.html",
+            ScriptureBook.OT2_Psalms => "./Scriptures/OT2/OT2_Psalms.html",
+            ScriptureBook.OT3_About => "./Scriptures/OT3/OT3_About.html",
+            ScriptureBook.OT3_Amos => "./Scriptures/OT3/OT3_Amos.html",
+            ScriptureBook.OT3_ChronologyKings => "./Scriptures/OT3/OT3_ChronologyKings.html",
+            ScriptureBook.OT3_Daniel => "./Scriptures/OT3/OT3_Daniel.html",
+            ScriptureBook.OT3_Ezekiel => "./Scriptures/OT3/OT3_Ezekiel.html",
+            ScriptureBook.OT3_Habakkuk => "./Scriptures/OT3/OT3_Habakkuk.html",
+            ScriptureBook.OT3_Haggai => "./Scriptures/OT3/OT3_Haggai.html",
+            ScriptureBook.OT3_Hosea => "./Scriptures/OT3/OT3_Hosea.html",
+            ScriptureBook.OT3_Isaiah => "./Scriptures/OT3/OT3_Isaiah.html",
+            ScriptureBook.OT3_Jeremiah => "./Scriptures/OT3/OT3_Jeremiah.html",
+            ScriptureBook.OT3_Joel => "./Scriptures/OT3/OT3_Joel.html",
+            ScriptureBook.OT3_Jonah => "./Scriptures/OT3/OT3_Jonah.html",
+            ScriptureBook.OT3_Lamentations => "./Scriptures/OT3/OT3_Lamentations.html",
+            ScriptureBook.OT3_Malachi => "./Scriptures/OT3/OT3_Malachi.html",
+            ScriptureBook.OT3_Micah => "./Scriptures/OT3/OT3_Micah.html",
+            ScriptureBook.OT3_Nahum => "./Scriptures/OT3/OT3_Nahum.html",
+            ScriptureBook.OT3_Obadiah => "./Scriptures/OT3/OT3_Obadiah.html",
+            ScriptureBook.OT3_Zechariah => "./Scriptures/OT3/OT3_Zechariah.html",
+            ScriptureBook.OT3_Zephaniah => "./Scriptures/OT3/OT3_Zephaniah.html",
+            _ => isUnknownBookError ? throw new Exception($"Invalid book: {book}") : "",
+        };
     }
 }

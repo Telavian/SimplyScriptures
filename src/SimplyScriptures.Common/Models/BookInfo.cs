@@ -9,43 +9,23 @@ public class BookInfo : IEquatable<BookInfo>
 
     public string HtmlPath { get; set; } = "";
     public string Html { get; set; } = "";
-    public ContentItem[] ContentItems { get; set; } = Array.Empty<ContentItem>();
+    public ContentItem[] ContentItems { get; set; } = [];
 
     #region Public Methods
 
     public bool Equals(BookInfo? other)
     {
-        if (ReferenceEquals(null, other))
-        {
-            return false;
-        }
-
-        if (ReferenceEquals(this, other))
-        {
-            return true;
-        }
-
-        return Book == other.Book;
+        return other is not null && (ReferenceEquals(this, other) || Book == other.Book);
     }
 
     public override bool Equals(object? obj)
     {
-        if (ReferenceEquals(null, obj))
+        if (obj is null)
         {
             return false;
         }
 
-        if (ReferenceEquals(this, obj))
-        {
-            return true;
-        }
-
-        if (obj.GetType() != this.GetType())
-        {
-            return false;
-        }
-
-        return Equals((BookInfo)obj);
+        return ReferenceEquals(this, obj) || obj.GetType() == GetType() && Equals((BookInfo)obj);
     }
 
     public override int GetHashCode()

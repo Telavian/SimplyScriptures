@@ -29,7 +29,7 @@ public class DictionaryWord
         var index = html.IndexOf(',');
         if (index != -1)
         {
-            wordRepresentation = html.Substring(0, index);
+            wordRepresentation = html[..index];
         }
 
         if (wordRepresentation.Contains(' '))
@@ -37,12 +37,9 @@ public class DictionaryWord
             wordRepresentation = Word;
         }
 
-        if (string.IsNullOrWhiteSpace(wordRepresentation))
-        {
-            return html;
-        }
-
-        return html
+        return string.IsNullOrWhiteSpace(wordRepresentation)
+            ? html
+            : html
             .ReplaceEntireWord(wordRepresentation, $"<strong>{wordRepresentation}</strong>");
     }
 

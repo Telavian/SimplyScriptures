@@ -9,20 +9,18 @@ namespace SimplyScriptures.Converters;
 
 public class SelectedMenuContentItemToColorConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        switch (value)
+        return value switch
         {
-            case bool b when b:
-                return Colors.Green;
-            default:
-                return App.IsDarkTheme
-                    ? Colors.White
-                    : Colors.Black;
-        }
+            bool b when b => Colors.Green,
+            _ => App.IsDarkTheme
+                                ? Colors.White
+                                : Colors.Black,
+        };
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

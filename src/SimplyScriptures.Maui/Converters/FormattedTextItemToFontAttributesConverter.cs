@@ -11,7 +11,7 @@ namespace SimplyScriptures.Converters;
 
 public class FormattedTextItemToFontAttributesConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         if (value == null || value is FormattedTextItem item == false)
         {
@@ -33,7 +33,7 @@ public class FormattedTextItemToFontAttributesConverter : IValueConverter
         return result;
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

@@ -14,30 +14,20 @@ public class TopicItemToColorConverter : IValueConverter
 {
     public object? Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value is null || value is ContentTopicItem item == false)
-        {
-            return value;
-        }
-
-        if (item.Book.IsOldTestament())
-        {
-            return Color.FromRgb(89, 74, 226);
-        }
-
-        switch (item.Book)
-        {
-            case ScriptureBook.NT:
-                return Color.FromRgb(33, 150, 243);
-            case ScriptureBook.BM:
-                return Color.FromRgb(0, 200, 83);
-            case ScriptureBook.DC:
-                return Colors.DarkGray;
-            default:
-                return Colors.White;
-        }
+        return value is null || value is ContentTopicItem item == false
+            ? value
+            : item.Book.IsOldTestament()
+            ? Color.FromRgb(89, 74, 226)
+            : item.Book switch
+            {
+                ScriptureBook.NT => Color.FromRgb(33, 150, 243),
+                ScriptureBook.BM => Color.FromRgb(0, 200, 83),
+                ScriptureBook.DC => Colors.DarkGray,
+                _ => Colors.White,
+            };
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

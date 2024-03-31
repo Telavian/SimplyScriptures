@@ -13,12 +13,10 @@ public class HighlightColorTemplateSelector : DataTemplateSelector
 
     protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
     {
-        switch (item)
+        return item switch
         {
-            case Color c when c.Equals(Colors.Transparent):
-                return TransparentTemplate;
-            default:
-                return ColorTemplate;
-        }
+            Color c when c.Equals(Colors.Transparent) => TransparentTemplate,
+            _ => ColorTemplate,
+        };
     }
 }

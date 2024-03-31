@@ -4,7 +4,7 @@ namespace SimplyScriptures.Converters;
 
 public class ScriptureBookToHtmlLinkConverter : IMultiValueConverter
 {
-    public object Convert(object[]? values, Type targetType, object parameter, CultureInfo culture)
+    public static object Convert(object[]? values, Type targetType, object parameter, CultureInfo culture)
     {
         var url = "";
 
@@ -20,7 +20,7 @@ public class ScriptureBookToHtmlLinkConverter : IMultiValueConverter
 
             if (fullPath.StartsWith("./"))
             {
-                url = fullPath.Substring(2);
+                url = fullPath[2..];
             }
         }
 
@@ -46,8 +46,8 @@ public class ScriptureBookToHtmlLinkConverter : IMultiValueConverter
         return url;
     }
 
-    public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+    public static object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
     {
-        return new [] { Binding.DoNothing };
+        return [Binding.DoNothing];
     }
 }

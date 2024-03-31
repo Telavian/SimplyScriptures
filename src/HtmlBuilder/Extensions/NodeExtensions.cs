@@ -1,6 +1,6 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Linq;
+using HtmlAgilityPack;
 
 namespace HtmlBuilder.Extensions;
 
@@ -38,46 +38,33 @@ public static class NodeExtensions
     public static bool HasClass(this HtmlNode node, params string[] classes)
     {
         return classes
-            .Any(c => node.HasClass(c));
+            .Any(node.HasClass);
     }
 
     public static bool CheckContainerNode(this HtmlNode node)
     {
         var name = node.Name;
-        return name == "block" || name == "quote";
+        return name is "block" or "quote";
     }
 
     public static bool CheckTopNode(this HtmlNode node)
     {
-        if (node.Name == "block" || node.Name == "book" || node.Name == "chapter" || node.Name.Contains("heading", StringComparison.OrdinalIgnoreCase))
-        {
-            return true;
-        }
-
-        switch (node.Name)
-        {
-            case "note":
-                return true;
-            default:
-                return false;
-        }
+        return node.Name == "block" || node.Name == "book" || node.Name == "chapter" || node.Name.Contains("heading", StringComparison.OrdinalIgnoreCase)
+|| node.Name switch
+            {
+                "note" => true,
+                _ => false,
+            };
     }
 
     public static bool CheckCombinableNode(this HtmlNode? last, HtmlNode newNode)
     {
-        if (last == null || last.Name != newNode.Name)
-        {
-            return false;
-        }
-
-        switch (last.Name)
-        {
-            case "dunder":
-            case "ddunder":
-                return true;
-            default:
-                return false;
-        }
+        return last != null && last.Name == newNode.Name
+&& last.Name switch
+            {
+                "dunder" or "ddunder" => true,
+                _ => false,
+            };
     }
 
     public static bool CheckMoreIndented(this HtmlNode newNode, HtmlNode last)
@@ -93,13 +80,11 @@ public static class NodeExtensions
         var padding = node.GetNodeAttribute("padding-left", "pt");
         var indent = node.GetNodeAttribute("text-indent", "pt");
 
-        switch (padding)
+        return padding switch
         {
-            case 0:
-                return 0;
-            default:
-                return padding + indent;
-        }
+            0 => 0,
+            _ => padding + indent,
+        };
     }
 
     public static int GetNodeAttribute(this HtmlNode node, string name, string unit)
@@ -109,11 +94,6 @@ public static class NodeExtensions
             .Replace($"{unit};", "")
             .Replace($"{unit}", "");
 
-        if (string.IsNullOrWhiteSpace(padding))
-        {
-            return 0;
-        }
-
-        return int.Parse(padding);
+        return string.IsNullOrWhiteSpace(padding) ? 0 : int.Parse(padding);
     }
 }

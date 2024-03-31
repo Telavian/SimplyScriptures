@@ -9,22 +9,14 @@ namespace SimplyScriptures.Converters;
 
 public class EnumToVisibilityConverter : IValueConverter
 {
-    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public static object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
-        if (value == null || value is Enum == false || parameter == null || parameter is Enum == false || value.GetType() != parameter.GetType())
-        {
-            return Visibility.Collapsed;
-        }
-
-        if (value?.ToString() == parameter?.ToString())
-        {
-            return Visibility.Visible;
-        }
-
-        return Visibility.Collapsed;
+        return value == null || (value is Enum) == false || parameter == null || (parameter is Enum) == false || value.GetType() != parameter.GetType()
+            ? Visibility.Collapsed
+            : (object)(value?.ToString() == parameter?.ToString() ? Visibility.Visible : Visibility.Collapsed);
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

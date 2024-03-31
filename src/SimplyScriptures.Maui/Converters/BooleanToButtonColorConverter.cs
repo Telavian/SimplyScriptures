@@ -21,7 +21,7 @@ public class BooleanToButtonColorConverter : IValueConverter
             : Color.FromRgb(244, 67, 54); // Red
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

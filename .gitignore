@@ -4,3 +4,5 @@
 
 /src/SimplyScriptures.Maui/.AndroidPublish.cmd
 /src/SimplyScriptures.Maui/.iOSPublish.cmd
+/src/.DotnetFormat.cmd
+/src/SimplyScriptures.Maui/simplyscriptures.keystore

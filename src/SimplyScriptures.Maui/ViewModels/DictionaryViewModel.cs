@@ -11,12 +11,12 @@ using SimplyScriptures.Pages;
 namespace SimplyScriptures.ViewModels;
 
 [SuppressMessage("ReSharper", "InconsistentNaming")]
-public class DictionaryViewModel : ViewModelBase
+public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 {
     #region Private Variables
 
-    private readonly IFileService _fileService;
-    private DictionaryWord[] _allLoadedWords = Array.Empty<DictionaryWord>();
+    private readonly IFileService _fileService = fileService;
+    private DictionaryWord[] _allLoadedWords = [];
 
     #endregion
 
@@ -36,7 +36,7 @@ public class DictionaryViewModel : ViewModelBase
 
     #region IsWordsInitializing
 
-    private bool _isWordsInitializing;
+    private readonly bool _isWordsInitializing;
 
     public bool IsWordsInitializing
     {
@@ -54,7 +54,7 @@ public class DictionaryViewModel : ViewModelBase
     {
         get => _WordsFilterText;
         set => SetProperty(ref _WordsFilterText, value,
-            async x => await FilterWordsAsync(x)
+            FilterWordsAsync
                 );
     }
 
@@ -64,19 +64,13 @@ public class DictionaryViewModel : ViewModelBase
 
     private AsyncRelayCommand? _showDictionaryMenuAsyncCommand;
 
-    public AsyncRelayCommand ShowDictionaryMenuAsyncCommand
-    {
-        get
-        {
-            return _showDictionaryMenuAsyncCommand ??= CreateAsyncCommand(() => ShowDictionaryMenuAsync(), "Unable to show menu");
-        }
-    }
+    public AsyncRelayCommand ShowDictionaryMenuAsyncCommand => _showDictionaryMenuAsyncCommand ??= CreateAsyncCommand(ShowDictionaryMenuAsync, "Unable to show menu");
 
     #endregion ShowDictionaryMenuAsyncCommand
 
     #region AllWords
 
-    private ListItem<DictionaryWord>[] _allWords = Array.Empty<ListItem<DictionaryWord>>();
+    private ListItem<DictionaryWord>[] _allWords = [];
 
     public ListItem<DictionaryWord>[] AllWords
     {
@@ -88,7 +82,7 @@ public class DictionaryViewModel : ViewModelBase
 
     #region SelectedWord
 
-    private ListItem<DictionaryWord>? _selectedWord;
+    private readonly ListItem<DictionaryWord>? _selectedWord;
 
     public ListItem<DictionaryWord>? SelectedWord
     {
@@ -102,24 +96,11 @@ public class DictionaryViewModel : ViewModelBase
 
     private AsyncRelayCommand<ListItem<DictionaryWord>>? _wordSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ListItem<DictionaryWord>> WordSelectedAsyncCommand
-    {
-        get
-        {
-            return _wordSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<DictionaryWord>>(item => WordSelectedAsync(item), "Unable to process word");
-        }
-    }
+    public AsyncRelayCommand<ListItem<DictionaryWord>> WordSelectedAsyncCommand => _wordSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<DictionaryWord>>(WordSelectedAsync, "Unable to process word");
 
     #endregion WordSelectedAsyncCommand
-
     #endregion
-
     #region Constructors
-
-    public DictionaryViewModel(IFileService fileService)
-    {
-        _fileService = fileService;
-    }
 
     #endregion
 
@@ -140,10 +121,7 @@ public class DictionaryViewModel : ViewModelBase
 
     private async Task ShowDictionaryMenuAsync()
     {
-        await DispatchAsync(() =>
-            {
-                IsMenuOpen = !IsMenuOpen;
-            })
+        await DispatchAsync(() => IsMenuOpen = !IsMenuOpen)
             ;
 
         if (AllWords.Length == 0 && WordsFilterText == "")
@@ -155,10 +133,7 @@ public class DictionaryViewModel : ViewModelBase
 
     private async Task InitializeWordsAsync()
     {
-        await DispatchAsync(() =>
-            {
-                IsWordsInitializing = true;
-            })
+        await DispatchAsync(() => IsWordsInitializing = true)
             ;
 
         await Task.Delay(250)
@@ -173,10 +148,7 @@ public class DictionaryViewModel : ViewModelBase
         await Task.Delay(250)
             ;
 
-        await DispatchAsync(() =>
-            {
-                IsWordsInitializing = false;
-            })
+        await DispatchAsync(() => IsWordsInitializing = false)
             ;
     }
 
@@ -194,10 +166,7 @@ public class DictionaryViewModel : ViewModelBase
             .Select(x => new ListItem<DictionaryWord>(x, x.Word))
             .ToArray();
 
-        await DispatchAsync(() =>
-            {
-                AllWords = wordItems;
-            })
+        await DispatchAsync(() => AllWords = wordItems)
         ;
 
         await SelectWordAsync()
@@ -213,10 +182,7 @@ public class DictionaryViewModel : ViewModelBase
 
         var item = AllWords.FirstOrDefault();
 
-        await DispatchAsync(() =>
-            {
-                SelectedWord = item;
-            })
+        await DispatchAsync(() => SelectedWord = item)
             ;
 
         if (item != null)
@@ -239,7 +205,7 @@ public class DictionaryViewModel : ViewModelBase
             using (var memStream = new MemoryStream(data))
             {
                 var words = await memStream.DeserializeFromJsonAsync<DictionaryWord[]>()
-                    .ConfigureAwait(false) ?? Array.Empty<DictionaryWord>();
+                    .ConfigureAwait(false) ?? [];
 
                 loadedWords
                     .AddRange(words);
@@ -249,9 +215,12 @@ public class DictionaryViewModel : ViewModelBase
                 ;
         }
 
-        _allLoadedWords = loadedWords
-            .OrderBy(x => x.Word)
-            .ToArray();
+        _allLoadedWords =
+        [
+            .. loadedWords
+                        .OrderBy(x => x.Word)
+,
+        ];
     }
 
     private async Task WordSelectedAsync(ListItem<DictionaryWord>? item)
