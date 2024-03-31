@@ -1,0 +1,1902 @@
+[
+  {
+    "IsVisible": true,
+    "Book": "OT3_About",
+    "Name": "About This Edition",
+    "XPath": "/html[1]/body[@book='OT3_About']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_ChronologyKings",
+    "Name": "Chronology of Kings",
+    "XPath": "/html[1]/body[@book='OT3_ChronologyKings']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Isaiah",
+    "Name": "Isaiah",
+    "XPath": "/html[1]/body[@book='OT3_Isaiah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 2",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 3",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 4",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 5",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 6",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 7",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 8",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 9",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 10",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 11",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 12",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 13",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 14",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 15",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 16",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 17",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 18",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 19",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 20",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 21",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 22",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 23",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 24",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 25",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 26",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 27",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 28",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 29",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 30",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 31",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 32",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 33",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 34",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 35",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 36",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 37",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 38",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 39",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 40",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[40]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 41",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[41]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 42",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[42]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 43",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[43]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 44",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[44]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 45",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[45]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 46",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[46]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 47",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[47]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 48",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[48]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 49",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[49]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 50",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[50]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 51",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[51]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 52",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[52]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 53",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[53]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 54",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[54]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 55",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[55]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 56",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[56]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 57",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[57]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 58",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[58]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 59",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[59]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 60",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[60]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 61",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[61]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 62",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[62]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 63",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[63]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 64",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[64]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 65",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[65]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Isaiah",
+        "Name": "Isaiah 66",
+        "XPath": "(/html[1]/body[@book='OT3_Isaiah']//chapter)[66]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Jeremiah",
+    "Name": "Jeremiah",
+    "XPath": "/html[1]/body[@book='OT3_Jeremiah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 2",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 3",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 4",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 5",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 6",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 7",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 8",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 9",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 10",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 11",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 12",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 13",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 14",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 15",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 16",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 17",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 18",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 19",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 20",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 21",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 22",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 23",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 24",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 25",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 26",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 27",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 28",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 29",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 30",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 31",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 32",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 33",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 34",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 35",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 36",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 37",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 38",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 39",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 40",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[40]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 41",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[41]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 42",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[42]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 43",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[43]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 44",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[44]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 45",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[45]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 46",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[46]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 47",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[47]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 48",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[48]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 49",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[49]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 50",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[50]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 51",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[51]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jeremiah",
+        "Name": "Jeremiah 52",
+        "XPath": "(/html[1]/body[@book='OT3_Jeremiah']//chapter)[52]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Lamentations",
+    "Name": "The Lamentations of Jeremiah",
+    "XPath": "/html[1]/body[@book='OT3_Lamentations']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Lamentations",
+        "Name": "Lamentations 1",
+        "XPath": "(/html[1]/body[@book='OT3_Lamentations']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Lamentations",
+        "Name": "Lamentations 2",
+        "XPath": "(/html[1]/body[@book='OT3_Lamentations']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Lamentations",
+        "Name": "Lamentations 3",
+        "XPath": "(/html[1]/body[@book='OT3_Lamentations']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Lamentations",
+        "Name": "Lamentations 4",
+        "XPath": "(/html[1]/body[@book='OT3_Lamentations']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Lamentations",
+        "Name": "Lamentations 5",
+        "XPath": "(/html[1]/body[@book='OT3_Lamentations']//chapter)[5]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Ezekiel",
+    "Name": "Ezekiel",
+    "XPath": "/html[1]/body[@book='OT3_Ezekiel']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 1",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 2",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 3",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 4",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 5",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 6",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 7",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 8",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 9",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 10",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 11",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 12",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 13",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 14",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 15",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 16",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 17",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 18",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 19",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 20",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 21",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 22",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 23",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 24",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 25",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 26",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 27",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 28",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 29",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 30",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 31",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 32",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 33",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 34",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 35",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 36",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 37",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 38",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 39",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 40",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[40]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 41",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[41]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 42",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[42]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 43",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[43]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 44",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[44]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 45",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[45]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 46",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[46]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 47",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[47]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Ezekiel",
+        "Name": "Ezekiel 48",
+        "XPath": "(/html[1]/body[@book='OT3_Ezekiel']//chapter)[48]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Daniel",
+    "Name": "Daniel",
+    "XPath": "/html[1]/body[@book='OT3_Daniel']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 1",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 2",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 3",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 4",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 5",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 6",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 7",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 8",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 9",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 10",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 11",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Daniel",
+        "Name": "Daniel 12",
+        "XPath": "(/html[1]/body[@book='OT3_Daniel']//chapter)[12]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Hosea",
+    "Name": "Hosea",
+    "XPath": "/html[1]/body[@book='OT3_Hosea']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 1",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 2",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 3",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 4",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 5",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 6",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 7",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 8",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 9",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 10",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 11",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 12",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 13",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Hosea",
+        "Name": "Hosea 14",
+        "XPath": "(/html[1]/body[@book='OT3_Hosea']//chapter)[14]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Joel",
+    "Name": "Joel",
+    "XPath": "/html[1]/body[@book='OT3_Joel']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Joel",
+        "Name": "Joel 1",
+        "XPath": "(/html[1]/body[@book='OT3_Joel']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Joel",
+        "Name": "Joel 2",
+        "XPath": "(/html[1]/body[@book='OT3_Joel']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Joel",
+        "Name": "Joel 3",
+        "XPath": "(/html[1]/body[@book='OT3_Joel']//chapter)[3]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Amos",
+    "Name": "Amos",
+    "XPath": "/html[1]/body[@book='OT3_Amos']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 1",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 2",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 3",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 4",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 5",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 6",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 7",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 8",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Amos",
+        "Name": "Amos 9",
+        "XPath": "(/html[1]/body[@book='OT3_Amos']//chapter)[9]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Obadiah",
+    "Name": "Obadiah",
+    "XPath": "/html[1]/body[@book='OT3_Obadiah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Obadiah",
+        "Name": "Obadiah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Obadiah']//chapter)[1]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Jonah",
+    "Name": "Jonah",
+    "XPath": "/html[1]/body[@book='OT3_Jonah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jonah",
+        "Name": "Jonah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Jonah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jonah",
+        "Name": "Jonah 2",
+        "XPath": "(/html[1]/body[@book='OT3_Jonah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jonah",
+        "Name": "Jonah 3",
+        "XPath": "(/html[1]/body[@book='OT3_Jonah']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Jonah",
+        "Name": "Jonah 4",
+        "XPath": "(/html[1]/body[@book='OT3_Jonah']//chapter)[4]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Micah",
+    "Name": "Micah",
+    "XPath": "/html[1]/body[@book='OT3_Micah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 2",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 3",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 4",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 5",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 6",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Micah",
+        "Name": "Micah 7",
+        "XPath": "(/html[1]/body[@book='OT3_Micah']//chapter)[7]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Nahum",
+    "Name": "Nahum",
+    "XPath": "/html[1]/body[@book='OT3_Nahum']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Nahum",
+        "Name": "Nahum 1",
+        "XPath": "(/html[1]/body[@book='OT3_Nahum']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Nahum",
+        "Name": "Nahum 2",
+        "XPath": "(/html[1]/body[@book='OT3_Nahum']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Nahum",
+        "Name": "Nahum 3",
+        "XPath": "(/html[1]/body[@book='OT3_Nahum']//chapter)[3]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Habakkuk",
+    "Name": "Habakkuk",
+    "XPath": "/html[1]/body[@book='OT3_Habakkuk']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Habakkuk",
+        "Name": "Habakkuk 1",
+        "XPath": "(/html[1]/body[@book='OT3_Habakkuk']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Habakkuk",
+        "Name": "Habakkuk 2",
+        "XPath": "(/html[1]/body[@book='OT3_Habakkuk']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Habakkuk",
+        "Name": "Habakkuk 3",
+        "XPath": "(/html[1]/body[@book='OT3_Habakkuk']//chapter)[3]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Zephaniah",
+    "Name": "Zephaniah",
+    "XPath": "/html[1]/body[@book='OT3_Zephaniah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zephaniah",
+        "Name": "Zephaniah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Zephaniah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zephaniah",
+        "Name": "Zephaniah 2",
+        "XPath": "(/html[1]/body[@book='OT3_Zephaniah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zephaniah",
+        "Name": "Zephaniah 3",
+        "XPath": "(/html[1]/body[@book='OT3_Zephaniah']//chapter)[3]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Haggai",
+    "Name": "Haggai",
+    "XPath": "/html[1]/body[@book='OT3_Haggai']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Haggai",
+        "Name": "Haggai 1",
+        "XPath": "(/html[1]/body[@book='OT3_Haggai']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Haggai",
+        "Name": "Haggai 2",
+        "XPath": "(/html[1]/body[@book='OT3_Haggai']//chapter)[2]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Zechariah",
+    "Name": "Zechariah",
+    "XPath": "/html[1]/body[@book='OT3_Zechariah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 1",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 2",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 3",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 4",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 5",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 6",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 7",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 8",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 9",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 10",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 11",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 12",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 13",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Zechariah",
+        "Name": "Zechariah 14",
+        "XPath": "(/html[1]/body[@book='OT3_Zechariah']//chapter)[14]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT3_Malachi",
+    "Name": "Malachi",
+    "XPath": "/html[1]/body[@book='OT3_Malachi']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT3_Malachi",
+        "Name": "Malachi 1",
+        "XPath": "(/html[1]/body[@book='OT3_Malachi']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Malachi",
+        "Name": "Malachi 2",
+        "XPath": "(/html[1]/body[@book='OT3_Malachi']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Malachi",
+        "Name": "Malachi 3",
+        "XPath": "(/html[1]/body[@book='OT3_Malachi']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT3_Malachi",
+        "Name": "Malachi 4",
+        "XPath": "(/html[1]/body[@book='OT3_Malachi']//chapter)[4]",
+        "Children": []
+      }
+    ]
+  }
+]

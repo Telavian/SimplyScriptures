@@ -1,0 +1,219 @@
+﻿@page "/dictionary"
+
+@using SimplyScriptures.Common.Models
+@using SimplyScriptures.Common.Extensions
+@using SimplyScriptures.Common.Enums
+@using System.Web
+@inherits DictionaryPageBase
+
+<PageTitle>
+    Simply Scriptures - @(SelectedWord?.Word)
+</PageTitle>
+
+@{
+    var invertStyle = IsDisplayInverted
+        ? "-webkit-filter: invert();"
+        : "";
+
+    var backgroundColor = IsDisplayInverted
+        ? "background-color: #171717;"
+        : "background-color: white;";
+
+    var invertedSelection = IsDisplayInverted
+        ? "::selection { background: #FF6C6C !important; }"
+        : "";
+}
+
+<style>
+    .sidemenu .mud-input-label-outlined {
+        background-color: #DEDEDE !important;
+    }
+
+    .clearable-text-field button.mud-icon-button {
+        margin-right: 50px;
+    }
+
+    .appBarMenu .mud-input {
+        color: white;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .mud-dialog {
+        background-color: @(IsDisplayInverted ? "#282828" : "lightgray");
+        color: @(IsDisplayInverted ? "white" : "black");
+    }
+
+    blockquote {
+        margin-left: 2em;
+    }
+
+    @invertedSelection
+</style>
+
+@{
+    var appBarStyle = IsDisplayInverted
+        ? "background-color: #212121 !important;"
+        : "";
+
+    var headerBorderColor = IsDisplayInverted
+        ? "lightgray"
+        : "darkgray";
+
+/*    var sideMenuStyle = IsDisplayInverted
+        ? "border-style: solid none none none; border-color: #2c2c2c; border-width: 1px; margin-top: -1px;"
+        : "border-style: solid none none none; border-color: lightgray; border-width: 1px;";*/
+}
+
+<div style="display: grid; grid-template-rows: auto 1fr; grid-template-columns: auto 1fr; height: 100%; width: 100%; overflow: hidden; @backgroundColor">
+        <div style="grid-row: 1; grid-column: 3; width: 100%; border-style: none none solid none; border-color: @headerBorderColor; border-width: 1px;">
+            @{
+                var headerButtonStyle = IsDisplayInverted
+                    ? "color: white !important;"
+                    : "";                
+            }
+
+            <MudAppBar Fixed="true" Color="Color.Transparent" Style="@appBarStyle">
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Inherit" Href="/"
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ShowHomeAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Go home</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.EventNote" Color="Color.Inherit" 
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ToggleDictionaryVisibilityAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Toggle dictionary menu</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.MenuBook" Color="Color.Inherit" Href="/display"
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ShowScripturesAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Show scriptures</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.Topic" Color="Color.Inherit" Href="/topics"
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ShowTopicsAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Show topics</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudSpacer />
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudToggleIconButton Icon="@Icons.Material.Filled.Lightbulb" Title="Light" Color="Color.Warning"
+                                             ToggledIcon="@Icons.Material.Outlined.Lightbulb" ToggledTitle="Light" ToggledColor="Color.Inherit"
+                                             Style="@headerButtonStyle"
+                                             @bind-Toggled="IsDisplayInverted" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Toggle display mode</div>
+                    </TooltipContent>
+                </MudTooltip>
+            </MudAppBar>
+        </div>    
+
+    <div style="grid-row: 2; grid-column: 1; overflow: auto; @invertStyle  @(ConvertBooleanToDisplay(IsDictionaryOpen));">
+        <MudPaper Elevation="5" Outlined="true" Square="true" Style="width:300px; min-height: 100%; background-color: #DEDEDE;">
+            <MudNavMenu Bordered="true" Rounded="true">
+                <div style="display:grid; grid-template-rows: auto auto 1fr; grid-template-columns: 1fr auto;">
+                    <div style="grid-row: 1; grid-column: 1 /span 2; align-items: center;">
+                        <MudText Typo="Typo.h6" Style="grid-column: 1; margin-left: 5px;">Words</MudText>                    
+                    </div>
+                    <MudDivider Style="grid-row: 2; grid-column: 1 /span 2;" />
+
+                    @if (IsWordsLoading)
+                    {
+                        <div style="grid-row: 2; grid-column: 1 /span 2;">
+                            <div style="display: flex; align-items: center; justify-content: center; margin-top: 25px;">
+                                <h5>Initializing Words</h5>
+                            </div>
+                            <div style="display: flex; align-items: center; justify-content: center; margin-left: 15px; margin-right: 15px;">
+                                <MudProgressLinear Color="Color.Primary" Indeterminate="true" />
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="grid-row: 2; grid-column: 1 /span 2;">
+                            <div style="margin-left: 5px; margin-right: 5px; margin-bottom: 15px;">
+                                <MudTextField Variant="Variant.Outlined" Immediate="true" Clearable="true"
+                                              Label="Filter" DebounceInterval="25" Adornment="Adornment.End"
+                                              AdornmentIcon="@Icons.Material.Rounded.FilterList" AdornmentColor="Color.Info"
+                                              Class="sidemenu"
+                                              @bind-Value="WordsFilterText"/>
+                            </div>
+
+                            <MudSimpleTable Hover="true" Style="background-color: transparent !important;">
+                                <tbody>                        
+                                    @foreach (var item in FilteredWords)
+                                    {                                                                        
+                                        var selectedStyle = item.Word == SelectedWord?.Word
+                                            ? $"color: green; font-size: 18px; {invertStyle}"
+                                            : "";                                
+                                        
+                                        <tr @onclick="@(() => WordSelectedAsyncCommand!(item))">
+                                            <td>
+                                                <a href="/dictionary?w=@(HttpUtility.UrlEncode(item.Word))">
+                                                    <div style="font-size: 16px; font-weight: bold; @selectedStyle">
+                                                        @item.Word
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </MudSimpleTable>
+                        </div>
+                    }
+                </div>                
+            </MudNavMenu>            
+        </MudPaper>
+    </div>
+
+    <div style="grid-row: 2; grid-column: 2; overflow: auto;">
+        <div style="display:grid; grid-template-rows: auto 1fr; grid-template-columns: 1fr; height: 100%;">
+            <div style="grid-row: 1; font-size: 28px; justify-self: center; font-weight: bold; margin-top: 25px; @invertStyle">
+                <a href="/dictionary?w=@(HttpUtility.UrlEncode(SelectedWord?.Word))">
+                    @SelectedWord?.Word
+                </a>
+            </div>
+
+            <div style="grid-row: 2; grid-column: 1; margin-left: 25px; margin-right: 25px; margin-top: 25px; height: 100%; @invertStyle">
+                @(ProcessItemText(SelectedWord))
+            </div>
+        </div>
+    </div>
+</div>

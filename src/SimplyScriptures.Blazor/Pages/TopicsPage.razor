@@ -1,0 +1,381 @@
+﻿@page "/topics"
+
+@using SimplyScriptures.Common.Models
+@using SimplyScriptures.Common.Extensions
+@using SimplyScriptures.Common.Enums
+@using System.Web
+@inherits TopicsPageBase
+
+<PageTitle>
+    Simply Scriptures - @(SelectedTopic?.Topic)
+</PageTitle>
+
+@{
+    var invertStyle = IsDisplayInverted
+        ? "-webkit-filter: invert();"
+        : "";
+
+    var backgroundColor = IsDisplayInverted
+        ? "background-color: #171717;"
+        : "background-color: white;";
+
+    var invertedSelection = IsDisplayInverted
+        ? "::selection { background: #FF6C6C !important; }"
+        : "";
+}
+
+<style>
+    .sidemenu .mud-input-label-outlined {
+        background-color: #DEDEDE !important;
+    }
+
+    .clearable-text-field button.mud-icon-button {
+        margin-right: 50px;
+    }
+
+    .appBarMenu .mud-input {
+        color: white;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .mud-dialog {
+        background-color: @(IsDisplayInverted ? "#282828" : "lightgray");
+        color: @(IsDisplayInverted ? "white" : "black");
+    }
+
+    blockquote {
+        margin-left: 2em;
+    }
+
+    @invertedSelection
+</style>
+
+@{
+    var appBarStyle = IsDisplayInverted
+        ? "background-color: #212121 !important;"
+        : "";
+
+    var headerBorderColor = IsDisplayInverted
+        ? "lightgray"
+        : "darkgray";
+
+/*    var sideMenuStyle = IsDisplayInverted
+        ? "border-style: solid none none none; border-color: #2c2c2c; border-width: 1px; margin-top: -1px;"
+        : "border-style: solid none none none; border-color: lightgray; border-width: 1px;";*/
+}
+
+<div style="display: grid; grid-template-rows: auto 1fr; grid-template-columns: auto 1fr; height: 100%; width: 100%; overflow: hidden; @backgroundColor">
+        <div style="grid-row: 1; grid-column: 3; width: 100%; border-style: none none solid none; border-color: @headerBorderColor; border-width: 1px;">
+            @{
+                var headerButtonStyle = IsDisplayInverted
+                    ? "color: white !important;"
+                    : "";                
+            }
+
+            <MudAppBar Fixed="true" Color="Color.Transparent" Style="@appBarStyle">
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Inherit" Href="/"
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ShowHomeAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Go home</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.Topic" Color="Color.Inherit" 
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ToggleTopicsVisibilityAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Toggle topics menu</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.MenuBook" Color="Color.Inherit" Href="/display"
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ShowScripturesAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Show scriptures</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.EventNote" Color="Color.Inherit" Href="/dictionary" 
+                                       Edge="Edge.Start" Style="@headerButtonStyle"
+                                       OnClick="@(() => ShowDictionaryAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Show dictionary</div>
+                    </TooltipContent>
+                </MudTooltip>
+
+                <MudSpacer />
+
+                <MudTooltip>
+                    <ChildContent>
+                        <MudToggleIconButton Icon="@Icons.Material.Filled.Lightbulb" Title="Light" Color="Color.Warning"
+                                             ToggledIcon="@Icons.Material.Outlined.Lightbulb" ToggledTitle="Light" ToggledColor="Color.Inherit"
+                                             Style="@headerButtonStyle"
+                                             @bind-Toggled="IsDisplayInverted" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Toggle display mode</div>
+                    </TooltipContent>
+                </MudTooltip>
+            </MudAppBar>
+        </div>    
+
+    <div style="grid-row: 2; grid-column: 1; overflow: auto; @invertStyle  @(ConvertBooleanToDisplay(IsTopicsOpen));">
+        <MudPaper Elevation="5" Outlined="true" Square="true" Style="width:300px; min-height: 100%; background-color: #DEDEDE;">
+            <MudNavMenu Bordered="true" Rounded="true">
+                <div style="display: grid; grid-template-columns: 1fr auto; align-items: center;">
+                    <MudText Typo="Typo.h6" Style="grid-column: 1; margin-left: 5px;">Topics</MudText>
+
+                    @{
+                        var buttonStyle = $"grid-column: 2; {invertStyle}";
+                    }
+
+                    <MudTooltip>
+                        <ChildContent>
+                            <MudIconButton style="@buttonStyle" Icon="@Icons.Material.Filled.LibraryAdd" Color="Color.Primary"
+                                           OnClick="@(() => SuggestNewTopicAsyncCommand!())" />
+                        </ChildContent>
+
+                        <TooltipContent>
+                            <div>Suggest new topic</div>
+                        </TooltipContent>
+                    </MudTooltip>
+                </div>
+                <MudDivider />
+
+                @if (IsTopicsLoading)
+                {
+                    <div style="display: flex; align-items: center; justify-content: center; margin-top: 25px;">
+                        <h5>Initializing Topics</h5>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; margin-left: 15px; margin-right: 15px;">
+                        <MudProgressLinear Color="Color.Primary" Indeterminate="true" />
+                    </div>
+                }
+                else
+                {
+                    <div style="margin-left: 5px; margin-right: 5px; margin-bottom: 15px;">
+                        <MudTextField T="string" Variant="Variant.Outlined" Immediate="true" Clearable="true"
+                                      Label="Filter" DebounceInterval="25" Adornment="Adornment.End"
+                                      AdornmentIcon="@Icons.Material.Rounded.FilterList" AdornmentColor="Color.Info"
+                                      Class="sidemenu"
+                                      @bind-Value="TopicsFilterText"/>
+                    </div>
+
+                    <MudList Clickable="true" Color="Color.Primary" Style="overflow: hidden;"
+                             @bind-SelectedValue="SelectedTopicValue">
+                        @foreach (var item in FilteredTopics)
+                        {
+                            if (item == null)
+                            {
+                                continue;
+                            }
+
+                            var selectedStyle = item.Topic == SelectedTopic?.Topic
+                                ? $"color: green; font-size: 18px; {invertStyle}"
+                                : "";
+
+                            <MudListItem OnClick="@(() => ContentTopicSelectedAsyncCommand!(item))">
+                                @{
+                                    var visibleCount = (item?.Items ?? Array.Empty<ContentTopicItem>())
+                                        .Count(x => CheckVisibleItem(x));
+                                }
+
+                                <a href="/topics?t=@(HttpUtility.UrlEncode(item!.Topic))">
+                                    <div style="font-size: 16px; font-weight: bold; @selectedStyle">
+                                        @($"{item.Topic} ({visibleCount})")
+                                    </div>                                
+                                </a>
+                            </MudListItem>
+                        }
+                    </MudList>
+                }
+            </MudNavMenu>            
+        </MudPaper>
+    </div>
+
+    <div style="grid-row: 2; grid-column: 2; overflow: auto;">
+        <div style="display:grid; grid-template-rows: auto auto auto 1fr; grid-template-columns: 1fr; height: 100%;">
+            <div style="grid-row: 1; grid-column: 1; justify-self: center; margin-left: 25px; margin-right: 25px; margin-top: 15px; margin-bottom: 15px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr auto auto">
+                    <MudButton Variant="Variant.Filled" Style="grid-column: 1; min-width: 150px; "
+                               StartIcon="@(IsOTVisible ? Icons.Material.Filled.Check : Icons.Material.Filled.Cancel)"
+                               Color="@(IsOTVisible ? Color.Success : Color.Error)"
+                               OnClick="@(() => IsOTVisible = !IsOTVisible)">
+                        Old Testament    
+                    </MudButton>
+
+                    <MudButton Variant="Variant.Filled" Style="grid-column: 2; margin-left: 15px; min-width: 150px; "
+                               StartIcon="@(IsNTVisible ? Icons.Material.Filled.Check : Icons.Material.Filled.Cancel)"
+                               Color="@(IsNTVisible ? Color.Success : Color.Error)"
+                               OnClick="@(() => IsNTVisible = !IsNTVisible)">
+                        New Testament
+                    </MudButton>
+
+                    <MudButton Variant="Variant.Filled" Style="grid-column: 3; margin-left: 15px; min-width: 150px; "
+                               StartIcon="@(IsBMVisible ? Icons.Material.Filled.Check : Icons.Material.Filled.Cancel)"
+                               Color="@(IsBMVisible ? Color.Success : Color.Error)"
+                               OnClick="@(() => IsBMVisible = !IsBMVisible)">
+                        Book of Mormon
+                    </MudButton>
+
+                    <MudButton Variant="Variant.Filled" Style="grid-column: 4; margin-left: 15px; min-width: 150px; "
+                               StartIcon="@(IsDCVisible ? Icons.Material.Filled.Check : Icons.Material.Filled.Cancel)"
+                               Color="@(IsDCVisible ? Color.Success : Color.Error)"
+                               OnClick="@(() => IsDCVisible = !IsDCVisible)">
+                        Doctrine & Covenants
+                    </MudButton>
+
+                    <MudTooltip>
+                        <ChildContent>
+                            <MudIconButton style="grid-column: 6;" Icon="@Icons.Material.Filled.LibraryAdd" Color="Color.Primary" 
+                                           OnClick="@(() => SuggestNewTopicItemAsyncCommand!())" />
+                        </ChildContent>
+
+                        <TooltipContent>
+                            <div>Suggest new topic item</div>
+                        </TooltipContent>
+                    </MudTooltip>
+                </div>
+            </div>
+
+            <div style="grid-row: 2; font-size: 28px; justify-self: center; font-weight: bold; @invertStyle">
+                <a href="/topics?t=@(HttpUtility.UrlEncode(SelectedTopic?.Topic))">
+                    @SelectedTopic?.Topic
+                </a>
+            </div>
+
+            <div style="grid-row: 3; margin-left: 25px; margin-right: 25px; margin-bottom: 25px; @invertStyle">
+                <MudTextField Variant="Variant.Outlined" Immediate="true" Clearable="true"
+                              Label="Filter" DebounceInterval="25" Adornment="Adornment.End"
+                              AdornmentIcon="@Icons.Material.Rounded.FilterList" AdornmentColor="Color.Info"
+                              Class="sidemenu" Style="background-color: #DEDEDE;"
+                              @bind-Value="TopicItemsFilterText"/>
+            </div>
+
+            <div style="grid-row: 4; grid-column: 1; margin-left: 25px; margin-right: 25px; height: 100%; @invertStyle">
+                @{
+                    var currentItems = (SelectedTopic?.Items ?? Array.Empty<ContentTopicItem>())
+                        .Where(x => CheckVisibleItem(x))
+                        .ToArray();
+                }
+
+                @if (currentItems.Length == 0)
+                {
+                    <div style="display:grid; grid-template-rows: 1fr auto 1fr; height: 100%; justify-content: center;">
+                        <h2 style="grid-row: 2;">No items for that topic</h2>
+                    </div>
+                }
+                else
+                {
+                    <div style="display:grid; grid-template-rows: repeat(@currentItems.Length, auto);">
+                        @{
+                            var index = 1;
+                        }
+
+
+                        @for (var itemIndex = 0; itemIndex < currentItems.Length; itemIndex++)
+                        {
+                            var item = currentItems[itemIndex];
+                            var url = @BuildItemUrl(item);
+
+                            var borderColor = IsDisplayInverted
+                                ? "darkgray"
+                                : "gray";
+
+                            var borderStyle = itemIndex != currentItems.Length - 1
+                                ? $"border-bottom: 1px solid {borderColor}"
+                                : "";
+
+                            <div style="grid-row: @(index++); margin-bottom: 15px; @borderStyle">
+                                <div style="display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; justify-content: start; filter: contrast(2); margin-bottom: 15px;">
+                                    <div style="grid-row: 1; grid-column: 1; font-size: 18px; margin-left: 5px;">@ProcessItemText(item)</div>
+                                    <div style="grid-row: 2; grid-column: 1; justify-self: end; font-size: 16px; font-weight: bold;">
+                                        <a href="@url">
+                                            - @item.Verse
+                                        </a>
+                                    </div>
+
+                                    <div style="grid-row: 1/span 2; grid-column: 2; align-self: start">
+                                        <div style="display: grid; grid-template-rows: auto auto">
+                                            <MudTooltip>
+                                                <ChildContent>
+                                                    <MudIconButton Style="grid-row: 1" Icon="@Icons.Material.Filled.ContentCopy"
+                                                                   OnClick="@(() => CopyTopicItemToClipboardAsyncCommand!(item))"/>
+                                                </ChildContent>
+
+                                                <TooltipContent>
+                                                    <div>Copy item to clipboard</div>
+                                                </TooltipContent>
+                                            </MudTooltip>
+
+                                            @{
+                                                var localInvertStyle = IsDisplayInverted && item.Book.IsDoctrineAndCovenants()
+                                ? ""
+                                : invertStyle;
+                                            }
+
+                                            @{
+                                                var tagButtonStyle = $"grid-row: 2; margin-left: 5px; {localInvertStyle}; ";
+                                            }
+
+                                            @{
+                                                var variant = IsDisplayInverted
+                                ? Variant.Outlined
+                                : Variant.Filled;
+
+                            if (IsDisplayInverted && item.Book.IsOldTestament())
+                            {
+                                tagButtonStyle += "color: #8573ff; border: 1px solid #8573ff;";
+                            }
+                                            }
+
+                                            <MudTooltip>
+                                                <ChildContent>
+                                                    <MudChip Variant="@variant"
+                                                             Color="@BuildBookColor(item.Book)"
+                                                             Style="@tagButtonStyle">
+                                                        @item.Book.ToAbbreviatedDisplayString()
+                                                    </MudChip>
+                                                </ChildContent>
+
+                                                <TooltipContent>
+                                                    <div>@item.Book.ToDisplayString()</div>
+                                                </TooltipContent>
+                                            </MudTooltip>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+            }
+            </div>
+        </div>
+    </div>
+</div>

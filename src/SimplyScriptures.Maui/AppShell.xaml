@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SimplyScriptures.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:SimplyScriptures.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    NavBarIsVisible="false" TabBarIsVisible="false" FlyoutItemIsVisible="False">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="false" IsVisible="false" />
+    </Shell.BackButtonBehavior>
+
+    <ShellContent 
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:MainPage}"
+        Route="MainPage" />
+
+</Shell>

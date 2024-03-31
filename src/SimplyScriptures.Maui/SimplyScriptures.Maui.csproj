@@ -1,0 +1,168 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimplyScriptures</RootNamespace>
+    <AssemblyName>SimplyScriptures</AssemblyName>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCssItems>false</EnableDefaultCssItems>
+    <Nullable>enable</Nullable>
+
+		<!-- Display name -->
+    <ApplicationTitle>Simply Scriptures</ApplicationTitle>
+
+		<!-- App Identifier -->
+    <ApplicationId>com.simplyscriptures.app</ApplicationId>
+		<ApplicationIdGuid>33662316-3D89-4D4E-A2E1-BCBF1B5F34C5</ApplicationIdGuid>
+
+		<!-- Versions -->
+    <ApplicationDisplayVersion>3.0.1</ApplicationDisplayVersion>
+    <ApplicationVersion>21</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">31.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+  <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>simplyscriptures.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyAlias>key</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>53AB0F9340B535577B8CCE1AE6A66FC3A6E8721C19A3012A20BFA37AF41272DA</AndroidSigningKeyPass>
+    <AndroidSigningStorePass>53AB0F9340B535577B8CCE1AE6A66FC3A6E8721C19A3012A20BFA37AF41272DA</AndroidSigningStorePass>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+    <CodesignKey>iPhone Distribution: Patrick Morris (J8XMH3XT7Q)</CodesignKey>
+    <CodesignProvision>Simply Scriptures</CodesignProvision>
+    <ArchiveOnBuild>true</ArchiveOnBuild>
+    <TcpPort>58181</TcpPort>
+    <ResolveAssemblyConflicts>true</ResolveAssemblyConflicts>
+    <ErrorReport>prompt</ErrorReport>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <UseInterpreter>true</UseInterpreter>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchExtraArgs>--linkskip=SimplyScriptures.Common</MtouchExtraArgs>
+  </PropertyGroup>
+
+  <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <EnableSGenConc>True</EnableSGenConc>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+    <EnableSGenConc>True</EnableSGenConc>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <ResolveAssemblyConflicts>true</ResolveAssemblyConflicts>
+  </PropertyGroup>-->
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
+    <MtouchLink>SdkOnly</MtouchLink>
+    <AndroidEnableSGenConcurrent>False</AndroidEnableSGenConcurrent>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
+    <MtouchLink>SdkOnly</MtouchLink>
+    <AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <AndroidEnableSGenConcurrent>False</AndroidEnableSGenConcurrent>
+    <PublishTrimmed>False</PublishTrimmed>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|x64'">
+    <MtouchLink>None</MtouchLink>
+    <AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <AndroidEnableSGenConcurrent>False</AndroidEnableSGenConcurrent>
+    <PublishTrimmed>False</PublishTrimmed>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- App Icon -->    
+    <MauiIcon Include="Resources\appicon.png">
+      <BaseSize>300,300</BaseSize>
+    </MauiIcon>
+    <MauiIcon Include="Resources\AppIcon\ss_icon.png" BaseSize="300,300" />
+
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\Splash\ss_splash.png" BaseSize="300,300" Color="#000000" />
+
+    <!-- Images -->
+    <MauiImage Include="Resources\Images\*" />
+
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\Fonts\*" />
+
+    <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+    <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.3" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="7.0.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+    <PackageReference Include="Telerik.UI.for.Maui" Version="5.1.0" />
+    <PackageReference Include="ThrottleDebounce" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimplyScriptures.Common\SimplyScriptures.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\DictionaryPage.xaml.cs">
+      <DependentUpon>DictionaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TopicsPage.xaml.cs">
+      <DependentUpon>TopicsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\DisplayPage.xaml.cs">
+      <DependentUpon>DisplayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiXaml Update="Pages\DictionaryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\TopicsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\DisplayPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Raw\fonts\" />
+    <Folder Include="Resources\Raw\Images\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionSimplyScripturesMauiHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSimplyScripturesMauiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+</Project>

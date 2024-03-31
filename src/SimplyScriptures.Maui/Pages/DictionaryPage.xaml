@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:SimplyScriptures.Converters"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             xmlns:interfaces="clr-namespace:SimplyScriptures.Models.Interfaces"
+             xmlns:viewModels="clr-namespace:SimplyScriptures.ViewModels"
+             xmlns:models="clr-namespace:SimplyScriptures.Common.Models;assembly=SimplyScriptures.Common"
+             xmlns:localModels="clr-namespace:SimplyScriptures.Models"
+             x:Class="SimplyScriptures.Pages.DictionaryPage" 
+             x:DataType="viewModels:DictionaryViewModel"
+             NavigationPage.HasBackButton="false">
+    <ContentPage.Resources>
+        <converters:EnumToVisibilityConverter x:Key="EnumToVisibilityConverter" />
+        <converters:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+        <converters:ScriptureBookToDisplayConverter x:Key="ScriptureBookToDisplayConverter" />
+        <converters:BooleanToInvertedBooleanConverter x:Key="BooleanToInvertedBooleanConverter" />
+        <converters:ScriptureBookToHtmlLinkConverter x:Key="ScriptureBookToHtmlLinkConverter" />
+        <converters:ColorToVisibilityConverter x:Key="ColorToVisibilityConverter" />
+        <converters:ColorToInvertedVisibilityConverter x:Key="ColorToInvertedVisibilityConverter" />
+        <converters:SelectedItemToColorConverter x:Key="SelectedItemToColorConverter" />
+        <converters:BooleanToButtonColorConverter x:Key="BooleanToButtonColorConverter" />
+        <converters:BooleanToButtonImageConverter x:Key="BooleanToButtonImageConverter" />
+        <converters:ScriptureBookToColorConverter x:Key="ScriptureBookToColorConverter" />
+        <converters:ScriptureBookToTextColorConverter x:Key="ScriptureBookToTextColorConverter" />
+        <converters:ScriptureBookToAbbreviationConverter x:Key="ScriptureBookToAbbreviationConverter" />
+        <converters:ArrayItemsToInvertedVisibilityConverter x:Key="ArrayItemsToInvertedVisibilityConverter" />
+        <converters:ArrayItemsToVisibilityConverter x:Key="ArrayItemsToVisibilityConverter" />
+        <converters:IndentationLevelToMarginConverter x:Key="IndentationLevelToMarginConverter" />
+        <converters:DictionaryWordToFormattedTextConverter x:Key="DictionaryWordToFormattedTextConverter" />
+
+        <DataTemplate x:Key="WordTemplate" x:DataType="interfaces:IListItem">
+            <Grid RowDefinitions="Auto, *"
+                  MaximumWidthRequest="290" HorizontalOptions="Fill" 
+                  VerticalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                <telerik:RadButton FontSize="18" FontAttributes="Bold" LineBreakMode="WordWrap"
+                       BackgroundColor="Transparent" BorderColor="Transparent" 
+                       BorderThickness="0" BorderWidth="0" HorizontalContentAlignment="Start"
+                       HorizontalOptions="Fill" VerticalOptions="Center"
+                       Text="{Binding Path=Text}"
+                       TextColor="{Binding Path=IsSelected, Converter={StaticResource SelectedItemToColorConverter}}"
+                       Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:DictionaryViewModel}}, Path=WordSelectedAsyncCommand}" 
+                       CommandParameter="{Binding Path=.}"/>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <Grid x:Name="MainGrid" BackgroundColor="{AppThemeBinding Dark=#1A1D21, Light=#f2f0ee}"> <!-- Light={StaticResource Gray100} -->
+        <Grid ColumnDefinitions="*" RowDefinitions="Auto, *">
+            <Border Grid.Column="0" Grid.Row="0" HeightRequest="64" Margin="-2, 0, -2, 0"
+                    StrokeThickness="1" BackgroundColor="{AppThemeBinding Dark=#1A1D21, Light=#f2f0ee}"
+                    Stroke="{AppThemeBinding Dark={StaticResource Gray600}, Light={StaticResource Gray300}}">
+
+                <!-- Header -->
+                <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" 
+                      HorizontalOptions="Start">
+                    <ImageButton Grid.Column="0" 
+                                 VerticalOptions="Center" Margin="15, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent"
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=home_light.png, Dark=home_dark.png}" 
+                                 Command="{Binding Path=ShowHomeAsyncCommand}"/>
+                    <ImageButton Grid.Column="1" 
+                                 VerticalOptions="Center" Margin="5, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent"
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=dictionary_light.png, Dark=dictionary_dark.png}" 
+                                 Command="{Binding Path=ShowDictionaryMenuAsyncCommand}"/>
+                    <ImageButton Grid.Column="2" 
+                                 VerticalOptions="Center" Margin="5, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent" 
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=book_light.png, Dark=book_dark.png}" 
+                                 Command="{Binding Path=ShowDisplayAsyncCommand}"/>
+                    <ImageButton Grid.Column="3" 
+                                 VerticalOptions="Center" Margin="5, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent" 
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=list_light.png, Dark=list_dark.png}" 
+                                 Command="{Binding Path=ShowTopicsAsyncCommand}"/>
+                 </Grid>
+            </Border>
+
+            <telerik:RadSideDrawer Grid.Column="0" Grid.Row="1"
+                                   AreGesturesEnabled="True" DrawerLocation="Left"
+                                   DrawerLength="350" DrawerTransitionType="SlideInOnTop" 
+                                   TouchTargetThreshold="-25"
+                                   IsOpen="{Binding Path=IsMenuOpen, Mode=TwoWay}">
+
+                <!-- Dictionary Side Menu -->
+                <telerik:RadSideDrawer.DrawerContent>
+                    <Grid Margin="5" 
+                          VerticalOptions="Fill"
+                          BackgroundColor="{AppThemeBinding Dark=#2E333A, Light={StaticResource Gray300}}">
+                        <Grid RowDefinitions="Auto, Auto, *">
+                            <Label Grid.Row="0" Text="Words" FontSize="16" FontAttributes="Bold"
+                                   HorizontalOptions="Start" Margin="5, 0, 0, 0" />
+
+                            <Grid Grid.Row="1" Margin="5, 10, 5, 0"
+                                  IsVisible="{Binding Path=IsWordsInitializing, Converter={StaticResource BooleanToInvertedBooleanConverter}}">
+                                <telerik:RadBorder Grid.Column="0" 
+                                                   MinimumWidthRequest="300" BorderThickness="1" CornerRadius="5"
+                                                   BorderBrush="{AppThemeBinding Dark={StaticResource Gray200}, Light={StaticResource Gray600}}">
+                                    <Entry Placeholder="Filter" IsTextPredictionEnabled="True"
+                                           IsSpellCheckEnabled="True" ReturnType="Default"
+                                           HorizontalOptions="Fill" ClearButtonVisibility="Never"  
+                                           Margin="{OnPlatform Android='5, 0, 5, 0', Default='0, 0, 0, 0'}"
+                                           FontSize="{OnPlatform WinUI=24, Default=16}"
+                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                           PlaceholderColor="{AppThemeBinding Dark={StaticResource Gray300}, Light={StaticResource Gray600}}"                                                  
+                                           Text="{Binding Path=WordsFilterText}" />
+                                </telerik:RadBorder>
+                            </Grid>
+
+                            <Grid Grid.Row="2" 
+                                  RowDefinitions="Auto, Auto" VerticalOptions="Center"
+                                  IsVisible="{Binding Path=IsWordsInitializing}">
+                                <Label Grid.Row="0" Margin="0, 25, 0, 0" HorizontalOptions="Center" FontSize="24">
+                                    Initializing Dictionary
+                                </Label>
+
+                                <ActivityIndicator Grid.Row="1" 
+                                                   Margin="0, 15, 0, 0" HorizontalOptions="Center"
+                                                   IsRunning="True" />
+                            </Grid>
+
+
+                            <ScrollView Grid.Row="2" HorizontalScrollBarVisibility="Never"
+                                        Margin="0, 15, 0, 0"
+                                        IsVisible="{Binding Path=IsWordsInitializing, Converter={StaticResource BooleanToInvertedBooleanConverter}}">
+                                <VerticalStackLayout Margin="5, 0, 0, 0"
+                                     BindableLayout.ItemsSource="{Binding Path=AllWords}"
+                                     BindableLayout.ItemTemplate="{StaticResource WordTemplate}" />
+                            </ScrollView>
+                        </Grid>
+                    </Grid>
+                </telerik:RadSideDrawer.DrawerContent>
+
+                <!-- Main Page -->
+                <telerik:RadSideDrawer.MainContent>
+                    <ScrollView>
+                        <Grid RowDefinitions="Auto, *" Margin="25, 25, 25, 25">
+                            <Label Grid.Row="0" FontSize="36"
+                                   Text="{Binding Path=SelectedWord.Item.Word, FallbackValue=''}" />
+
+                            <Label Grid.Row="1"
+                                   TextType="Html" FontSize="18"
+                                   Text="{Binding Path=SelectedWord.Item, Converter={StaticResource DictionaryWordToFormattedTextConverter}}"></Label>
+
+                            <!--<HorizontalStackLayout Grid.Row="1"
+                                BindableLayout.ItemsSource="{Binding Path=SelectedWord.Item, Converter={StaticResource DictionaryWordToFormattedTextConverter}}"
+                                BindableLayout.ItemTemplate="{StaticResource DictionaryWordTextTemplate}" />-->
+                        </Grid>
+                    </ScrollView>
+                </telerik:RadSideDrawer.MainContent>
+            </telerik:RadSideDrawer>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:SimplyScriptures.Converters"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             xmlns:interfaces="clr-namespace:SimplyScriptures.Models.Interfaces"
+             xmlns:viewModels="clr-namespace:SimplyScriptures.ViewModels"
+             xmlns:models="clr-namespace:SimplyScriptures.Common.Models;assembly=SimplyScriptures.Common"
+             xmlns:commonModels="clr-namespace:SimplyScriptures.Common.Html.Models;assembly=SimplyScriptures.Common"
+             x:Class="SimplyScriptures.Pages.TopicsPage" 
+             x:DataType="viewModels:TopicsViewModel"
+             NavigationPage.HasBackButton="false">
+    <ContentPage.Resources>
+        <converters:EnumToVisibilityConverter x:Key="EnumToVisibilityConverter" />
+        <converters:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+        <converters:ScriptureBookToDisplayConverter x:Key="ScriptureBookToDisplayConverter" />
+        <converters:BooleanToInvertedBooleanConverter x:Key="BooleanToInvertedBooleanConverter" />
+        <converters:ScriptureBookToHtmlLinkConverter x:Key="ScriptureBookToHtmlLinkConverter" />
+        <converters:ColorToVisibilityConverter x:Key="ColorToVisibilityConverter" />
+        <converters:ColorToInvertedVisibilityConverter x:Key="ColorToInvertedVisibilityConverter" />
+        <converters:SelectedItemToColorConverter x:Key="SelectedItemToColorConverter" />
+        <converters:BooleanToButtonColorConverter x:Key="BooleanToButtonColorConverter" />
+        <converters:BooleanToButtonImageConverter x:Key="BooleanToButtonImageConverter" />
+        <converters:TopicItemToFormattedTextConverter x:Key="TopicItemToFormattedTextConverter" />
+        <converters:FormattedTextItemToFontAttributesConverter x:Key="FormattedTextItemToFontAttributesConverter" />
+        <converters:ScriptureBookToColorConverter x:Key="ScriptureBookToColorConverter" />
+        <converters:ScriptureBookToTextColorConverter x:Key="ScriptureBookToTextColorConverter" />
+        <converters:ScriptureBookToAbbreviationConverter x:Key="ScriptureBookToAbbreviationConverter" />
+        <converters:TopicItemToDividerVisibilityConverter x:Key="TopicItemToDividerVisibilityConverter" />
+        <converters:ArrayItemsToInvertedVisibilityConverter x:Key="ArrayItemsToInvertedVisibilityConverter" />
+        <converters:ArrayItemsToVisibilityConverter x:Key="ArrayItemsToVisibilityConverter" />
+        <converters:IndentationLevelToMarginConverter x:Key="IndentationLevelToMarginConverter" />
+
+        <DataTemplate x:Key="TopicTemplate" x:DataType="interfaces:IListItem">
+            <Grid RowDefinitions="*" ColumnDefinitions="*"
+                  MaximumWidthRequest="290" HorizontalOptions="Fill" 
+                  VerticalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+
+                <telerik:RadButton Grid.Row="0" FontSize="18" FontAttributes="Bold" HorizontalContentAlignment="Start"
+                                   BorderThickness="0" BorderColor="Transparent" BorderWidth="0"
+                                   BackgroundColor="Transparent" LineBreakMode="WordWrap"
+                                   HorizontalOptions="Start" VerticalOptions="Center"
+                                   Text="{Binding Path=Text}"
+                                   TextColor="{Binding Path=IsSelected, Converter={StaticResource SelectedItemToColorConverter}}"
+                                   Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}, Path=TopicSelectedAsyncCommand}" 
+                                   CommandParameter="{Binding Path=.}" />
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TopicItemTextTemplate" x:DataType="commonModels:FormattedTextItem">
+            <Label FontSize="18" LineBreakMode="WordWrap"
+                   FontAttributes="{Binding Path=., Converter={StaticResource FormattedTextItemToFontAttributesConverter}}"
+                   Margin="{Binding Path=IndentationLevel, Converter={StaticResource IndentationLevelToMarginConverter}}"
+                   Text="{Binding Path=Text}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="TopicItemTemplate" x:DataType="models:ContentTopicItem">
+            <Grid RowDefinitions="*, Auto, Auto" ColumnDefinitions="*" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout Grid.Row="0" Grid.Column="0"
+                                     BindableLayout.ItemsSource="{Binding Path=., Converter={StaticResource TopicItemToFormattedTextConverter}}"
+                                     BindableLayout.ItemTemplate="{StaticResource TopicItemTextTemplate}" />
+
+                <Grid Grid.Row="1" Grid.Column="0" 
+                      ColumnDefinitions="*, Auto, Auto" RowDefinitions="Auto" Margin="0, 25, 0, 0">
+                    <telerik:RadButton Grid.Column="0" HorizontalOptions="Start" LineBreakMode="HeadTruncation"
+                                       FontAttributes="Bold" FontSize="20"
+                                       BorderColor="Transparent" BorderWidth="0"
+                                       BackgroundColor="Transparent"
+                                       TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                       Text="{Binding Path=Verse}"
+                                       Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}, Path=TopicItemSelectedAsyncCommand}" 
+                                       CommandParameter="{Binding Path=.}" />
+
+                    <ImageButton Grid.Column="2" VerticalOptions="Center"
+                                 IsOpaque="True" BackgroundColor="Transparent"
+                                 HeightRequest="32" WidthRequest="32" Margin="5, 0, 0, 0"
+                                 Source="{AppThemeBinding Light=copy_light.png, Dark=copy_dark.png}" 
+                                 Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}, Path=CopyTopicItemAsyncCommand}"
+                                 CommandParameter="{Binding Path=.}"/>
+
+                    <telerik:RadButton Grid.Column="1" VerticalOptions="Center" Margin="10, 0, 0, 0"
+                                       CornerRadius="15" FontAttributes="Bold"
+                                       HeightRequest="32" HorizontalOptions="Center"
+                                       BackgroundColor="{Binding Path=Book, Converter={StaticResource ScriptureBookToColorConverter}}"
+                                       Text="{Binding Path=Book, Converter={StaticResource ScriptureBookToAbbreviationConverter}}"
+                                       TextColor="{Binding Path=Book, Converter={StaticResource ScriptureBookToTextColorConverter}}" />
+                </Grid>
+                <!--<telerik:RadButton Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                   HorizontalOptions="End" LineBreakMode="HeadTruncation"
+                                   Margin="0, 25, 0, 0" FontAttributes="Bold" FontSize="20"
+                                   BorderColor="Transparent" BorderWidth="0"
+                                   BackgroundColor="Transparent"
+                                   TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                   Text="{Binding Path=Verse}"
+                                   Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}, Path=TopicItemSelectedAsyncCommand}" 
+                                   CommandParameter="{Binding Path=.}" />-->
+
+                <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                        Margin="0, 10, 0, 10"
+                        StrokeThickness="1" HeightRequest="3"
+                        Stroke="{AppThemeBinding Light=LightGray, Dark=DarkGray}">
+                    <Border.IsVisible>
+                        <MultiBinding Converter="{StaticResource TopicItemToDividerVisibilityConverter}">
+                            <Binding Path="." />
+                            <Binding Source="{RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}" Path="AllTopicItems" />
+                        </MultiBinding>
+                    </Border.IsVisible>
+                    <!-- Used only for the border -->
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <Grid x:Name="MainGrid" BackgroundColor="{AppThemeBinding Dark=#1A1D21, Light=#f2f0ee}">
+        <!-- Light={StaticResource Gray100} -->
+        <Grid ColumnDefinitions="*" RowDefinitions="Auto, *">
+            <Border Grid.Column="0" Grid.Row="0" HeightRequest="64" Margin="-2, 0, -2, 0"
+                    StrokeThickness="1"
+                    BackgroundColor="{AppThemeBinding Dark=#1A1D21, Light=#f2f0ee}"
+                    Stroke="{AppThemeBinding Dark={StaticResource Gray600}, Light={StaticResource Gray300}}">
+
+                <!-- Header -->
+                <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" 
+                      HorizontalOptions="Start">
+                    <ImageButton Grid.Column="0" 
+                                 VerticalOptions="Center" Margin="15, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent"
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=home_light.png, Dark=home_dark.png}" 
+                                 Command="{Binding Path=ShowHomeAsyncCommand}"/>
+                    <ImageButton Grid.Column="1" 
+                                 VerticalOptions="Center" Margin="5, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent"
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=list_light.png, Dark=list_dark.png}" 
+                                 Command="{Binding Path=ShowTopicsMenuAsyncCommand}"/>
+                    <ImageButton Grid.Column="2" 
+                                 VerticalOptions="Center" Margin="5, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent" 
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=book_light.png, Dark=book_dark.png}" 
+                                 Command="{Binding Path=ShowDisplayAsyncCommand}"/>
+                    <ImageButton Grid.Column="3" 
+                                 VerticalOptions="Center" Margin="5, 0, 0, 0"
+                                 IsOpaque="True" BackgroundColor="Transparent" 
+                                 HeightRequest="32" WidthRequest="32"
+                                 Source="{AppThemeBinding Light=dictionary_light.png, Dark=dictionary_dark.png}" 
+                                 Command="{Binding Path=ShowDictionaryAsyncCommand}"/>
+                </Grid>
+            </Border>
+
+            <telerik:RadSideDrawer Grid.Column="0" Grid.Row="1"
+                                   AreGesturesEnabled="True" DrawerLocation="Left"
+                                   DrawerLength="350" DrawerTransitionType="SlideInOnTop" 
+                                   TouchTargetThreshold="-25"
+                                   IsOpen="{Binding Path=IsMenuOpen, Mode=TwoWay}">
+
+                <!-- Topics Side Menu -->
+                <telerik:RadSideDrawer.DrawerContent>
+                    <Grid Margin="5" 
+                          VerticalOptions="Fill"
+                          BackgroundColor="{AppThemeBinding Dark=#2E333A, Light={StaticResource Gray300}}">
+                        <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*">
+                            <Label Grid.Row="0" Text="Topics" FontSize="16" FontAttributes="Bold"
+                                   HorizontalOptions="Start" Margin="5, 0, 0, 0" />
+
+                            <Grid Grid.Row="1" Margin="5, 10, 5, 0"
+                                  IsVisible="{Binding Path=IsTopicsInitializing, Converter={StaticResource BooleanToInvertedBooleanConverter}}">
+                                <telerik:RadBorder Grid.Column="0" 
+                                                   MinimumWidthRequest="300" BorderThickness="1" CornerRadius="5"
+                                                   BorderBrush="{AppThemeBinding Dark={StaticResource Gray200}, Light={StaticResource Gray600}}">
+                                    <Entry Placeholder="Filter" IsTextPredictionEnabled="True"
+                                           IsSpellCheckEnabled="True" ReturnType="Default"
+                                           HorizontalOptions="Fill" ClearButtonVisibility="Never"  
+                                           Margin="{OnPlatform Android='5, 0, 5, 0', Default='0, 0, 0, 0'}"
+                                           FontSize="{OnPlatform WinUI=24, Default=16}"
+                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                           PlaceholderColor="{AppThemeBinding Dark={StaticResource Gray300}, Light={StaticResource Gray600}}"                                                  
+                                           Text="{Binding Path=TopicsFilterText}" />
+                                </telerik:RadBorder>
+                            </Grid>
+
+                            <Grid Grid.Row="2" 
+                                  RowDefinitions="Auto, Auto" ColumnDefinitions="*"
+                                  VerticalOptions="Center"
+                                  IsVisible="{Binding Path=IsTopicsInitializing}">
+                                <Label Grid.Row="0" Margin="0, 25, 0, 0" HorizontalOptions="Center" FontSize="24">
+                                    Initializing Topics
+                                </Label>
+
+                                <ActivityIndicator Grid.Row="1" 
+                                                   Margin="0, 15, 0, 0" HorizontalOptions="Center"
+                                                   IsRunning="True" />
+                            </Grid>
+
+
+                            <ScrollView Grid.Row="2" HorizontalScrollBarVisibility="Never"
+                                        Margin="0, 15, 0, 0"
+                                        IsVisible="{Binding Path=IsTopicsInitializing, Converter={StaticResource BooleanToInvertedBooleanConverter}}">
+                                <VerticalStackLayout Margin="5, 0, 0, 0"
+                                     BindableLayout.ItemsSource="{Binding Path=AllTopics}"
+                                     BindableLayout.ItemTemplate="{StaticResource TopicTemplate}" />
+                            </ScrollView>
+                        </Grid>
+                    </Grid>
+                </telerik:RadSideDrawer.DrawerContent>
+
+                <!-- Main Page -->
+                <telerik:RadSideDrawer.MainContent>
+                    <Grid RowDefinitions="Auto, Auto, Auto, *" ColumnDefinitions="*">
+                        <Grid Grid.Row="0" Grid.Column="0" 
+                                  ColumnDefinitions="Auto, *" RowDefinitions="Auto">
+                            <Label Grid.Column="0" 
+                                       Margin="25, 5, 0, 5" FontSize="16" 
+                                       VerticalOptions="Center" VerticalTextAlignment="Center"
+                                       Text="Filter:" />
+
+                            <telerik:RadWrapLayout Grid.Column="1" VerticalOptions="Center"
+                                                       Orientation="Horizontal">
+                                <telerik:RadButton CornerRadius="15" Text="OT" TextColor="White"
+                                                       Margin="5, 5, 5, 5" FontAttributes="Bold" MinimumHeightRequest="48" 
+                                                       HorizontalOptions="Center" VerticalOptions="Center"
+                                                       WidthRequest="{OnPlatform WinUI=128, Default=64}" 
+                                                       BackgroundColor="{Binding Path=IsOTVisible, Converter={StaticResource BooleanToButtonColorConverter}}"
+                                                       Command="{Binding Path=ToggleOTVisibilityAsyncCommand}">
+                                </telerik:RadButton>
+
+                                <telerik:RadButton CornerRadius="15" Text="NT" TextColor="White"
+                                                       Margin="5, 5, 5, 5" FontAttributes="Bold" MinimumHeightRequest="48" 
+                                                       HorizontalOptions="Center" VerticalOptions="Center"
+                                                       WidthRequest="{OnPlatform WinUI=128, Default=64}" 
+                                                       BackgroundColor="{Binding Path=IsNTVisible, Converter={StaticResource BooleanToButtonColorConverter}}"
+                                                       Command="{Binding Path=ToggleNTVisibilityAsyncCommand}">
+                                </telerik:RadButton>
+
+                                <telerik:RadButton CornerRadius="15" Text="BM" TextColor="White"
+                                                       Margin="5, 5, 5, 5" FontAttributes="Bold" MinimumHeightRequest="48" 
+                                                       HorizontalOptions="Center" VerticalOptions="Center"
+                                                       WidthRequest="{OnPlatform WinUI=128, Default=64}" 
+                                                       BackgroundColor="{Binding Path=IsBMVisible, Converter={StaticResource BooleanToButtonColorConverter}}"
+                                                       Command="{Binding Path=ToggleBMVisibilityAsyncCommand}">
+                                </telerik:RadButton>
+
+                                <telerik:RadButton CornerRadius="15" Text="DC" TextColor="White"
+                                                       Margin="5, 5, 5, 5" FontAttributes="Bold" MinimumHeightRequest="48" 
+                                                       HorizontalOptions="Center" VerticalOptions="Center"
+                                                       WidthRequest="{OnPlatform WinUI=128, Default=64}" 
+                                                       BackgroundColor="{Binding Path=IsDCVisible, Converter={StaticResource BooleanToButtonColorConverter}}"
+                                                       Command="{Binding Path=ToggleDCVisibilityAsyncCommand}">
+                                </telerik:RadButton>
+                            </telerik:RadWrapLayout>
+                        </Grid>
+
+                        <Label Grid.Row="1" Grid.Column="0" 
+                                   Margin="25, 15, 25, 0" FontSize="24" FontAttributes="Bold" 
+                                   HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                                   MaxLines="100"
+                                   Text="{Binding Path=SelectedTopic.Item.Topic, FallbackValue=''}" />
+
+                        <telerik:RadBorder Grid.Row="2" Grid.Column="0" 
+                                               HorizontalOptions="Fill" BorderThickness="1" CornerRadius="5" Margin="25, 5, 25, 0"
+                                               BorderBrush="{AppThemeBinding Dark={StaticResource Gray200}, Light={StaticResource Gray600}}">
+                            <Entry Placeholder="Filter" IsTextPredictionEnabled="True"
+                                       IsSpellCheckEnabled="True" ReturnType="Default"
+                                       HorizontalOptions="Fill" ClearButtonVisibility="Never"  
+                                       Margin="{OnPlatform Android='5, 0, 5, 0', Default='0, 0, 0, 0'}"
+                                       FontSize="{OnPlatform WinUI=24, Default=16}"
+                                       TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                       PlaceholderColor="{AppThemeBinding Dark={StaticResource Gray300}, Light={StaticResource Gray600}}"                                                  
+                                       Text="{Binding Path=TopicItemsFilterText}" />
+                        </telerik:RadBorder>
+
+                        <ScrollView Grid.Row="3" Grid.Column="0"
+                                        Margin="5, 15, 5, 15" Padding="25, 0, 25, 0">
+                            <VerticalStackLayout
+                                    BindableLayout.ItemsSource="{Binding Path=AllTopicItems}"
+                                    BindableLayout.ItemTemplate="{StaticResource TopicItemTemplate}" 
+                                    IsVisible="{Binding Path=AllTopicItems, Converter={StaticResource ArrayItemsToVisibilityConverter}}"/>
+                        </ScrollView>
+
+                        <Label Grid.Row="3" Grid.Column="0"
+                                   Margin="25, 25, 25, 25"
+                                   Text="No items for that topic"
+                                   FontSize="24" FontAttributes="Bold" 
+                                   HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                                   VerticalOptions="Center" VerticalTextAlignment="Center"
+                                   IsVisible="{Binding Path=AllTopicItems, Converter={StaticResource ArrayItemsToInvertedVisibilityConverter}}"/>
+                    </Grid>
+                </telerik:RadSideDrawer.MainContent>
+            </telerik:RadSideDrawer>
+        </Grid>
+    </Grid>
+</ContentPage>

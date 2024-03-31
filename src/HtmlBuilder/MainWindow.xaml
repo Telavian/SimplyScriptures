@@ -1,0 +1,92 @@
+﻿<Window x:Class="HtmlBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HtmlBuilder"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainWindow }">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0"
+                   Height="25" VerticalAlignment="Center">File:</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="0" 
+                 Margin="5, 0, 0, 0" Height="25"
+                 Text="{Binding Path=FilePath}" />
+        <Button Grid.Row="0" Grid.Column="2"
+                Height="25" Width="75" Content="Load" 
+                Click="LoadButton_OnClick"/>
+        <Button Grid.Row="0" Grid.Column="3"
+                Height="25" Width="75" Content="Save" 
+                Click="SaveButton_OnClick"/>
+        <Button Grid.Row="0" Grid.Column="4"
+                Height="25" Width="75" Content="Process" 
+                Click="ProcessButton_OnClick"/>
+
+        <telerik:RadSyntaxEditor x:Name="SyntaxEditor" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" 
+                                 Margin="0 5 0 0" BorderThickness="1" BorderBrush="Black" Background="#2B2B2B"
+                                 IsWordWrapEnabled="True" AcceptsReturn="True" AllowScaling="True" Visibility="Visible"
+                                 IsSelectionEnabled="True" IsReadOnly="False">
+            <telerik:RadContextMenu.ContextMenu>
+                <telerik:RadContextMenu x:Name="ContextMenu">
+                    <telerik:RadMenuItem Header="Paste" Click="PasteTagButton_OnClick" />
+                    <telerik:RadMenuSeparatorItem />
+                    <telerik:RadMenuItem Header="Book" Click="BookTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Chapter" Click="ChapterTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Verse" Click="VerseTagButton_OnClick" />
+                    <telerik:RadMenuSeparatorItem />
+                    <telerik:RadMenuItem Header="Heading" Click="HeadingTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Block" Click="BlockTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Break" Click="BreakTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Break Indent" Click="BreakIndentTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Indent" Click="IndentTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Quote" Click="QuoteTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Border" Click="BorderTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Box" Click="BoxTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Reference" Click="ReferenceTagButton_OnClick" />
+                    <telerik:RadMenuSeparatorItem />
+                    <telerik:RadMenuItem Header="Under" Click="UnderTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Dashed Under" Click="DashedUnderTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Dotted Dashed Under" Click="DottedDashedUnderTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Italic" Click="ItalicTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Bold" Click="BoldTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Dot" Click="DotTagButton_OnClick" />
+                    <telerik:RadMenuSeparatorItem />
+                    <telerik:RadMenuItem Header="Note" Click="NoteTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Original" Click="OriginalTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Printer" Click="PrinterTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="Manuscript" Click="ManuscriptTagButton_OnClick" />
+                    <telerik:RadMenuItem Header="JST" Click="JSTTagButton_OnClick" />
+                    <telerik:RadMenuSeparatorItem />
+                    <telerik:RadMenuGroupItem Header="Section">
+                        <telerik:RadMenuItem Header="Header" Click="SectionHeaderTagButton_OnClick" />
+                        <telerik:RadMenuItem Header="Number" Click="SectionNumberTagButton_OnClick" />
+                        <telerik:RadMenuItem Header="Topic" Click="SectionTopicTagButton_OnClick" />
+                        <telerik:RadMenuItem Header="Time" Click="SectionTimeTagButton_OnClick" />
+                        <telerik:RadMenuItem Header="Reference 1" Click="SectionReference1TagButton_OnClick" />
+                        <telerik:RadMenuItem Header="Reference 2" Click="SectionReference2TagButton_OnClick" />
+                        <telerik:RadMenuItem Header="Reference 3" Click="SectionReference3TagButton_OnClick" />
+                    </telerik:RadMenuGroupItem>
+                    <telerik:RadMenuSeparatorItem />
+                    <telerik:RadMenuGroupItem Header="Format">
+                        <telerik:RadMenuItem Header="Poetic block" Click="FormatPoeticBlockButton_OnClick" />
+                        <telerik:RadMenuItem Header="Paste Poetic block" Click="PastePoeticBlockButton_OnClick" />
+                    </telerik:RadMenuGroupItem>
+                </telerik:RadContextMenu>
+            </telerik:RadContextMenu.ContextMenu>
+        </telerik:RadSyntaxEditor>
+    </Grid>
+</Window>

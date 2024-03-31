@@ -1,0 +1,1823 @@
+[
+  {
+    "IsVisible": true,
+    "Book": "BM_About",
+    "Name": "About This Edition",
+    "XPath": "/html[1]/body[@book='BM_About']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_TitlePage",
+    "Name": "The Book of Mormon",
+    "XPath": "/html[1]/body[@book='BM_TitlePage']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_1Nephi",
+    "Name": "The First Book of Nephi",
+    "XPath": "/html[1]/body[@book='BM_1Nephi']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 1",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 2",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 3",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 4",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 5",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 6",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 7",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 8",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 9",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 10",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 11",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 12",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 13",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 14",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 15",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 16",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 17",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 18",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 19",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 20",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 21",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_1Nephi",
+        "Name": "1 Nephi 22",
+        "XPath": "(/html[1]/body[@book='BM_1Nephi']//chapter)[22]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_2Nephi",
+    "Name": "The Second Book of Nephi",
+    "XPath": "/html[1]/body[@book='BM_2Nephi']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 1",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 2",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 3",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 4",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 5",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 6",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 7",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 8",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 9",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 10",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 11",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 12",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 13",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 14",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 15",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 16",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 17",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 18",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 19",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 20",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 21",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 22",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 23",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 24",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 25",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 26",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 27",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 28",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 29",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 30",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 31",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 32",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_2Nephi",
+        "Name": "2 Nephi 33",
+        "XPath": "(/html[1]/body[@book='BM_2Nephi']//chapter)[33]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Jacob",
+    "Name": "The Book of Jacob",
+    "XPath": "/html[1]/body[@book='BM_Jacob']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 1",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 2",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 3",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 4",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 5",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 6",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Jacob",
+        "Name": "Jacob 7",
+        "XPath": "(/html[1]/body[@book='BM_Jacob']//chapter)[7]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Enos",
+    "Name": "The Book of Enos",
+    "XPath": "/html[1]/body[@book='BM_Enos']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Enos",
+        "Name": "Enos 1",
+        "XPath": "(/html[1]/body[@book='BM_Enos']//chapter)[1]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Jarom",
+    "Name": "The Book of Jarom",
+    "XPath": "/html[1]/body[@book='BM_Jarom']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Jarom",
+        "Name": "Jarom 1",
+        "XPath": "(/html[1]/body[@book='BM_Jarom']//chapter)[1]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Omni",
+    "Name": "The Book of Omni",
+    "XPath": "/html[1]/body[@book='BM_Omni']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Omni",
+        "Name": "Omni 1",
+        "XPath": "(/html[1]/body[@book='BM_Omni']//chapter)[1]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Words",
+    "Name": "The Words of Mormon",
+    "XPath": "/html[1]/body[@book='BM_Words']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Words",
+        "Name": "Words of Mormon 1",
+        "XPath": "(/html[1]/body[@book='BM_Words']//chapter)[1]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Mosiah",
+    "Name": "The Book of Mosiah",
+    "XPath": "/html[1]/body[@book='BM_Mosiah']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 1",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 2",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 3",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 4",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 5",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 6",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 7",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 8",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 9",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 10",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 11",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 12",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 13",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 14",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 15",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 16",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 17",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 18",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 19",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 20",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 21",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 22",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 23",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 24",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 25",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 26",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 27",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 28",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mosiah",
+        "Name": "Mosiah 29",
+        "XPath": "(/html[1]/body[@book='BM_Mosiah']//chapter)[29]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Alma",
+    "Name": "The Book of Alma",
+    "XPath": "/html[1]/body[@book='BM_Alma']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 1",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 2",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 3",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 4",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 5",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 6",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 7",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 8",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 9",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 10",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 11",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 12",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 13",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 14",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 15",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 16",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 17",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 18",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 19",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 20",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 21",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 22",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 23",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 24",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 25",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 26",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 27",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 28",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 29",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 30",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 31",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 32",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 33",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 34",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 35",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 36",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 37",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 38",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 39",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 40",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[40]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 41",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[41]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 42",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[42]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 43",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[43]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 44",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[44]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 45",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[45]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 46",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[46]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 47",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[47]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 48",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[48]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 49",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[49]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 50",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[50]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 51",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[51]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 52",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[52]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 53",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[53]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 54",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[54]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 55",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[55]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 56",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[56]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 57",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[57]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 58",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[58]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 59",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[59]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 60",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[60]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 61",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[61]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 62",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[62]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Alma",
+        "Name": "Alma 63",
+        "XPath": "(/html[1]/body[@book='BM_Alma']//chapter)[63]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Helaman",
+    "Name": "The Book of Helaman",
+    "XPath": "/html[1]/body[@book='BM_Helaman']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 1",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 2",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 3",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 4",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 5",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 6",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 7",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 8",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 9",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 10",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 11",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 12",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 13",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 14",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 15",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Helaman",
+        "Name": "Helaman 16",
+        "XPath": "(/html[1]/body[@book='BM_Helaman']//chapter)[16]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_3Nephi",
+    "Name": "The Third Book of Nephi",
+    "XPath": "/html[1]/body[@book='BM_3Nephi']/book[2]",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 1",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 2",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 3",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 4",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 5",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 6",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 7",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 8",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 9",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 10",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 11",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 12",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 13",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 14",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 15",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 16",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 17",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 18",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 19",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 20",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 21",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 22",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 23",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 24",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 25",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 26",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 27",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 28",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 29",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_3Nephi",
+        "Name": "3 Nephi 30",
+        "XPath": "(/html[1]/body[@book='BM_3Nephi']//chapter)[30]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_4Nephi",
+    "Name": "The Forth Book of Nephi",
+    "XPath": "/html[1]/body[@book='BM_4Nephi']/book[2]",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_4Nephi",
+        "Name": "4 Nephi 1",
+        "XPath": "(/html[1]/body[@book='BM_4Nephi']//chapter)[1]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Mormon",
+    "Name": "The Book of Mormon",
+    "XPath": "/html[1]/body[@book='BM_Mormon']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 1",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 2",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 3",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 4",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 5",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 6",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 7",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 8",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Mormon",
+        "Name": "Mormon 9",
+        "XPath": "(/html[1]/body[@book='BM_Mormon']//chapter)[9]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Ether",
+    "Name": "The Book of Ether",
+    "XPath": "/html[1]/body[@book='BM_Ether']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 1",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 2",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 3",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 4",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 5",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 6",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 7",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 8",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 9",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 10",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 11",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 12",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 13",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 14",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Ether",
+        "Name": "Ether 15",
+        "XPath": "(/html[1]/body[@book='BM_Ether']//chapter)[15]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_Moroni",
+    "Name": "The Book of Moroni",
+    "XPath": "/html[1]/body[@book='BM_Moroni']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 1",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 2",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 3",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 4",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 5",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 6",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 7",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 8",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 9",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "BM_Moroni",
+        "Name": "Moroni 10",
+        "XPath": "(/html[1]/body[@book='BM_Moroni']//chapter)[10]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_3Witness",
+    "Name": "The Testimony of Three Witnesses",
+    "XPath": "/html[1]/body[@book='BM_3Witness']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "BM_8Witness",
+    "Name": "The Testimony of Eight Witnesses",
+    "XPath": "/html[1]/body[@book='BM_8Witness']/book",
+    "Children": []
+  }
+]

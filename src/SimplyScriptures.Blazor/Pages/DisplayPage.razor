@@ -1,0 +1,628 @@
+﻿@page "/display"
+
+@using SimplyScriptures.Common.Enums
+@using SimplyScriptures.Common.Extensions
+@using SimplyScriptures.Common.Services.TextSearch.Models
+@using System.Linq
+@using SimplyScriptures.Common.Search.Models
+
+@inherits DisplayPageBase
+
+<PageTitle>
+    @{
+        @($"Simply Scriptures - {SelectedScripture}")
+    }
+</PageTitle>
+
+@{
+    var invertStyle = IsDisplayInverted
+        ? "-webkit-filter: invert();"
+        : "";
+}
+
+<style>
+    .sidemenu .mud-input-label-outlined {
+        background-color: #DEDEDE !important;
+    }
+
+    .clearable-text-field button.mud-icon-button {
+        margin-right: 50px;
+    }
+
+    .appBarMenu .mud-input {
+        color: white;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .mud-dialog {
+        background-color: @(IsDisplayInverted ? "#282828" : "lightgray");
+        color: @(IsDisplayInverted ? "white" : "black");
+    }
+
+    .mud-tab-active {
+        background-color: rgb(118,106,231);
+    }
+</style>
+
+@{
+    var appBarStyle = IsDisplayInverted
+        ? "background-color: #212121 !important;"
+        : "";
+
+    var headerBorderColor = IsDisplayInverted
+        ? "lightgray"
+        : "darkgray";
+
+    var sideMenuStyle = IsDisplayInverted
+        ? "border-style: solid none none none; border-color: #2c2c2c; border-width: 1px; margin-top: -1px;"
+        : "border-style: solid none none none; border-color: lightgray; border-width: 1px;";
+}
+
+<div style="display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: auto 1fr; height: 100%; width: 100%; overflow: hidden;">
+    <div style="grid-row: 1; grid-column: 3; width: 100%; border-style: none none solid none; border-color: @headerBorderColor; border-width: 1px;">
+        @{
+            var buttonStyle = IsDisplayInverted
+            ? "color: white !important;"
+            : "";
+
+            var dropDownButtonStyle = $"height: 40px; width: 40px; margin-left: -10px; z-index: 0; {buttonStyle}";
+        }
+
+        <MudAppBar Fixed="true" Color="Color.Transparent" Style="@appBarStyle">
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Inherit" Href="/"
+                                   Edge="Edge.Start" Style="@buttonStyle"
+                                   OnClick="@(() => ShowHomeAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Go home</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Filled.MenuBook" Color="Color.Inherit"
+                                   Edge="Edge.Start" Style="@buttonStyle"
+                                   OnClick="@(() => ToggleMenuVisibilityAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Open menu</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Filled.Topic" Color="Color.Inherit" Href="/topics"
+                                   Edge="Edge.Start" Style="@buttonStyle"
+                                   OnClick="@(() => ShowTopicsAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Show topic items</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Filled.EventNote" Color="Color.Inherit" Href="/dictionary"
+                                   Edge="Edge.Start" Style="@buttonStyle"
+                                   OnClick="@(() => ShowDictionaryAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Show dictionary</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudSpacer />
+
+            @if (SelectedHighlightColor == "transparent")
+            {
+                var highlightButtonStyle = $"height: 30px; width: 30px; z-index: 1; {buttonStyle}";
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.DeleteOutline" Size="Size.Medium"
+                                       Style="@highlightButtonStyle"
+                                       OnClick="@(() => RemoveHighlightAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Clear highlight</div>
+                    </TooltipContent>
+                </MudTooltip>
+            }
+            else
+            {
+                var highlightButtonStyle = $"height: 30px; width: 30px; z-index: 1; background-color: {SelectedHighlightColor}";
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Variant="Variant.Filled" Style="@highlightButtonStyle" Icon="@Icons.Material.Outlined.FormatPaint"
+                                       OnClick="@(() => ApplyHighlightAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Apply highlight color</div>
+                    </TooltipContent>
+                </MudTooltip>
+            }
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Filled.ArrowDropDown" Color="Color.Inherit"
+                                   Style="@dropDownButtonStyle"
+                                   OnClick="@(() => ShowHighlightColorsAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Show highlight colors</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Outlined.Bookmarks" Title="Bookmarks"
+                                   Color="Color.Inherit" Style="@buttonStyle"
+                                   OnClick="@(() => ShowBookmarksAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Show bookmarks</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Outlined.Share" Title="Share"
+                                   Color="Color.Inherit" Style="@buttonStyle"
+                                   OnClick="@(() => CopyLinkAsyncCommand!())" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Copy link</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudToggleIconButton Icon="@Icons.Material.Filled.Lightbulb" Title="Light" Color="Color.Warning"
+                                         ToggledIcon="@Icons.Material.Outlined.Lightbulb" ToggledTitle="Light" ToggledColor="Color.Inherit"
+                                         Style="@buttonStyle"
+                                         @bind-Toggled="IsDisplayInverted" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Toggle display mode</div>
+                </TooltipContent>
+            </MudTooltip>
+
+            <MudTooltip>
+                <ChildContent>
+                    <MudIconButton Icon="@Icons.Material.Filled.Print" Title="Print" Color="Color.Inherit"
+                                   Style="@buttonStyle"
+                                   OnClick="@(args => ShowPrintableScripturesAsyncCommand!(args))" />
+                </ChildContent>
+
+                <TooltipContent>
+                    <div>Show printable book</div>
+                </TooltipContent>
+            </MudTooltip>
+        </MudAppBar>
+    </div>
+
+    @{
+        var tabControlStyle = $"height: 100%; {invertStyle}";
+    }
+
+    <div style="grid-row: 2; grid-column: 1; overflow: auto; min-height: 100%; @(ConvertBooleanToDisplay(IsMenuOpen)); @invertStyle @sideMenuStyle">
+        <MudPaper Elevation="5" Outlined="true" Square="true" Style="width: 400px; min-height: 100%; background-color: #DEDEDE; display: inline-block;">
+            <MudTabs @ref="MenuTabs" Elevation="4" Rounded="true" Centered="true" ApplyEffectsToContainer="true"
+                     Color="@(IsDisplayInverted ? Color.Dark : Color.Primary)"
+                     Style="@tabControlStyle">
+                <MudTabPanel Text="Content">
+                    <div style="grid-row: 2; grid-column: 2; overflow: auto; @sideMenuStyle">
+                        <MudNavMenu Bordered="true" Rounded="true" Style="@invertStyle">
+                            <MudText Typo="Typo.h6">Content</MudText>
+                            <MudDivider />
+
+                            <div style="margin-left: 5px; margin-right: 5px;">
+                                <MudTextField Variant="Variant.Outlined" Immediate="true" Clearable="true"
+                                              Label="Filter" DebounceInterval="25" Adornment="Adornment.End"
+                                              AdornmentIcon="@Icons.Material.Rounded.FilterList" AdornmentColor="Color.Info"
+                                              Class="sidemenu"
+                                              @bind-Value="ContentFilterText" />
+                            </div>
+
+                            @{
+                                // This should be optimized to be a recursive control
+                                if (CurrentBook != null)
+                                {
+                                    foreach (var item in CurrentBook.ContentItems)
+                                    {
+                                        if (item.Children.Length == 0)
+                                        {
+                                            var selectedStyle = item == SelectedNavigationItem
+                                            ? $"color: green; font-size: 18px; {invertStyle}"
+                                            : "";
+
+                                            <a href="@ConvertItemToLink(item)">
+                                                <MudNavLink Style="@ConvertBooleanToDisplay(item.IsVisible)"
+                                                            OnClick="@(() => NavItemSelectedAsyncCommand!(item))">
+                                                    <div style="font-size: 16px; @(MenuItemFontWeight(item)) @selectedStyle">
+                                                        @CleanMenuName(item.Name)
+                                                    </div>
+                                                </MudNavLink>
+                                            </a>
+                                            continue;
+                                        }
+                                        else
+                                        {
+                                            <div style="font-size: 16px; @(MenuItemFontWeight(item))">
+                                                <MudNavGroup Title="@item.Name"
+                                                             Style="@ConvertBooleanToDisplay(item.IsVisible)">
+                                                    @{
+                                                        foreach (var item2 in item.Children)
+                                                        {
+                                                            if (item2.Children.Length == 0)
+                                                            {
+                                                                var selectedStyle = item2 == SelectedNavigationItem
+                                                                ? $"color: green; font-size: 18px; {invertStyle}"
+                                                                : "";
+
+                                                                <a href="@ConvertItemToLink(item2)">
+                                                                    <MudNavLink Style="@ConvertBooleanToDisplay(item2.IsVisible)"
+                                                                                OnClick="@(() => NavItemSelectedAsyncCommand!(item2))">
+                                                                        <div style="font-size: 16px; @(MenuItemFontWeight(item2)) @selectedStyle">
+                                                                            @CleanMenuName(item2.Name)
+                                                                        </div>
+                                                                    </MudNavLink>
+                                                                </a>
+                                                                continue;
+                                                            }
+
+                                                            else
+                                                            {
+                                                                <div style="font-size: 16px; @(MenuItemFontWeight(item2))">
+                                                                    <MudNavGroup Title="@CleanMenuName(item2.Name)"
+                                                                                 Style="@ConvertBooleanToDisplay(item2.IsVisible)">
+                                                                        @{
+                                                                            foreach (var item3 in item2.Children)
+                                                                            {
+                                                                                if (item3.Children.Length == 0)
+                                                                                {
+                                                                                    var selectedStyle = item3 == SelectedNavigationItem
+                                                                                    ? $"color: green; font-size: 18px; {invertStyle}"
+                                                                                    : "";
+
+                                                                                    <a href="@ConvertItemToLink(item3)">
+                                                                                        <MudNavLink Style="@ConvertBooleanToDisplay(item3.IsVisible)"
+                                                                                                    OnClick="@(() => NavItemSelectedAsyncCommand!(item3))">
+                                                                                            <div style="font-size: 16px; @(MenuItemFontWeight(item3)) @selectedStyle">
+                                                                                                @CleanMenuName(item3.Name)
+                                                                                            </div>
+                                                                                        </MudNavLink>
+                                                                                    </a>
+                                                                                    continue;
+                                                                                }
+
+                                                                                else
+                                                                                {
+                                                                                    <div style="font-size: 16px; @(MenuItemFontWeight(item3))">
+                                                                                        <MudNavGroup Title="@CleanMenuName(item3.Name)"
+                                                                                                     Style="@ConvertBooleanToDisplay(item3.IsVisible)">
+                                                                                            @{
+                                                                                                foreach (var item4 in item3.Children)
+                                                                                                {
+                                                                                                    if (item4.Children.Length == 0)
+                                                                                                    {
+                                                                                                        var selectedStyle = item4 == SelectedNavigationItem
+                                                                                                        ? $"color: green; font-size: 18px; {invertStyle}"
+                                                                                                        : "";
+
+                                                                                                        <a href="@ConvertItemToLink(item4)">
+                                                                                                            <MudNavLink Style="@ConvertBooleanToDisplay(item4.IsVisible)"
+                                                                                                                        OnClick="@(() => NavItemSelectedAsyncCommand!(item4))">
+                                                                                                                <div style="font-size: 16px; @(MenuItemFontWeight(item4)) @selectedStyle">
+                                                                                                                    @CleanMenuName(item4.Name)
+                                                                                                                </div>
+                                                                                                            </MudNavLink>
+                                                                                                        </a>
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        </MudNavGroup>
+                                                                                    </div>
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    </MudNavGroup>
+                                                                </div>
+                                                            }
+                                                        }
+                                                    }
+                                                </MudNavGroup>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        </MudNavMenu>
+                    </div>
+                </MudTabPanel>
+
+                <MudTabPanel Text="Search">
+                    <MudNavMenu Bordered="true" Rounded="true" Style="@invertStyle">
+                        <MudText Typo="Typo.h6">Search</MudText>
+                        <MudDivider />
+
+                        @if (IsSearchInitializing)
+                        {
+                            <div style="display: flex; align-items: center; justify-content: center; margin-top: 25px;">
+                                <h5>Initializing Search</h5>
+                            </div>
+                            <div style="display: flex; align-items: center; justify-content: center; margin-left: 15px; margin-right: 15px; @invertStyle">
+                                <MudProgressLinear Color="Color.Primary" Indeterminate="true" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div style="display: grid; grid-template-columns: 1fr auto">
+                                <div style="grid-column: 1; margin-left: 5px; margin-right: 5px;">
+                                    <MudTextField Variant="Variant.Outlined" Immediate="true"
+                                                  Label="Search" Clearable="true"
+                                                  OnKeyPress="@(e => HandleSearchKeypressAsyncCommand!(e))"
+                                                  Class="sidemenu clearable-text-field"
+                                                  @bind-Value="SearchText" />
+                                </div>
+
+                                <div style="grid-column: 2; margin-left: -50px; margin-top: 12px;">
+                                    <MudTooltip Delay="1000" Placement="Placement.Right">
+                                        <ChildContent>
+                                            <MudIconButton Icon="@Icons.Material.Filled.Search" Variant="Variant.Filled"
+                                                           Color="Color.Primary" Size="Size.Large" Style="@invertStyle"
+                                                           OnClick="@(() => SearchAsyncCommand!())" />
+                                        </ChildContent>
+
+                                        <TooltipContent>
+                                            <MudText Typo="Typo.h6">Search for all matches</MudText>
+                                            <MudText Typo="Typo.body2" Align="Align.Left">Examples:</MudText>
+                                            <MudText Typo="Typo.body2" Align="Align.Left" style="font-family: monospace; white-space: pre;">Only Begotten   - Searches for all linked passages using the phrases</MudText>
+                                            <MudText Typo="Typo.body2" Align="Align.Left" style="font-family: monospace; white-space: pre;">"Only Begotten" - Searches for the exact phrase</MudText>
+                                            <MudText Typo="Typo.body2" Align="Align.Left" style="font-family: monospace; white-space: pre;">2 Nephi 25:26   - Searches for the scripture reference</MudText>
+                                        </TooltipContent>
+                                    </MudTooltip>
+                                </div>
+                            </div>
+
+                            if (IsSearchBusy)
+                            {
+                                <div style="display: flex; align-items: center; justify-content: center; margin-top: 25px;">
+                                    <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true" />
+                                </div>
+                            }
+                            else if (SearchResults != null && SearchResults.MatchMode == SearchMatchMode.NoMatches)
+                            {
+                                <h4 style="display: flex; align-items: center; justify-content: center; margin-top: 25px; height: 100%;">
+                                    No matches found
+                                </h4>
+                            }
+                            else if (SearchResults != null && SearchResults.MatchMode == SearchMatchMode.ScriptureMatch)
+                            {
+                                <h4 style="display: flex; align-items: center; justify-content: center; margin-top: 25px; height: 100%;">
+                                    Scripture found
+                                </h4>
+                            }
+                            else if (SearchResults != null && SearchResults.MatchMode == SearchMatchMode.SearchMatches)
+                            {
+                                var groups = (SearchResults?.AllMatches ?? Array.Empty<SearchMatch>())
+                                .GroupBy(x => x.Book.ToRootBook())
+                                .OrderBy(x => x.Key);
+
+                                foreach (var group in groups)
+                                {
+                                    var groupName = group.Key.ToDisplayString();
+                                    var groupItems = group
+                                    .OrderByDescending(x => x.Score);
+
+                                    <div style="font-size: 16px; font-weight: bold;">
+                                        <MudNavGroup Title="@($"{groupName} ({group.Count():N0})")">
+                                            @foreach (var groupItem in groupItems)
+                                            {
+                                                var selectedStyle = groupItem == SelectedSearchMatch
+                                                ? $"color: green; font-size: 18px; {invertStyle}"
+                                                : "";
+
+                                                <a href="@ConvertItemToLink(groupItem)">
+                                                    <MudNavLink OnClick="@(() => SearchMatchSelectedAsyncCommand!(groupItem))">
+                                                        <div style="display: grid; grid-template-rows: auto auto;">
+                                                            <div style="grid-row: 1; font-size: 10px;">@(groupItem.BuildScriptureReference())</div>
+                                                            <div style="grid-row: 2; margin-left: 15px; font-size: 16px; @selectedStyle">
+                                                                @((MarkupString)groupItem.FormattedText)
+                                                            </div>
+                                                        </div>
+                                                    </MudNavLink>
+                                                </a>
+                                            }
+
+                                        </MudNavGroup>
+                                    </div>
+                                }
+                            }
+                        }
+                    </MudNavMenu>
+                </MudTabPanel>
+            </MudTabs>
+        </MudPaper>
+    </div>
+
+    <div style="grid-row: 2; grid-column: 2; overflow: hidden; @invertStyle">
+        @{
+            var fullPageLink = CurrentBook?.HtmlPath ?? ScriptureBook.BM_About.ToHtmlPath();
+        }
+
+        <iframe id="pageFrame" src="@fullPageLink" style="width: 100%; height: 100%"
+                @onload="@(() => InitializePageFrameAsyncCommand!())"></iframe>
+    </div>
+
+    @{
+        var footerBackground = IsDisplayInverted
+        ? "background-color:#DEDEDE; "
+        : "background-color:#c7c6c3; ";
+    }
+
+    <div style="grid-row: 3; grid-column: 1 / span 3; width: 100%; height: auto; border-style: solid none none none; border-color: darkgray; border-width: 1px; @footerBackground @invertStyle">
+        <div style="display: grid; grid-template-columns: 1fr auto auto">
+            <div style="grid-column: 1; width: 350px; margin-left: 15px;">
+                <MudSelect Label="Scriptures" Placeholder="Select scriptures" AdornmentIcon="@Icons.Material.Outlined.Book"
+                           Style="margin-left: 15px;"
+                           @bind-Value="SelectedScripture"
+                           SelectedValuesChanged="@((IEnumerable<ScriptureBook> v) => SelectScriptureBookAsyncCommand!(v.FirstOrDefault()))">
+
+                    @foreach (var item in new[] { ScriptureBook.OT1, ScriptureBook.OT2, ScriptureBook.OT3, ScriptureBook.NT, ScriptureBook.BM, ScriptureBook.DC })
+                    {
+                        <MudSelectItem Value="@item">@(item.ToDisplayString())</MudSelectItem>
+                    }
+                </MudSelect>
+            </div>
+
+            <div style="grid-column: 2">
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.ZoomIn" Color="Color.Inherit"
+                                       Edge="Edge.Start" Size="Size.Large" DisableElevation="false"
+                                       OnClick="@(() => ZoomInAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Zoom in</div>
+                    </TooltipContent>
+                </MudTooltip>
+            </div>
+
+            <div style="grid-column: 3">
+                <MudTooltip>
+                    <ChildContent>
+                        <MudIconButton Icon="@Icons.Material.Filled.ZoomOut" Color="Color.Inherit"
+                                       Edge="Edge.Start" Size="Size.Large"
+                                       OnClick="@(() => ZoomOutAsyncCommand!())" />
+                    </ChildContent>
+
+                    <TooltipContent>
+                        <div>Zoom out</div>
+                    </TooltipContent>
+                </MudTooltip>
+            </div>
+        </div>
+    </div>
+</div>
+
+<MudMessageBox @ref="HighlightColorPopup" Title="Colors">
+    <MessageContent>
+        <div style="width: 300px; display: grid; grid-template-columns: auto auto auto auto auto; grid-template-rows: auto auto auto auto auto">
+            @{
+                var column = 1;
+                var row = 1;
+            }
+
+            @foreach (var color in AllColors)
+                {
+                    if (color == "transparent")
+                    {
+                        var buttonStyle = $"grid-column: {column}; grid-row: {row}; height: 40px; width: 40px; margin-bottom: 2px;";
+                        <MudIconButton Icon="@Icons.Material.Filled.DeleteOutline" Size="Size.Large"
+                                       Style="@buttonStyle"
+                                       OnClick="@(() => SetSelectedHighlightColorAsyncCommand!(color))" />
+                    }
+                    else
+                    {
+                        var buttonStyle = $"grid-column: {column}; grid-row: {row}; height: 40px; width: 40px; margin-bottom: 2px; background-color: {color}";
+                        <MudFab Style="@buttonStyle"
+                                OnClick="@(() => SetSelectedHighlightColorAsyncCommand!(color))" />
+                    }
+
+                    column++;
+                    if (column > 5)
+                    {
+                        row++;
+                        column = 1;
+                    }
+                }
+        </div>
+    </MessageContent>
+</MudMessageBox>
+
+<MudMessageBox @ref="BookmarksMessageBox" Title="Bookmarks">
+    <YesButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary">Close</MudButton>
+    </YesButton>
+
+    <MessageContent>
+        <div style="width: 350px; overflow-x: hidden; max-height: 500px; overflow-y: auto;">
+            <MudList Clickable="true">
+                            @{
+                                var bookmarkGroups = AllBookmarks
+                                .GroupBy(x => x.Book)
+                                .ToArray();
+                            }
+
+                            @foreach (var bookmarkGroup in bookmarkGroups)
+                            {
+                                var iconColor = IsDisplayInverted ? Color.Info : Color.Dark;
+
+                    <MudListItem Icon="@Icons.Material.TwoTone.Bookmarks" IconColor="@iconColor"
+                                 Text="@(bookmarkGroup.Key.ToDisplayString())"
+                                 InitiallyExpanded="@(bookmarkGroups.Length == 1)">
+                        <NestedList>
+                                        @foreach (var bookmark in bookmarkGroup)
+                                        {
+                                <MudListItem Id="@bookmark.BookmarkId" Icon="@Icons.Material.TwoTone.Bookmark" IconColor="@iconColor"
+                                             OnClick="@(() => DisplayBookmarkAsyncCommand!(bookmark))">
+                                    <MudListItem.ChildContent>
+                                        <div style="display: grid; grid-template-columns: 1fr auto;">
+                                            <div style="grid-column: 1" class="vertical-center">
+                                                            @bookmark.Name
+                                            </div>
+
+                                            <div style="grid-column: 2">
+                                                <MudIconButton Icon="@Icons.Material.Filled.DeleteForever" Color="Color.Error" Edge="Edge.End"
+                                                               OnClick="@(() => DeleteBookmarkAsyncCommand!(bookmark))" />
+                                            </div>
+                                        </div>
+                                    </MudListItem.ChildContent>
+                                </MudListItem>
+                                        }
+                        </NestedList>
+                    </MudListItem>
+                            }
+            </MudList>
+
+            <div style="display: grid; grid-template-columns: 1fr auto; margin-right: 15px;">
+                <div style="grid-column: 1">
+                                @{
+                                    var fieldStyle = IsDisplayInverted
+                                    ? $"background: lightgray; {invertStyle}"
+                                    : "background: white;";
+                                }
+                    <MudTextField Variant="Variant.Outlined" Class="clearable-text-field"
+                                  Immediate="true" Style="@fieldStyle" InputType="InputType.Text"
+                                  OnKeyPress="@(e => HandleBookmarkNameKeypressAsyncCommand!(e))"
+                                  @bind-Value="NewBookmarkName" />
+                </div>
+
+                <div style="grid-column: 2; margin-top: 15px; margin-left: 5px;">
+                    <MudIconButton Icon="@Icons.Material.Filled.AddBox" Variant="Variant.Filled" Color="Color.Primary" Edge="Edge.End"
+                                   OnClick="@(() => AddBookmarkAsyncCommand!())" />
+                </div>
+            </div>
+        </div>
+    </MessageContent>
+</MudMessageBox>

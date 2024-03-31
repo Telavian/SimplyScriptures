@@ -1,0 +1,147 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SimplyScriptures</RootNamespace>
+    <AssemblyNamespace>SimplyScriptures</AssemblyNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Scriptures\BM\BM.json" />
+    <Content Remove="wwwroot\Scriptures\DC\DC.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words1.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words10.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words2.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words3.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words4.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words5.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words6.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words7.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words8.json" />
+    <Content Remove="wwwroot\Scriptures\Dictionary\words9.json" />
+    <Content Remove="wwwroot\Scriptures\NT\NT.json" />
+    <Content Remove="wwwroot\Scriptures\OT1\OT1.json" />
+    <Content Remove="wwwroot\Scriptures\OT2\OT2.json" />
+    <Content Remove="wwwroot\Scriptures\OT3\OT3.json" />
+    <Content Remove="wwwroot\Scriptures\Topics\topics.json" />
+    <Content Remove="wwwroot\Scriptures\_Index\FullIndex.bin" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
+    <PackageReference Include="CurrieTechnologies.Razor.Clipboard" Version="1.6.0" />
+    <PackageReference Include="Lucene.Net" Version="4.8.0-beta00016" />
+    <PackageReference Include="Lucene.Net.Analysis.Common" Version="4.8.0-beta00016" />
+    <PackageReference Include="Lucene.Net.Queries" Version="4.8.0-beta00016" />
+    <PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-beta00016" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
+    <PackageReference Include="MudBlazor" Version="6.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\fonts\OpenSans-Regular.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\fonts\OpenSans-Semibold.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\fonts\Oregon_LDO_Extended_Black.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\images\tree_dark.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\images\tree_light.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Scriptures\BM\BM.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\DC\DC.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words1.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words10.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words2.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words3.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words4.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words5.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words6.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words7.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words8.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Dictionary\words9.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\NT\NT.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\OT1\OT1.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\OT2\OT2.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\OT3\OT3.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\Topics\topics.json" />
+    <EmbeddedResource Include="wwwroot\Scriptures\_Index\FullIndex.bin" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimplyScriptures.Common\SimplyScriptures.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\app.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\bootstrap\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\bootstrap\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\FONT-LICENSE">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\font\fonts\open-iconic.eot">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\font\fonts\open-iconic.otf">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\font\fonts\open-iconic.svg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\font\fonts\open-iconic.ttf">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\font\fonts\open-iconic.woff">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\ICON-LICENSE">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\open-iconic\README.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\scripts\decode.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\scripts\DisplayPage.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\SimplyScriptures.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

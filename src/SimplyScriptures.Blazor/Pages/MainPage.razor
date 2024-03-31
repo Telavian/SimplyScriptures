@@ -1,0 +1,139 @@
+﻿@page "/"
+
+@using SimplyScriptures.Common.Enums
+@inherits MainPageBase
+
+<PageTitle>
+    Simply Scriptures
+</PageTitle>
+
+<style>
+    .sidemenu .mud-input-label-outlined {
+        background-color: #DEDEDE !important;
+    }
+
+    .clearable-text-field button.mud-icon-button {
+        margin-right: 50px;
+    }
+
+    .appBarMenu .mud-input {
+        color: white;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+</style>
+
+@{
+    var backgroundColor = IsDisplayInverted
+        ? "#202124"
+        : "#FFFFFF";
+    var titleColor = IsDisplayInverted
+        ? "white"
+        : "black";
+    var appBarStyle = $"background-color: {backgroundColor}";
+}
+
+<!-- Empty app bar because MudBlazor expects an app bar-->
+<MudAppBar Elevation="0" Style="@appBarStyle"></MudAppBar>
+
+<div style="display: grid; grid-template-rows: 1fr auto auto auto auto auto auto auto auto auto auto auto 1fr; grid-template-columns: 1fr 600px auto 1fr; height: 100%; width: 100%; background-color: @backgroundColor;">
+    <h1 style="grid-row: 2; grid-column: 2; font-family: Oregon_LDO_Extended_Black; font-weight: bold; font-size: 50px; color: @titleColor;">
+        <img style="height: 128px; width: 128px; box-shadow: 1px 1px 3px 1px #333; border-radius: 15%; margin-right: 15px; background-color: #505050;" src="SimplyScriptures.png" />
+        Simply Scriptures
+    </h1>
+    <div style="grid-row: 3; grid-column: 2;">
+        @{
+            var inputStyle = $"color: {titleColor};";
+        }
+
+        <MudTextField Label="Search" Variant="Variant.Outlined" Class="clearable-text-field"
+                      Immediate="true" Clearable="true" Style="@inputStyle"
+                      OnKeyPress="@(e => HandleSearchKeypressAsyncCommand!(e))"
+                      @bind-Value="SearchText" />
+    </div>
+
+    <div style="grid-row: 3; grid-column: 3; margin-left: -50px; margin-top: 12px;">
+        <MudTooltip Delay="1000" Placement="Placement.Bottom">
+            <ChildContent>
+                <MudIconButton Icon="@Icons.Material.Filled.Search" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large"
+                               @onclick="@(() => SearchAsyncCommand!())" />
+            </ChildContent>
+
+            <TooltipContent>
+                <MudText Typo="Typo.h6">Search for all matches</MudText>
+                <MudText Typo="Typo.body2" Align="Align.Left">Examples:</MudText>
+                <MudText Typo="Typo.body2" Align="Align.Left" style="font-family: monospace; white-space: pre;">Only Begotten   - Searches for all linked passages using the phrases</MudText>
+                <MudText Typo="Typo.body2" Align="Align.Left" style="font-family: monospace; white-space: pre;">"Only Begotten" - Searches for the exact phrase</MudText>
+                <MudText Typo="Typo.body2" Align="Align.Left" style="font-family: monospace; white-space: pre;">2 Nephi 25:26   - Searches for the scripture reference</MudText>
+            </TooltipContent>
+        </MudTooltip>
+    </div>
+
+    @{
+        var textColorStyle = IsDisplayInverted
+            ? ""
+            : "color: #158c73;";
+    }
+
+    <div style="grid-row: 4; grid-column: 2; margin-top: 15px; cursor: pointer;">        
+        <MudLink Color="Color.Tertiary" Href="@($"/display?s={ScriptureBook.OT1_About}")"
+                 @onclick="@(() => SelectScriptureBookAsyncCommand!(ScriptureBook.OT1_About))">
+            <h4 style="@textColorStyle">Old Testament (Genesis - Ruth)</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 5; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="@($"/display?s={ScriptureBook.OT2_About}")"
+                 @onclick="@(() => SelectScriptureBookAsyncCommand!(ScriptureBook.OT2_About))">
+            <h4 style="@textColorStyle">Old Testament (1 Samuel - Ecclesiastes)</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 6; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="@($"/display?s={ScriptureBook.OT3_About}")"
+                 @onclick="@(() => SelectScriptureBookAsyncCommand!(ScriptureBook.OT3_About))">
+            <h4 style="@textColorStyle">Old Testament (Isaiah - Malachi)</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 7; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="@($"/display?s={ScriptureBook.NT_About}")"
+                 @onclick="@(() => SelectScriptureBookAsyncCommand!(ScriptureBook.NT_About))">
+            <h4 style="@textColorStyle">New Testament</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 8; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="@($"/display?s={ScriptureBook.BM_About}")"
+                 @onclick="@(() => SelectScriptureBookAsyncCommand!(ScriptureBook.BM_About))">
+            <h4 style="@textColorStyle">Book of Mormon</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 9; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="@($"/display?s={ScriptureBook.DC_About}")"
+                 @onclick="@(() => SelectScriptureBookAsyncCommand!(ScriptureBook.DC_About))">
+            <h4 style="@textColorStyle">Doctrine & Covenants</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 10; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="/topics"
+                 @onclick="@(() => ShowTopicsAsyncCommand!())">
+            <h4 style="@textColorStyle">Scripture Topics</h4>
+        </MudLink>
+    </div>
+
+    <div style="grid-row: 11; grid-column: 2; cursor: pointer;">
+        <MudLink Color="Color.Tertiary" Href="/dictionary"
+                 @onclick="@(() => ShowDictionaryAsyncCommand!())">
+            <h4 style="@textColorStyle">Webster's Dictionary (1828)</h4>
+        </MudLink>
+    </div>
+</div>

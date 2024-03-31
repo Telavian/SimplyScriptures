@@ -1,0 +1,1805 @@
+[
+  {
+    "IsVisible": true,
+    "Book": "DC_About",
+    "Name": "About This Edition",
+    "XPath": "/html[1]/body[@book='DC_About']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Reception",
+    "Name": "Reception of Sections",
+    "XPath": "/html[1]/body[@book='DC_Reception']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Order",
+    "Name": "Order of Sections",
+    "XPath": "/html[1]/body[@book='DC_Order']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Preface",
+    "Name": "Preface To 1835 Edition",
+    "XPath": "/html[1]/body[@book='DC_Preface']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Lectures",
+    "Name": "Lectures On Faith",
+    "XPath": "/html[1]/body[@book='DC_Lectures']/book[1]",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 1",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 2",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 3",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 4",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 5",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 6",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Lectures",
+        "Name": "Lectures 7",
+        "XPath": "(/html[1]/body[@book='DC_Lectures']//chapter)[7]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Sections",
+    "Name": "Doctrine and Covenants",
+    "XPath": "/html[1]/body[@book='DC_Sections']/sectionheader[1]/sectiontitle",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 1 - The Lord's Preface",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 2 - Promise of Priesthood",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 3 - Lost 116 Pages",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 4 - Joseph Smith, Sr.",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 5 - Martin's Witness",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 6 - Witness of The Spirit",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 7 - John The Beloved",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 8 - Oliver's Gifts",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 9 - Oliver Tries Translating",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 10 - Retranslating The Lost Pages",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 11 - Hyrum Smith",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 12 - Joseph Knight, Sr.",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 13 - Priesthood of Aaron",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 14 - David Whitmer",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 15 - John Whitmer",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 16 - Peter Whitmer",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 17 - Seeing The Plates",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Articles of The Church of Christ",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 18 - Choosing The Twelve",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 19 - Endless And Eternal",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 20 - Articles And Covenants of The Church",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 21 - Ordaining The First Elders",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 22 - Baptism",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 23 - Personal Messages",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Moses Chapter 1 Received",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 24 - First And Second Elders",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 25 - Emma Smith",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 26 - Common Consent",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 27 - Sacrament",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 28 - Receiving Revelations For The Church",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 29 - Gathering The Elect",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 30 - Whitmer Brothers",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 31 - Thomas Marsh",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 32 - Mission To The Lamanites",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Mission Covenant",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 33 - Ezra Thayre And Northrop Sweet",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 34 - Orson Pratt",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 35 - Sidney Rigdon",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 36 - Edward Partridge",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Moses Chapter 7 Received",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[40]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 37 - Go To The Ohio",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[41]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 74 - Explaining 1 Corinthians 7:14",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[42]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 38 - Look To The Poor And The Needy",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[43]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 39 - James Covel: Called To Preach",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[44]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 40 - James Covel: Breaking The Covenant",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[45]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 41 - Bishop of Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[46]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 42 - Laws of The Church of Christ",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[47]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 43 - Commandments And Revelations",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[48]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 44 - Elders To Assemble",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[49]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 45 - Coming of The Son of Man",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[50]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 46 - Gifts of The Spirit",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[51]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 47 - John Whitmer – Church Historian",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[52]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 48 - Purchasing Land",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[53]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 49 - The Shakers",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[54]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 50 - Detecting False Spirits",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[55]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 51 - Directions For The Bishop",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[56]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Conference At Morley Farm",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[57]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 52 - A Consecrated Land",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[58]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 53 - Sidney Gilbert",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[59]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 54 - Newel Knight",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[60]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 55 - William Phelps",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[61]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 56 - Revoked Commandments",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[62]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 57 - The Center Place",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[63]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 58 - The Lord's Will For The Land of Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[64]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Sidney's First Description of Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[65]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Dedication of Land of Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[66]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 59 - The Sabbath",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[67]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 60 - Burying Your Talent",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[68]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 61 - Journeying By Water And Land",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[69]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 62 - Blessed For Bearing Testimony",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[70]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Oliver Ordained To High Priesthood",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[71]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 63 - Assemble Together Unto Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[72]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Sidney's Second Description of Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[73]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 64 - Kirtland: A Strong Hold For Five Years",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[74]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 65 - May The Kingdom Come",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[75]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 66 - William Mclellin",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[76]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 1 Received",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[77]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 67 - Language of Revelation",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[78]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 68 - Bishops And Children In Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[79]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Witnesses of The Book of Commandments",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[80]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 133 - Prepare For The Last Days",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[81]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Part of Section 107 Received",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[82]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 69 - Traveling Church Historian",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[83]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 70 - Stewards Over The Revelations",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[84]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 71 - Proclaim My Gospel Unto The World",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[85]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 72 - Bishop of Ohio",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[86]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 73 - Resume Translation of The Bible",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[87]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 75 - Missionaries And Journeys",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[89]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 76 - The Vision",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[90]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 77 - The Book of Revelation",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[91]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 78 - Organize The Storehouse",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[92]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 79 - Jared Carter",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[93]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 80 - Stephen Burnett",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[94]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 81 - Office of Counselor",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[95]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Duty of Bishops",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[96]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 82 - Forming The United Firm",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[97]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 83 - Women And Children",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[98]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 99 - John Murdock",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[99]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "1832 History Written",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[100]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 84 - Priesthood",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[101]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 85 - Names In The Book of The Law",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[102]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 86 - Parable of The Wheat And The Tares",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[103]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 87 - Prophecy On War",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[104]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 88 - The Olive Leaf",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[105]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Letter To Noah Saxton",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[106]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "School of The Prophets Begins",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[107]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 89 - A Word of Wisdom",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[108]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 90 - Equal In Holding The Keys",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[109]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 91 - The Apocrypha",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[110]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 92 - Joining The United Firm",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[111]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Presidents of The High Priesthood",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[112]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 93 - Light And Truth",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[113]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 94 - Building Committee In Kirtland",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[114]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 95 - Building God's House In Ohio",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[115]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 96 - Bringing Forth The Word",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[116]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Kirtland House Cornerstone Laid",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[117]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 97 - School In Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[118]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 94 - Building Committee In Kirtland",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[119]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 98 - Laws of Vengeance And Forgiveness",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[120]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 99 - John Murdock",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[121]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 100 - Sidney To Be A Spokesman",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[122]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Days of Zion's Purification",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[123]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 101 - Why Zion Is Persecuted",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[124]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 102 - High Council",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[125]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 103 - Organizing The Camp of Israel",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[126]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 104 - The Broken Covenant",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[127]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "The Church of The Latter Day Saints",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[128]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Camp of Israel Departs",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[129]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 105 - Disbanding Camp of Israel",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[130]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "15 Elders To Receive Endowment",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[131]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Appointed Time For Redemption of Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[132]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Committee To Arrange The Doctrine",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[133]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "School of The Elders Held",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[134]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 106 - Warren Cowdery",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[135]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Covenant of Tithing",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[136]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Condemnation",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[137]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Oliver Ordained A President",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[138]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Presiding Patriarch",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[139]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Twelve Apostles Called",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[140]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Apostolic Charge",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[141]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Apostolic Instructions",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[142]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Quorum of The Seventy Called",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[143]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 107 - Orders And Offices",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[144]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Limitations On The Twelve",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[145]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Doctrine &amp; Covenants Canonized",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[146]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Doctrine &amp; Covenants Canonized",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[147]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Article On Marriage",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[148]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 134 - Governments And Laws",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[149]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Blessing From Oliver Cowdery",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[150]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "The Twelve Under Condemnation",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[151]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Second Commission",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[152]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "1835 History Written",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[153]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Endowment Needed To Preach",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[154]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Abraham 1:1–2:18 Written",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[155]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 108 - Lyman Sherman",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[156]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 137 - Dying Without The Gospel",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[157]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Continuation of Visions",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[158]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 109 - Dedication of The Kirtland House",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[159]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 110 - Acceptance of The Kirtland House",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[160]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 111 - Treasure In Salem",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[161]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "High Priesthood Conferred On Elders",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[162]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Spirit of Speculation",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[163]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Something New Must Be Done",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[164]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 112 - Among All Nations",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[165]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Joseph And Sidney Flee Kirtland",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[166]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 113 - Explaining Isaiah",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[167]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 114 - David Patten",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[168]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 115 - House Unto The Lord In Far West",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[169]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 116 - Adam-ondi-ahman",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[170]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 117 - Come Up To Zion",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[171]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 118 - Mission of The Twelve",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[172]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 119 - Tithing",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[173]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 120 - Disposition of Tithes",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[174]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "1838 History Written",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[175]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Violence In Missouri",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[176]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Surrender At Far West",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[177]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 121 - Joseph's Lament",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[178]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 122 - The Lord's Comfort",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[179]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 123 - Joseph's Directions To The Church",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[180]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Joseph Escapes Custody",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[181]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Joseph Settles In Nauvoo",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[182]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Consecration",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[183]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Prophecy of A Tower",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[184]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Jews To Gather In America",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[185]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 124 - Command To Build A House",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[186]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo House",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[187]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 125 - Saints In Iowa",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[188]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo Temple Cornerstones Laid",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[189]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Sidney: Prophet, Seer, And Revelator",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[190]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 126 - Brigham Young",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[191]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo House Cornerstones Laid",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[192]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "No More Baptisms For The Dead",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[193]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Instructions For Kirtland",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[194]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Wentworth Letter",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[195]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Book of Abraham Published",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[196]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Depend On No Man",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[197]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Chastened For Not Obeying",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[198]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 127 - Recording Baptisms",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[199]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 128 - Baptism For The Dead",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[200]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 129 - Discerning Messengers",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[201]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Necessary To Build Two Buildings",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[202]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "If Both Not Built, Must Run Away",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[203]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 130 - Various Topics",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[204]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 131 - Various Topics",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[205]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Highest Office In The Church",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[206]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Joseph To Not Prophesy Anymore",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[207]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Orders of Priesthood",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[208]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "King Follett Discourse Delivered",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[209]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo Expositor Published",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[210]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Many Will Seek For High Positions",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[211]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 132 - Polygamy",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[212]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 135 - The Martyrdom",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[215]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Brigham Tries To Sell The Temple",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[216]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo Temple Preliminary Dedication",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[217]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Church Moves Out of Nauvoo",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[218]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Twelve Vote To Sell Both Temples",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[219]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo Temple Dedicated",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[220]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 136 - The Camp of Israel",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[221]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo Temple Destroyed By Fire",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[223]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Nauvoo Temple Walls Collapsed By Wind",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[224]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Sections",
+        "Name": "Section 138 - Joseph F Smith's Vision",
+        "XPath": "(/html[1]/body[@book='DC_Sections']/sectionheader/sectiontitle)[225]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Moses",
+    "Name": "The Book of Moses",
+    "XPath": "/html[1]/body[@book='DC_Moses']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 1",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 2",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 3",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 4",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 5",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 6",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 7",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Moses",
+        "Name": "Moses 8",
+        "XPath": "(/html[1]/body[@book='DC_Moses']//chapter)[8]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Abraham",
+    "Name": "The Book of Abraham",
+    "XPath": "/html[1]/body[@book='DC_Abraham']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "DC_Abraham",
+        "Name": "Abraham 1",
+        "XPath": "(/html[1]/body[@book='DC_Abraham']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Abraham",
+        "Name": "Abraham 2",
+        "XPath": "(/html[1]/body[@book='DC_Abraham']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Abraham",
+        "Name": "Abraham 3",
+        "XPath": "(/html[1]/body[@book='DC_Abraham']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Abraham",
+        "Name": "Abraham 4",
+        "XPath": "(/html[1]/body[@book='DC_Abraham']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "DC_Abraham",
+        "Name": "Abraham 5",
+        "XPath": "(/html[1]/body[@book='DC_Abraham']//chapter)[5]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Matthew25",
+    "Name": "Matthew 25 – Inspired Version",
+    "XPath": "/html[1]/body[@book='DC_Matthew25']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_Articles",
+    "Name": "Articles of Faith",
+    "XPath": "/html[1]/body[@book='DC_Articles']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_1832Account",
+    "Name": "Joseph Smith History – 1832 Account",
+    "XPath": "/html[1]/body[@book='DC_1832Account']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_1835Account",
+    "Name": "Joseph Smith History – 1835 Account",
+    "XPath": "/html[1]/body[@book='DC_1835Account']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_1838Account",
+    "Name": "Joseph Smith History – 1838 Account",
+    "XPath": "/html[1]/body[@book='DC_1838Account']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_1842Account",
+    "Name": "Joseph Smith History – 1842 Account",
+    "XPath": "/html[1]/body[@book='DC_1842Account']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_MoroniVisit",
+    "Name": "Account of Moroni's Visit In 1823",
+    "XPath": "/html[1]/body[@book='DC_MoroniVisit']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "DC_LetterLibertyJail",
+    "Name": "Letter To The Church From Liberty Jail",
+    "XPath": "/html[1]/body[@book='DC_LetterLibertyJail']/book",
+    "Children": []
+  }
+]

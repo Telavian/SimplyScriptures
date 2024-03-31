@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.simplyscriptures.app">
+	<application android:allowBackup="true" android:icon="@mipmap/ss_icon" android:roundIcon="@mipmap/ss_icon_round" 
+	             android:supportsRtl="true" android:label="Simply Scriptures"
+               android:extractNativeLibs="true" 
+               android:usesCleartextTraffic="true"></application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
+</manifest>

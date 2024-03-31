@@ -1,0 +1,1746 @@
+[
+  {
+    "IsVisible": true,
+    "Book": "OT1_About",
+    "Name": "About This Edition",
+    "XPath": "/html[1]/body[@book='OT1_About']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_MasoreticTimeline",
+    "Name": "Masoretic Timeline",
+    "XPath": "/html[1]/body[@book='OT1_MasoreticTimeline']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_SeptuagintTimeline",
+    "Name": "Septuagint Timeline",
+    "XPath": "/html[1]/body[@book='OT1_SeptuagintTimeline']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_DescendantsTerah",
+    "Name": "Descendants of Terah",
+    "XPath": "/html[1]/body[@book='OT1_DescendantsTerah']/book",
+    "Children": []
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Genesis",
+    "Name": "Genesis",
+    "XPath": "/html[1]/body[@book='OT1_Genesis']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 1",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 2",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 3",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 4",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 5",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 6",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 7",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 8",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 9",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 10",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 11",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 12",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 13",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 14",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 15",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 16",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 17",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 18",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 19",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 20",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 21",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 22",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 23",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 24",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 25",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 26",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 27",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 28",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 29",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 30",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 31",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 32",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 33",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 34",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 35",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 36",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 37",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 38",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 39",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 40",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[40]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 41",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[41]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 42",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[42]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 43",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[43]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 44",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[44]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 45",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[45]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 46",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[46]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 47",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[47]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 48",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[48]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 49",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[49]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Genesis",
+        "Name": "Genesis 50",
+        "XPath": "(/html[1]/body[@book='OT1_Genesis']//chapter)[50]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Exodus",
+    "Name": "Exodus",
+    "XPath": "/html[1]/body[@book='OT1_Exodus']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 1",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 2",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 3",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 4",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 5",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 6",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 7",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 8",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 9",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 10",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 11",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 12",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 13",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 14",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 15",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 16",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 17",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 18",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 19",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 20",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 21",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 22",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 23",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 24",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 25",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 26",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 27",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 28",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 29",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 30",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 31",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 32",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 33",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 34",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 35",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 36",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[36]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 37",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[37]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 38",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[38]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 39",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[39]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Exodus",
+        "Name": "Exodus 40",
+        "XPath": "(/html[1]/body[@book='OT1_Exodus']//chapter)[40]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Leviticus",
+    "Name": "Leviticus",
+    "XPath": "/html[1]/body[@book='OT1_Leviticus']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 1",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 2",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 3",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 4",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 5",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 6",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 7",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 8",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 9",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 10",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 11",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 12",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 13",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 14",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 15",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 16",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 17",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 18",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 19",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 20",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 21",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 22",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 23",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 24",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 25",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 26",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Leviticus",
+        "Name": "Leviticus 27",
+        "XPath": "(/html[1]/body[@book='OT1_Leviticus']//chapter)[27]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Numbers",
+    "Name": "Numbers",
+    "XPath": "/html[1]/body[@book='OT1_Numbers']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 1",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 2",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 3",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 4",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 5",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 6",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 7",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 8",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 9",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 10",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 11",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 12",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 13",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 14",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 15",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 16",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 17",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 18",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 19",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 20",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 21",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 22",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 23",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 24",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 25",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 26",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 27",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 28",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 29",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 30",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 31",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 32",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 33",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 34",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[34]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 35",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[35]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Numbers",
+        "Name": "Numbers 36",
+        "XPath": "(/html[1]/body[@book='OT1_Numbers']//chapter)[36]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Deuteronomy",
+    "Name": "Deuteronomy",
+    "XPath": "/html[1]/body[@book='OT1_Deuteronomy']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 1",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 2",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 3",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 4",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 5",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 6",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 7",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 8",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 9",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 10",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 11",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 12",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 13",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 14",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 15",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 16",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 17",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 18",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 19",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 20",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 21",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 22",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 23",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 24",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[24]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 25",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[25]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 26",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[26]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 27",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[27]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 28",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[28]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 29",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[29]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 30",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[30]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 31",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[31]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 32",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[32]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 33",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[33]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Deuteronomy",
+        "Name": "Deuteronomy 34",
+        "XPath": "(/html[1]/body[@book='OT1_Deuteronomy']//chapter)[34]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Joshua",
+    "Name": "Joshua",
+    "XPath": "/html[1]/body[@book='OT1_Joshua']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 1",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 2",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 3",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 4",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 5",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 6",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 7",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 8",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 9",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 10",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 11",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 12",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 13",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 14",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 15",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 16",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 17",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 18",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 19",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 20",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 21",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[21]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 22",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[22]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 23",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[23]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Joshua",
+        "Name": "Joshua 24",
+        "XPath": "(/html[1]/body[@book='OT1_Joshua']//chapter)[24]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Judges",
+    "Name": "Judges",
+    "XPath": "/html[1]/body[@book='OT1_Judges']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 1",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 2",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 3",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 4",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[4]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 5",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[5]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 6",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[6]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 7",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[7]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 8",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[8]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 9",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[9]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 10",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[10]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 11",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[11]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 12",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[12]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 13",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[13]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 14",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[14]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 15",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[15]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 16",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[16]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 17",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[17]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 18",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[18]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 19",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[19]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 20",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[20]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Judges",
+        "Name": "Judges 21",
+        "XPath": "(/html[1]/body[@book='OT1_Judges']//chapter)[21]",
+        "Children": []
+      }
+    ]
+  },
+  {
+    "IsVisible": true,
+    "Book": "OT1_Ruth",
+    "Name": "Ruth",
+    "XPath": "/html[1]/body[@book='OT1_Ruth']/book",
+    "Children": [
+      {
+        "IsVisible": true,
+        "Book": "OT1_Ruth",
+        "Name": "Ruth 1",
+        "XPath": "(/html[1]/body[@book='OT1_Ruth']//chapter)[1]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Ruth",
+        "Name": "Ruth 2",
+        "XPath": "(/html[1]/body[@book='OT1_Ruth']//chapter)[2]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Ruth",
+        "Name": "Ruth 3",
+        "XPath": "(/html[1]/body[@book='OT1_Ruth']//chapter)[3]",
+        "Children": []
+      },
+      {
+        "IsVisible": true,
+        "Book": "OT1_Ruth",
+        "Name": "Ruth 4",
+        "XPath": "(/html[1]/body[@book='OT1_Ruth']//chapter)[4]",
+        "Children": []
+      }
+    ]
+  }
+]
