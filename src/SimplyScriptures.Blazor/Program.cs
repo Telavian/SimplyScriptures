@@ -1,5 +1,7 @@
 using Blazored.LocalStorage;
 using CurrieTechnologies.Razor.Clipboard;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Caching.Memory;
 using MudBlazor.Services;
 using SimplyScriptures.Common.Services.FileService;
@@ -16,10 +18,12 @@ public class Program
     {
         await Task.Yield();
 
-        var builder = WebApplication.CreateBuilder(args);
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
+        builder.RootComponents.Add<HeadOutlet>("head::after");
 
-        builder.Services.AddRazorPages();
-        builder.Services.AddServerSideBlazor();
+        //builder.Services.AddRazorPages();
+        //builder.Services.AddServerSideBlazor();
 
         builder.Services.AddMudServices();
         builder.Services.AddBlazoredLocalStorage();
@@ -28,14 +32,16 @@ public class Program
         builder.Services.AddSingleton<IFileService>(p => new CachingFileService(p.GetService<IMemoryCache>()!, new EmbeddedResourceFileService()));
         builder.Services.AddScoped<IApplicationStateService, ApplicationStateService>();
 
-        var app = builder.Build();
+        //var app = builder.Build();
 
-        app.UseStaticFiles();
-        app.UseRouting();
+        ////app.UseStaticFiles();
+        ////app.UseRouting();
 
-        app.MapBlazorHub();
-        app.MapFallbackToPage("/_Host");
+        ////app.MapBlazorHub();
+        ////app.MapFallbackToPage("/_Host");
 
-        app.Run();
+        //app.Run();
+
+        await builder.Build().RunAsync();
     }
 }

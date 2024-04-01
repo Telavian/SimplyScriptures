@@ -12,8 +12,8 @@
 		<PackageReference Include="Lucene.Net.Queries" Version="4.8.0-beta00016" />
 		<PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-beta00016" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
-		<PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
-    <PackageReference Include="rm.Trie" Version="1.5.0" />
+		<PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="3.0.0" />
+    <PackageReference Include="rm.Trie" Version="1.6.0" />
 	</ItemGroup>
 
 </Project>
