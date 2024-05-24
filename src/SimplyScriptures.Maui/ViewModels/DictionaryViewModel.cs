@@ -1,5 +1,10 @@
-﻿using SimplyScriptures.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Common.Models;
+using SimplyScriptures.Common.Services.FileService.Interfaces;
+using SimplyScriptures.Models;
 using SimplyScriptures.Pages;
+using SimplyScriptures.Common.Extensions;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -29,7 +34,7 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
     #region IsWordsInitializing
 
-    private readonly bool _isWordsInitializing;
+    private bool _isWordsInitializing;
 
     public bool IsWordsInitializing
     {
@@ -75,7 +80,7 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
     #region SelectedWord
 
-    private readonly ListItem<DictionaryWord>? _selectedWord;
+    private ListItem<DictionaryWord>? _selectedWord;
 
     public ListItem<DictionaryWord>? SelectedWord
     {

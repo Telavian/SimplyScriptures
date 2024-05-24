@@ -4,10 +4,12 @@ using Android.Runtime;
 namespace SimplyScriptures;
 
 [Application]
-public class MainApplication(IntPtr handle, JniHandleOwnership ownership) : MauiApplication
+public class MainApplication : MauiApplication
 {
-    protected override MauiApp CreateMauiApp()
+    public MainApplication(IntPtr handle, JniHandleOwnership ownership)
+        : base(handle, ownership)
     {
-        return MauiProgram.CreateMauiApp();
     }
+
+    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 }

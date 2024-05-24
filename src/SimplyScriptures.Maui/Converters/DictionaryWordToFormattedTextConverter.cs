@@ -12,7 +12,7 @@ namespace SimplyScriptures.Converters;
 
 public class DictionaryWordToFormattedTextConverter : IValueConverter
 {
-    public static object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
+    public object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
     {
         if (value is null || value is DictionaryWord item == false)
         {
@@ -27,7 +27,7 @@ public class DictionaryWordToFormattedTextConverter : IValueConverter
         //return service.ConvertToFormattedText(html);
     }
 
-    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

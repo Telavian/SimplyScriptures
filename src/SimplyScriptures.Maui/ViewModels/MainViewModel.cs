@@ -1,4 +1,7 @@
 ﻿using SimplyScriptures.Pages;
+using SimplyScriptures.Common.Extensions;
+using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Common.Enums;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -8,7 +11,7 @@ public class MainViewModel : ViewModelBase
 
     #region SearchText
 
-    private readonly string _searchText = "";
+    private string _searchText = "";
 
     public string SearchText
     {

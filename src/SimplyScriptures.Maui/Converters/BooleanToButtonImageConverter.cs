@@ -4,7 +4,7 @@ namespace SimplyScriptures.Converters;
 
 public class BooleanToButtonImageConverter : IValueConverter
 {
-    public static object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         return value == null || value is bool b == false
             ? "checkmark.png"
@@ -13,7 +13,7 @@ public class BooleanToButtonImageConverter : IValueConverter
             : "cancel.png");
     }
 
-    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

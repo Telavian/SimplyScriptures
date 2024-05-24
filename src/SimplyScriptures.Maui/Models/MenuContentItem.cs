@@ -201,32 +201,11 @@ public class MenuContentItem<T>(T item) : ModelBase, IMenuContentItem
 
     public void AddChild(MenuContentItem<T> child)
     {
-
-        /* Unmerged change from project 'SimplyScriptures.Maui(net8.0-ios)'
-        Before:
-                AllChildren = AllChildren.Concat(new [] { child }).ToArray();
-        After:
-                AllChildren = [.. AllChildren, .. new [] { child }];
-        */
-
-        /* Unmerged change from project 'SimplyScriptures.Maui(net8.0-maccatalyst)'
-        Before:
-                AllChildren = AllChildren.Concat(new [] { child }).ToArray();
-        After:
-                AllChildren = [.. AllChildren, .. new [] { child }];
-        */
-
-        /* Unmerged change from project 'SimplyScriptures.Maui(net8.0-windows10.0.19041.0)'
-        Before:
-                AllChildren = AllChildren.Concat(new [] { child }).ToArray();
-        After:
-                AllChildren = [.. AllChildren, .. new [] { child }];
-        */
-        AllChildren = [.. AllChildren, .. new[] { child }];
+        AllChildren = AllChildren.Concat(new[] { child }).ToArray();
 
         if (child.IsVisible)
         {
-            Children = [.. Children, .. new[] { child }];
+            Children = Children.Concat(new[] { child }).ToArray();
         }
     }
 

@@ -1,4 +1,8 @@
-﻿using SimplyScriptures.Pages;
+﻿using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Pages;
 
 namespace SimplyScriptures.ViewModels;
 

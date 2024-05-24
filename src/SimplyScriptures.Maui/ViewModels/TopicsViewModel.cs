@@ -1,5 +1,10 @@
-﻿using SimplyScriptures.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Common.Models;
+using SimplyScriptures.Common.Services.FileService.Interfaces;
+using SimplyScriptures.Models;
 using SimplyScriptures.Pages;
+using SimplyScriptures.Common.Extensions;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -29,7 +34,7 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
 
     #region IsTopicsInitializing
 
-    private readonly bool _isTopicsInitializing;
+    private bool _isTopicsInitializing;
 
     public bool IsTopicsInitializing
     {
@@ -224,6 +229,7 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
     public AsyncRelayCommand<ContentTopicItem?> TopicItemSelectedAsyncCommand => _topicItemSelectedAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(TopicItemSelectedAsync, "Unable to process topic item");
 
     #endregion TopicItemSelectedAsyncCommand
+
     #endregion
 
     #region Public Methods

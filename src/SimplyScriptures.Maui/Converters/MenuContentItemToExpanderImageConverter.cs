@@ -5,7 +5,7 @@ namespace SimplyScriptures.Converters;
 
 public class MenuContentItemToExpanderImageConverter : IValueConverter
 {
-    public static object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
+    public object Convert(object? value, Type targetType, object parameter, CultureInfo culture)
     {
         return value == null || value is bool isExpanded == false
             ? Binding.DoNothing
@@ -18,7 +18,7 @@ public class MenuContentItemToExpanderImageConverter : IValueConverter
             : "right_light.png");
     }
 
-    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }

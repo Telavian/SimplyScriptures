@@ -1,5 +1,17 @@
-﻿using SimplyScriptures.Models;
+﻿using System.Collections.Concurrent;
+using System.Diagnostics;
+using System.Web;
+using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Common.Enums;
+using SimplyScriptures.Common.Extensions;
+using SimplyScriptures.Common.Models;
+using SimplyScriptures.Common.Search.Models;
+using SimplyScriptures.Common.Services.FileService.Interfaces;
+using SimplyScriptures.Common.Services.TextSearch;
+using SimplyScriptures.Common.Services.TextSearch.Models;
+using SimplyScriptures.Models;
 using SimplyScriptures.Models.Interfaces;
+using Telerik.Maui.Controls;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -1785,21 +1797,18 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
             .ForAllAsync(async item =>
             {
                 var colorText = App.IsDarkTheme
-                    ? $"{Color.Parse(selection.Color).ToInverseColor().ToHex()}66"
+                    ? $"{Color.Parse(selection.Color).ToString().ToInverseColor()}66"
                     : $"{selection.Color}66";
 
-                await ExecuteJavascriptAsync($"updateHighlightColor(\"{item}\", \"{colorText}\");")
-                    ;
-            })
-            ;
+                await ExecuteJavascriptAsync($"updateHighlightColor(\"{item}\", \"{colorText}\");");
+            });
 
         await DispatchAsync(() =>
         {
             AllHighlights = AllHighlights
                 .Concat(new[] { selection })
                 .ToArray();
-        })
-            ;
+        });
     }
 
     private Task SaveCurrentHighlightsAsync()

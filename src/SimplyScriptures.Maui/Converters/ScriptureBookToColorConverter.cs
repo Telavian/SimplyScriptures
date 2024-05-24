@@ -26,7 +26,7 @@ public class ScriptureBookToColorConverter : IValueConverter
         return book.IsBookOfMormon() ? Color.FromRgb(0, 200, 83) : (object)(book.IsDoctrineAndCovenants() ? Colors.DarkGray : Colors.White);
     }
 
-    public static object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return Binding.DoNothing;
     }
