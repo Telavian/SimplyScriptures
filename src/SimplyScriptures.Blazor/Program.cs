@@ -22,25 +22,12 @@ public class Program
         builder.RootComponents.Add<App>("#app");
         builder.RootComponents.Add<HeadOutlet>("head::after");
 
-        //builder.Services.AddRazorPages();
-        //builder.Services.AddServerSideBlazor();
-
         builder.Services.AddMudServices();
         builder.Services.AddBlazoredLocalStorage();
         builder.Services.AddClipboard();
         builder.Services.AddMemoryCache();
         builder.Services.AddSingleton<IFileService>(p => new CachingFileService(p.GetService<IMemoryCache>()!, new EmbeddedResourceFileService()));
         builder.Services.AddScoped<IApplicationStateService, ApplicationStateService>();
-
-        //var app = builder.Build();
-
-        ////app.UseStaticFiles();
-        ////app.UseRouting();
-
-        ////app.MapBlazorHub();
-        ////app.MapFallbackToPage("/_Host");
-
-        //app.Run();
 
         await builder.Build().RunAsync();
     }
