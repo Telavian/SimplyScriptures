@@ -121,9 +121,7 @@
   <ItemGroup>
     <Folder Include="Resources\Raw\fonts\" />
     <Folder Include="Resources\Raw\Images\" />
-  </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionSimplyScripturesMauiHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSimplyScripturesMauiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+  </ItemGroup>  
 
   <ItemGroup>
     <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.40" />
