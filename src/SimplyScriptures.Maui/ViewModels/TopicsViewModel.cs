@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using CommunityToolkit.Mvvm.Input;
 using SimplyScriptures.Common.Models;
 using SimplyScriptures.Common.Services.FileService.Interfaces;
 using SimplyScriptures.Models;
 using SimplyScriptures.Pages;
 using SimplyScriptures.Common.Extensions;
+using SimplyScriptures.Commands;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -116,41 +116,41 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
 
     #region ShowTopicsMenuAsyncCommand
 
-    private AsyncRelayCommand? _showTopicsMenuAsyncCommand;
+    private AsyncCommand? _showTopicsMenuAsyncCommand;
 
-    public AsyncRelayCommand ShowTopicsMenuAsyncCommand => _showTopicsMenuAsyncCommand ??= CreateAsyncCommand(ShowTopicsMenuAsync, "Unable to show topics menu");
+    public AsyncCommand ShowTopicsMenuAsyncCommand => _showTopicsMenuAsyncCommand ??= CreateAsyncCommand(ShowTopicsMenuAsync, "Unable to show topics menu");
 
     #endregion ShowTopicsMenuAsyncCommand
 
     #region ToggleOTVisibilityAsyncCommand
 
-    private AsyncRelayCommand? _toggleOTVisibilityAsyncCommand;
+    private AsyncCommand? _toggleOTVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleOTVisibilityAsyncCommand => _toggleOTVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleOTVisibilityAsync, "Unable to toggle visibility");
+    public AsyncCommand ToggleOTVisibilityAsyncCommand => _toggleOTVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleOTVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleOTVisibilityAsyncCommand
 
     #region ToggleNTVisibilityAsyncCommand
 
-    private AsyncRelayCommand? _toggleNTVisibilityAsyncCommand;
+    private AsyncCommand? _toggleNTVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleNTVisibilityAsyncCommand => _toggleNTVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleNTVisibilityAsync, "Unable to toggle visibility");
+    public AsyncCommand ToggleNTVisibilityAsyncCommand => _toggleNTVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleNTVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleNTVisibilityAsyncCommand
 
     #region ToggleBMVisibilityAsyncCommand
 
-    private AsyncRelayCommand? _toggleBMVisibilityAsyncCommand;
+    private AsyncCommand? _toggleBMVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleBMVisibilityAsyncCommand => _toggleBMVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleBMVisibilityAsync, "Unable to toggle visibility");
+    public AsyncCommand ToggleBMVisibilityAsyncCommand => _toggleBMVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleBMVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleBMVisibilityAsyncCommand
 
     #region ToggleDCVisibilityAsyncCommand
 
-    private AsyncRelayCommand? _toggleDCVisibilityAsyncCommand;
+    private AsyncCommand? _toggleDCVisibilityAsyncCommand;
 
-    public AsyncRelayCommand ToggleDCVisibilityAsyncCommand => _toggleDCVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleDCVisibilityAsync, "Unable to toggle visibility");
+    public AsyncCommand ToggleDCVisibilityAsyncCommand => _toggleDCVisibilityAsyncCommand ??= CreateAsyncCommand(ToggleDCVisibilityAsync, "Unable to toggle visibility");
 
     #endregion ToggleNTVisibilityAsyncCommand
 
@@ -208,25 +208,25 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
 
     #region CopyTopicItemAsyncCommand
 
-    private AsyncRelayCommand<ContentTopicItem?>? _copyTopicItemAsyncCommand;
+    private AsyncCommand<ContentTopicItem?>? _copyTopicItemAsyncCommand;
 
-    public AsyncRelayCommand<ContentTopicItem?> CopyTopicItemAsyncCommand => _copyTopicItemAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(CopyTopicItemAsync, "Unable to copy topic item");
+    public AsyncCommand<ContentTopicItem?> CopyTopicItemAsyncCommand => _copyTopicItemAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(CopyTopicItemAsync, "Unable to copy topic item");
 
     #endregion CopyTopicItemAsyncCommand
 
     #region TopicSelectedAsyncCommand
 
-    private AsyncRelayCommand<ListItem<ContentTopic>>? _topicSelectedAsyncCommand;
+    private AsyncCommand<ListItem<ContentTopic>>? _topicSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ListItem<ContentTopic>> TopicSelectedAsyncCommand => _topicSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<ContentTopic>>(TopicSelectedAsync, "Unable to process topic");
+    public AsyncCommand<ListItem<ContentTopic>> TopicSelectedAsyncCommand => _topicSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<ContentTopic>>(TopicSelectedAsync, "Unable to process topic");
 
     #endregion TopicSelectedAsyncCommand
 
     #region TopicItemSelectedAsyncCommand
 
-    private AsyncRelayCommand<ContentTopicItem?>? _topicItemSelectedAsyncCommand;
+    private AsyncCommand<ContentTopicItem?>? _topicItemSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ContentTopicItem?> TopicItemSelectedAsyncCommand => _topicItemSelectedAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(TopicItemSelectedAsync, "Unable to process topic item");
+    public AsyncCommand<ContentTopicItem?> TopicItemSelectedAsyncCommand => _topicItemSelectedAsyncCommand ??= CreateAsyncCommand<ContentTopicItem?>(TopicItemSelectedAsync, "Unable to process topic item");
 
     #endregion TopicItemSelectedAsyncCommand
 
@@ -234,13 +234,15 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
 
     #region Public Methods
 
-    public Task InitializeAsync()
+    public async Task InitializeAsync()
     {
+        await Task.Yield();
+
         // Force the value to be updated when command is called
         _isMenuOpen = false;
 
-        return ShowTopicsMenuAsyncCommand
-            .ExecuteAsync(null);
+        ShowTopicsMenuAsyncCommand
+            .Execute(null);
     }
 
     #endregion

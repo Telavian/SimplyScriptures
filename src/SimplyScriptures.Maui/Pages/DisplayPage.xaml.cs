@@ -51,23 +51,23 @@ public partial class DisplayPage : ContentPage
     [SuppressMessage("ReSharper", "AsyncApostle.AsyncAwaitMayBeElidedHighlighting")]
     private async void BookmarkDeleteButton_Clicked(object sender, EventArgs e)
     {
+        await Task.Yield();
+
         //TODO: Not sure how to do this through bindings
         var item = (ImageButton)sender;
         var dataContext = item.BindingContext as MenuContentItem<Bookmark>;
 
-        await _viewModel.DeleteBookmarkAsyncCommand
-            .ExecuteAsync(dataContext)
-            ;
+        _viewModel.DeleteBookmarkAsyncCommand
+            .Execute(dataContext);
     }
 
     #endregion
 
     private void MainContentWebView_OnNavigated(object? sender, WebNavigatedEventArgs e)
-    {
+    {        
         Debug.WriteLine($"Initializing browser for url: {e.Url}");
 
         _viewModel.InitializePageFrameAsyncCommand
-            .ExecuteAsync(null)
-            ;
+            .Execute(null);
     }
 }

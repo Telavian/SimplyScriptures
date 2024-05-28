@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
-
+﻿
 namespace SimplyScriptures.Models.Interfaces;
 
 public interface IListItem

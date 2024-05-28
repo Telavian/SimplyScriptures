@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Maui;
-using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.Extensions.Caching.Memory;
 using SimplyScriptures.Common.Services.FileService;
 using SimplyScriptures.Common.Services.FileService.Interfaces;
 using SimplyScriptures.Pages;
@@ -16,7 +15,6 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            .UseMauiCommunityToolkit()
             .UseTelerik()
             .ConfigureFonts(fonts =>
             {

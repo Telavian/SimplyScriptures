@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using CommunityToolkit.Mvvm.Input;
 using SimplyScriptures.Common.Models;
 using SimplyScriptures.Common.Services.FileService.Interfaces;
 using SimplyScriptures.Models;
 using SimplyScriptures.Pages;
 using SimplyScriptures.Common.Extensions;
+using SimplyScriptures.Commands;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -60,9 +60,9 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
     #region ShowDictionaryMenuAsyncCommand
 
-    private AsyncRelayCommand? _showDictionaryMenuAsyncCommand;
+    private AsyncCommand? _showDictionaryMenuAsyncCommand;
 
-    public AsyncRelayCommand ShowDictionaryMenuAsyncCommand => _showDictionaryMenuAsyncCommand ??= CreateAsyncCommand(ShowDictionaryMenuAsync, "Unable to show menu");
+    public AsyncCommand ShowDictionaryMenuAsyncCommand => _showDictionaryMenuAsyncCommand ??= CreateAsyncCommand(ShowDictionaryMenuAsync, "Unable to show menu");
 
     #endregion ShowDictionaryMenuAsyncCommand
 
@@ -92,9 +92,9 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
     #region WordSelectedAsyncCommand
 
-    private AsyncRelayCommand<ListItem<DictionaryWord>>? _wordSelectedAsyncCommand;
+    private AsyncCommand<ListItem<DictionaryWord>>? _wordSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ListItem<DictionaryWord>> WordSelectedAsyncCommand => _wordSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<DictionaryWord>>(WordSelectedAsync, "Unable to process word");
+    public AsyncCommand<ListItem<DictionaryWord>> WordSelectedAsyncCommand => _wordSelectedAsyncCommand ??= CreateAsyncCommand<ListItem<DictionaryWord>>(WordSelectedAsync, "Unable to process word");
 
     #endregion WordSelectedAsyncCommand
 
@@ -102,13 +102,15 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
     #region Public Methods
 
-    public Task InitializeAsync()
+    public async Task InitializeAsync()
     {
         // Force the value to be updated when command is called
         _isMenuOpen = false;
 
-        return ShowDictionaryMenuAsyncCommand
-            .ExecuteAsync(null);
+        await Task.Yield();
+
+        ShowDictionaryMenuAsyncCommand
+            .Execute(null);
     }
 
     #endregion

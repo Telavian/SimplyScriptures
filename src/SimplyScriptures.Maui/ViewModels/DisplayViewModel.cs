@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Web;
-using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Commands;
 using SimplyScriptures.Common.Enums;
 using SimplyScriptures.Common.Extensions;
 using SimplyScriptures.Common.Models;
@@ -241,7 +241,7 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
     {
         get => _selectedScripture;
         set => SetProperty(ref _selectedScripture, value,
-            b => SelectScriptureBookAsyncCommand.ExecuteAsync(b));
+            b => SelectScriptureBookAsyncCommand.Execute(b));
     }
 
     #endregion SelectedScripture
@@ -309,9 +309,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ShowDisplayMenuAsyncCommand
 
-    private AsyncRelayCommand? _showDisplayMenuAsyncCommand;
+    private AsyncCommand? _showDisplayMenuAsyncCommand;
 
-    public AsyncRelayCommand ShowDisplayMenuAsyncCommand
+    public AsyncCommand ShowDisplayMenuAsyncCommand
     {
         get
         {
@@ -323,9 +323,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region NavItemSelectedAsyncCommand
 
-    private AsyncRelayCommand<ContentItem>? _navItemSelectedAsyncCommand;
+    private AsyncCommand<ContentItem>? _navItemSelectedAsyncCommand;
 
-    public AsyncRelayCommand<ContentItem> NavItemSelectedAsyncCommand
+    public AsyncCommand<ContentItem> NavItemSelectedAsyncCommand
     {
         get
         {
@@ -337,9 +337,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region MenuContentItemSelectedAsyncCommand
 
-    private AsyncRelayCommand<IMenuContentItem>? _menuContentItemSelectedAsyncCommand;
+    private AsyncCommand<IMenuContentItem>? _menuContentItemSelectedAsyncCommand;
 
-    public AsyncRelayCommand<IMenuContentItem> MenuContentItemSelectedAsyncCommand
+    public AsyncCommand<IMenuContentItem> MenuContentItemSelectedAsyncCommand
     {
         get
         {
@@ -351,9 +351,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region SearchAsyncCommand
 
-    private AsyncRelayCommand? _searchAsyncCommand;
+    private AsyncCommand? _searchAsyncCommand;
 
-    public AsyncRelayCommand SearchAsyncCommand
+    public AsyncCommand SearchAsyncCommand
     {
         get
         {
@@ -365,9 +365,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region SearchMatchSelectedAsyncCommand
 
-    private AsyncRelayCommand<SearchMatch>? _searchMatchSelectedAsyncCommand;
+    private AsyncCommand<SearchMatch>? _searchMatchSelectedAsyncCommand;
 
-    public AsyncRelayCommand<SearchMatch> SearchMatchSelectedAsyncCommand
+    public AsyncCommand<SearchMatch> SearchMatchSelectedAsyncCommand
     {
         get
         {
@@ -379,9 +379,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region SelectScriptureBookAsyncCommand
 
-    private AsyncRelayCommand<ScriptureBook>? _selectScriptureBookAsyncCommand;
+    private AsyncCommand<ScriptureBook>? _selectScriptureBookAsyncCommand;
 
-    public AsyncRelayCommand<ScriptureBook> SelectScriptureBookAsyncCommand
+    public AsyncCommand<ScriptureBook> SelectScriptureBookAsyncCommand
     {
         get
         {
@@ -402,9 +402,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ShowPrintableScripturesAsyncCommand
 
-    private AsyncRelayCommand? _showPrintableScripturesAsyncCommand;
+    private AsyncCommand? _showPrintableScripturesAsyncCommand;
 
-    public AsyncRelayCommand ShowPrintableScripturesAsyncCommand
+    public AsyncCommand ShowPrintableScripturesAsyncCommand
     {
         get
         {
@@ -416,9 +416,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region CopyLinkAsyncCommand
 
-    private AsyncRelayCommand? _copyLinkAsyncCommand;
+    private AsyncCommand? _copyLinkAsyncCommand;
 
-    public AsyncRelayCommand CopyLinkAsyncCommand
+    public AsyncCommand CopyLinkAsyncCommand
     {
         get
         {
@@ -430,9 +430,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ZoomScripturesInAsyncCommand
 
-    private AsyncRelayCommand? _zoomScripturesInAsyncCommand;
+    private AsyncCommand? _zoomScripturesInAsyncCommand;
 
-    public AsyncRelayCommand ZoomScripturesInAsyncCommand
+    public AsyncCommand ZoomScripturesInAsyncCommand
     {
         get
         {
@@ -444,9 +444,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ZoomScripturesOutAsyncCommand
 
-    private AsyncRelayCommand? _zoomScripturesOutAsyncCommand;
+    private AsyncCommand? _zoomScripturesOutAsyncCommand;
 
-    public AsyncRelayCommand ZoomScripturesOutAsyncCommand
+    public AsyncCommand ZoomScripturesOutAsyncCommand
     {
         get
         {
@@ -458,9 +458,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region CloseSideMenuAsyncCommand
 
-    private AsyncRelayCommand? _closeSideMenuAsyncCommand;
+    private AsyncCommand? _closeSideMenuAsyncCommand;
 
-    public AsyncRelayCommand CloseSideMenuAsyncCommand
+    public AsyncCommand CloseSideMenuAsyncCommand
     {
         get
         {
@@ -472,9 +472,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ShowBookmarksAsyncCommand
 
-    private AsyncRelayCommand? _showBookmarksAsyncCommand;
+    private AsyncCommand? _showBookmarksAsyncCommand;
 
-    public AsyncRelayCommand ShowBookmarksAsyncCommand
+    public AsyncCommand ShowBookmarksAsyncCommand
     {
         get
         {
@@ -486,9 +486,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ShowHighlightColorsAsyncCommand
 
-    private AsyncRelayCommand? _showHighlightColorsAsyncCommand;
+    private AsyncCommand? _showHighlightColorsAsyncCommand;
 
-    public AsyncRelayCommand ShowHighlightColorsAsyncCommand
+    public AsyncCommand ShowHighlightColorsAsyncCommand
     {
         get
         {
@@ -500,9 +500,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region DeleteBookmarkAsyncCommand
 
-    private AsyncRelayCommand<MenuContentItem<Bookmark>>? _deleteBookmarkAsyncCommand;
+    private AsyncCommand<MenuContentItem<Bookmark>>? _deleteBookmarkAsyncCommand;
 
-    public AsyncRelayCommand<MenuContentItem<Bookmark>> DeleteBookmarkAsyncCommand
+    public AsyncCommand<MenuContentItem<Bookmark>> DeleteBookmarkAsyncCommand
     {
         get
         {
@@ -514,9 +514,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region AddBookmarkAsyncCommand
 
-    private AsyncRelayCommand? _addBookmarkAsyncCommand;
+    private AsyncCommand? _addBookmarkAsyncCommand;
 
-    public AsyncRelayCommand AddBookmarkAsyncCommand
+    public AsyncCommand AddBookmarkAsyncCommand
     {
         get
         {
@@ -528,9 +528,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region DisplayBookmarkAsyncCommand
 
-    private AsyncRelayCommand<Bookmark>? _displayBookmarkAsyncCommand;
+    private AsyncCommand<Bookmark>? _displayBookmarkAsyncCommand;
 
-    public AsyncRelayCommand<Bookmark> DisplayBookmarkAsyncCommand
+    public AsyncCommand<Bookmark> DisplayBookmarkAsyncCommand
     {
         get
         {
@@ -542,9 +542,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region ApplyHighlightAsyncCommand
 
-    private AsyncRelayCommand? _applyHighlightAsyncCommand;
+    private AsyncCommand? _applyHighlightAsyncCommand;
 
-    public AsyncRelayCommand ApplyHighlightAsyncCommand
+    public AsyncCommand ApplyHighlightAsyncCommand
     {
         get
         {
@@ -556,9 +556,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region RemoveHighlightAsyncCommand
 
-    private AsyncRelayCommand? _removeHighlightAsyncCommand;
+    private AsyncCommand? _removeHighlightAsyncCommand;
 
-    public AsyncRelayCommand RemoveHighlightAsyncCommand
+    public AsyncCommand RemoveHighlightAsyncCommand
     {
         get
         {
@@ -570,9 +570,9 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
 
     #region InitializePageFrameAsyncCommand
 
-    private AsyncRelayCommand? _initializePageFrameAsyncCommand;
+    private AsyncCommand? _initializePageFrameAsyncCommand;
 
-    public AsyncRelayCommand InitializePageFrameAsyncCommand
+    public AsyncCommand InitializePageFrameAsyncCommand
     {
         get
         {
@@ -941,7 +941,7 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
             Level = 0,
             Text = FixMenuTextForDisplay($"{book.ToDisplayString()} ({items.Length:N0})"),
             Action = () => Task.CompletedTask,
-            Handler = new AsyncRelayCommand<MenuContentItem<SearchMatch?>>(x => MenuContentItemSelectedAsyncCommand.ExecuteAsync(x)),
+            Handler = new AsyncCommand<MenuContentItem<SearchMatch?>>(x => Task.Run(() => MenuContentItemSelectedAsyncCommand.Execute(x))),
         };
 
         searchGroup.AllChildren = ConvertSearchResults(searchGroup, items);
@@ -961,8 +961,8 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
                 IsVisible = true,
                 IsExpanded = false,
                 Level = 1,
-                Action = () => SearchMatchSelectedAsyncCommand.ExecuteAsync(item),
-                Handler = new AsyncRelayCommand<MenuContentItem<SearchMatch?>>(x => MenuContentItemSelectedAsyncCommand.ExecuteAsync(x)),
+                Action = () => Task.Run(() => SearchMatchSelectedAsyncCommand.Execute(item)),
+                Handler = new AsyncCommand<MenuContentItem<SearchMatch?>>(x => Task.Run(() => MenuContentItemSelectedAsyncCommand.Execute(x))),
                 HasChildren = false,
             })
             .ToArray();
@@ -1315,8 +1315,8 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
             IsExpanded = false,
             Level = level,
             Text = FixMenuTextForDisplay(item.Name),
-            Action = () => NavItemSelectedAsyncCommand.ExecuteAsync(item),
-            Handler = new AsyncRelayCommand<MenuContentItem<ContentItem>>(x => MenuContentItemSelectedAsyncCommand.ExecuteAsync(x))
+            Action = () => Task.Run(() => NavItemSelectedAsyncCommand.Execute(item)),
+            Handler = new AsyncCommand<MenuContentItem<ContentItem>>(x => Task.Run(() => MenuContentItemSelectedAsyncCommand.Execute(x)))
         };
 
         var children = (item.Children ?? Array.Empty<ContentItem>())
@@ -1523,8 +1523,8 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
     {
         return new MenuContentItem<Bookmark>(bookmark)
         {
-            Action = () => DisplayBookmarkAsyncCommand.ExecuteAsync(bookmark),
-            Handler = new AsyncRelayCommand<MenuContentItem<Bookmark>>(x => MenuContentItemSelectedAsyncCommand.ExecuteAsync(x)),
+            Action = () => Task.Run(() => DisplayBookmarkAsyncCommand.Execute(bookmark)),
+            Handler = new AsyncCommand<MenuContentItem<Bookmark>>(x => Task.Run(() => MenuContentItemSelectedAsyncCommand.Execute(x))),
             IsExpanded = false,
             IsVisible = true,
             Level = 1,
@@ -1610,7 +1610,7 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
     {
         return new MenuContentItem<Bookmark>(new Bookmark { Book = book })
         {
-            Handler = new AsyncRelayCommand<MenuContentItem<Bookmark>>(x => MenuContentItemSelectedAsyncCommand.ExecuteAsync(x)),
+            Handler = new AsyncCommand<MenuContentItem<Bookmark>>(x => Task.Run(() => MenuContentItemSelectedAsyncCommand.Execute(x))),
             Action = () => Task.CompletedTask,
             Text = book.ToDisplayString(),
             IsVisible = true,
@@ -1630,8 +1630,8 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
                 IsVisible = true,
                 IsExpanded = false,
                 HasChildren = false,
-                Handler = new AsyncRelayCommand<MenuContentItem<Bookmark>>(x => MenuContentItemSelectedAsyncCommand.ExecuteAsync(x)),
-                Action = () => DisplayBookmarkAsyncCommand.ExecuteAsync(x),
+                Handler = new AsyncCommand<MenuContentItem<Bookmark>>(x => Task.Run(() => MenuContentItemSelectedAsyncCommand.Execute(x))),
+                Action = () => Task.Run(() => DisplayBookmarkAsyncCommand.Execute(x)),
             })
             .ToArray();
     }

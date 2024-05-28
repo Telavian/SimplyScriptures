@@ -1,7 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using CommunityToolkit.Maui.Core.Extensions;
-using CommunityToolkit.Mvvm.Input;
-using SimplyScriptures.Models.Interfaces;
+﻿using SimplyScriptures.Models.Interfaces;
 
 namespace SimplyScriptures.Models;
 

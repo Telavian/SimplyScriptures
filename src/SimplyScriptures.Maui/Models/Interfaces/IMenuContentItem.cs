@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using SimplyScriptures.Commands;
 
 namespace SimplyScriptures.Models.Interfaces;
 
@@ -17,7 +17,7 @@ public interface IMenuContentItem
     IMenuContentItem? Parent { get; set; }
     IReadOnlyList<IMenuContentItem> AllChildren { get; set; }
     IReadOnlyList<IMenuContentItem> Children { get; set; }
-    AsyncRelayCommand<IMenuContentItem> Handler { get; }
+    AsyncCommand<IMenuContentItem> Handler { get; }
 
     void CollapseItem();
     void ExpandItem();

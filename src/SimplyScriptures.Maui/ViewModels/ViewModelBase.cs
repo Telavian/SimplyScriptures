@@ -1,58 +1,33 @@
-﻿using System.Diagnostics;
+﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+using SimplyScriptures.Commands;
 using SimplyScriptures.Pages;
 
 namespace SimplyScriptures.ViewModels;
 
-public abstract class ViewModelBase : ObservableObject
+public abstract class ViewModelBase : INotifyPropertyChanged
 {
-    #region Public Properties
+    private AsyncCommand? _showHomeAsyncCommand;
+    public AsyncCommand ShowHomeAsyncCommand => _showHomeAsyncCommand ??= CreateAsyncCommand(ShowHomeAsync, "Unable to show home");
 
-    #region ShowHomeAsyncCommand
+    private AsyncCommand? _showDisplayAsyncCommand;
+    public AsyncCommand ShowDisplayAsyncCommand => _showDisplayAsyncCommand ??= CreateAsyncCommand(ShowDisplayAsync, "Unable to show display");
 
-    private AsyncRelayCommand? _showHomeAsyncCommand;
+    private AsyncCommand? _showDictionaryAsyncCommand;
+    public AsyncCommand ShowDictionaryAsyncCommand => _showDictionaryAsyncCommand ??= CreateAsyncCommand(ShowDictionaryAsync, "Unable to show dictionary");
 
-    public AsyncRelayCommand ShowHomeAsyncCommand => _showHomeAsyncCommand ??= CreateAsyncCommand(ShowHomeAsync, "Unable to show home");
+    private AsyncCommand? _showTopicsAsyncCommand;    
+    public AsyncCommand ShowTopicsAsyncCommand => _showTopicsAsyncCommand ??= CreateAsyncCommand(ShowTopicsAsync, "Unable to show topics");
 
-    #endregion ShowHomeAsyncCommand
-
-    #region ShowDisplayAsyncCommand
-
-    private AsyncRelayCommand? _showDisplayAsyncCommand;
-
-    public AsyncRelayCommand ShowDisplayAsyncCommand => _showDisplayAsyncCommand ??= CreateAsyncCommand(ShowDisplayAsync, "Unable to show display");
-
-    #endregion ShowDisplayAsyncCommand
-
-    #region ShowDictionaryAsyncCommand
-
-    private AsyncRelayCommand? _showDictionaryAsyncCommand;
-
-    public AsyncRelayCommand ShowDictionaryAsyncCommand => _showDictionaryAsyncCommand ??= CreateAsyncCommand(ShowDictionaryAsync, "Unable to show dictionary");
-
-    #endregion ShowDictionaryAsyncCommand
-
-    #region ShowTopicsAsyncCommand
-
-    private AsyncRelayCommand? _showTopicsAsyncCommand;
-
-    public AsyncRelayCommand ShowTopicsAsyncCommand => _showTopicsAsyncCommand ??= CreateAsyncCommand(ShowTopicsAsync, "Unable to show topics");
-
-    #endregion ShowTopicsAsyncCommand
-
-    #endregion
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     #region Protected Methods
 
     protected async Task CopyItemToClipboardAsync(string text)
     {
-        await Clipboard.SetTextAsync(text)
-            ;
-
-        await ViewModelBase.DisplayAlertAsync("Copy item", "Item copied to clipboard", "OK")
-            ;
+        await Clipboard.SetTextAsync(text);
+        await ViewModelBase.DisplayAlertAsync("Copy item", "Item copied to clipboard", "OK");
     }
 
     protected static async Task<bool> LoadBooleanSettingAsync(string name, bool defaultValue)
@@ -87,7 +62,7 @@ public abstract class ViewModelBase : ObservableObject
 
     protected bool SetProperty<T>(ref T property, T newValue, Action<T> action, [CallerMemberName] string? propertyName = null)
     {
-        if (base.SetProperty(ref property, newValue, propertyName))
+        if (SetPropertyItem(ref property, newValue, propertyName))
         {
             action(newValue);
             return true;
@@ -96,12 +71,21 @@ public abstract class ViewModelBase : ObservableObject
         return false;
     }
 
+    protected bool SetProperty<T>(ref T property, T newValue, [CallerMemberName] string? propertyName = null)
+    {
+        if (SetPropertyItem(ref property, newValue, propertyName))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     protected bool SetProperty<T>(ref T property, T newValue, Func<T, Task> action, [CallerMemberName] string? propertyName = null)
     {
-        if (base.SetProperty(ref property, newValue, propertyName))
+        if (SetPropertyItem(ref property, newValue, propertyName))
         {
-            _ = action(newValue)
-                ;
+            _ = action(newValue);
             return true;
         }
 
@@ -110,7 +94,7 @@ public abstract class ViewModelBase : ObservableObject
 
     protected bool SetProperty<T>(ref T[] property, T[] newValue, [CallerMemberName] string? propertyName = null)
     {
-        return property != newValue && !property.SequenceEqual(newValue) && base.SetProperty(ref property, newValue, propertyName);
+        return property != newValue && !property.SequenceEqual(newValue) && SetPropertyItem(ref property, newValue, propertyName);
     }
 
     protected bool SetProperty<T>(ref T[] property, T[] newValue, Action<T[]> action, [CallerMemberName] string? propertyName = null)
@@ -120,7 +104,7 @@ public abstract class ViewModelBase : ObservableObject
             return false;
         }
 
-        if (base.SetProperty(ref property, newValue, propertyName))
+        if (SetPropertyItem(ref property, newValue, propertyName))
         {
             action(newValue);
             return true;
@@ -136,14 +120,45 @@ public abstract class ViewModelBase : ObservableObject
             return false;
         }
 
-        if (base.SetProperty(ref property, newValue, propertyName))
+        if (SetPropertyItem(ref property, newValue, propertyName))
         {
-            _ = action(newValue)
-                ;
+            _ = action(newValue);
             return true;
         }
 
         return false;
+    }
+
+    private bool SetPropertyItem<T>(ref T? property, T? newValue, string? propertyName)
+    {
+        if (EqualityComparer<T>.Default.Equals(property, newValue))
+        {
+            return false;
+        }
+
+        property = newValue;
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        return true;
+    }
+
+    private bool SetPropertyItem<T>(ref T[] property, T[] newValue, string? propertyName)
+    {
+        if (EqualityComparer<T[]>.Default.Equals(property, newValue))
+        {
+            return false;
+        }
+
+        property = newValue;
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        return true;
     }
 
     protected static Task DispatchAsync(Action action)
@@ -158,52 +173,44 @@ public abstract class ViewModelBase : ObservableObject
 
     protected static Task<T> DispatchAsync<T>(Func<Task<T>> action)
     {
-        return Shell.Current.Dispatcher.DispatchAsync(action)
-            ;
+        return Shell.Current.Dispatcher.DispatchAsync(action);
     }
 
     protected static Task<bool> DisplayAlertAsync(string title, string message, string accept, string cancel)
     {
-        return DispatchAsync(async () => await Shell.Current.DisplayAlert(title, message, accept, cancel)
-)
-        ;
+        return DispatchAsync(async () => await Shell.Current.DisplayAlert(title, message, accept, cancel));
     }
 
     protected static Task DisplayAlertAsync(string title, string message, string cancel)
     {
-        return DispatchAsync(async () => await Shell.Current.DisplayAlert(title, message, cancel)
-);
+        return DispatchAsync(async () => await Shell.Current.DisplayAlert(title, message, cancel));
     }
 
-    protected static AsyncRelayCommand CreateAsyncCommand(Func<Task> action, string message, [CallerMemberName] string? name = null)
+    protected static AsyncCommand CreateAsyncCommand(Func<Task> action, string message, [CallerMemberName] string? name = null)
     {
         var commandName = name;
-        return new AsyncRelayCommand(async () => await AttemptActionAsync(async () =>
+        return new AsyncCommand(async () => await AttemptActionAsync(async () =>
                 {
                     var timer = Stopwatch.StartNew();
                     Debug.WriteLine($"Executing {commandName}");
 
-                    await action()
-                        ;
+                    await action();
 
                     Debug.WriteLine($"{commandName}: {timer.ElapsedMilliseconds:N0} ms");
                 }, message)
 );
     }
 
-    protected static AsyncRelayCommand<T> CreateAsyncCommand<T>(Func<T?, Task> action, string message)
+    protected static AsyncCommand<T> CreateAsyncCommand<T>(Func<T?, Task> action, string message)
     {
-        return new AsyncRelayCommand<T>(async arg => await AttemptActionAsync(async () => await action(arg)
-, message)
-);
+        return new AsyncCommand<T>(async arg => await AttemptActionAsync(async () => await action(arg), message));
     }
 
     protected static async Task AttemptActionAsync(Func<Task> actionAsync, string message)
     {
         try
         {
-            await actionAsync()
-                ;
+            await actionAsync();
         }
         catch (Exception ex)
         {

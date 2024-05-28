@@ -1,6 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using CommunityToolkit.Maui.Core.Extensions;
-using CommunityToolkit.Mvvm.Input;
+﻿using SimplyScriptures.Commands;
 using SimplyScriptures.Models.Interfaces;
 
 namespace SimplyScriptures.Models;
@@ -164,11 +162,11 @@ public class MenuContentItem<T>(T item) : ModelBase, IMenuContentItem
 
     #region Handler
 
-    AsyncRelayCommand<IMenuContentItem> IMenuContentItem.Handler => new(Handler.ExecuteAsync);
+    AsyncCommand<IMenuContentItem> IMenuContentItem.Handler => new AsyncCommand<IMenuContentItem>(async arg => Handler.Execute(arg));
 
-    private AsyncRelayCommand<MenuContentItem<T>> _handler = new(x => Task.CompletedTask);
+    private AsyncCommand<MenuContentItem<T>> _handler = new(x => Task.CompletedTask);
 
-    public AsyncRelayCommand<MenuContentItem<T>> Handler
+    public AsyncCommand<MenuContentItem<T>> Handler
     {
         get => _handler;
         set => SetProperty(ref _handler, value);

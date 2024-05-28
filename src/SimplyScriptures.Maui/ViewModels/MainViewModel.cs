@@ -1,7 +1,6 @@
 ﻿using SimplyScriptures.Pages;
-using SimplyScriptures.Common.Extensions;
-using CommunityToolkit.Mvvm.Input;
 using SimplyScriptures.Common.Enums;
+using SimplyScriptures.Commands;
 
 namespace SimplyScriptures.ViewModels;
 
@@ -23,17 +22,17 @@ public class MainViewModel : ViewModelBase
 
     #region SearchAsyncCommand
 
-    private AsyncRelayCommand? _searchAsyncCommand;
+    private AsyncCommand? _searchAsyncCommand;
 
-    public AsyncRelayCommand SearchAsyncCommand => _searchAsyncCommand ??= CreateAsyncCommand(SearchAsync, "Unable to search");
+    public AsyncCommand SearchAsyncCommand => _searchAsyncCommand ??= CreateAsyncCommand(SearchAsync, "Unable to search");
 
     #endregion SearchAsyncCommand
 
     #region SelectScriptureBookAsyncCommand
 
-    private AsyncRelayCommand<ScriptureBook>? _selectScriptureBookAsyncCommand;
+    private AsyncCommand<ScriptureBook>? _selectScriptureBookAsyncCommand;
 
-    public AsyncRelayCommand<ScriptureBook> SelectScriptureBookAsyncCommand
+    public AsyncCommand<ScriptureBook> SelectScriptureBookAsyncCommand
     {
         get
         {
