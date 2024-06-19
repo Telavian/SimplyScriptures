@@ -161,6 +161,14 @@ public abstract class ViewModelBase : INotifyPropertyChanged
         return true;
     }
 
+    protected void RaisePropertyChangedEvent(string name)
+    {
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+    }
+
     protected static Task DispatchAsync(Action action)
     {
         return Shell.Current.Dispatcher.DispatchAsync(action);

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Web;
 using SimplyScriptures.Commands;
@@ -611,6 +612,12 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
         _ = InitializeContentItemsAsync();
 
         await ProcessPageParametersAsync();
+
+        await DispatchAsync(() =>
+        {
+            _selectedScripture = CurrentBook!.Book.ToRootBook();
+            RaisePropertyChangedEvent(nameof(SelectedScripture));
+        });
     }
 
     public void ApplyQueryAttributes(IDictionary<string, object> query)
@@ -943,8 +950,7 @@ public class DisplayViewModel : ViewModelBase, IQueryAttributable
             _browserInitialization = new TaskCompletionSource();
             await DispatchAsync(() =>
             {
-                CurrentBook = bookItem;
-                SelectedScripture = book.ToRootBook();
+                CurrentBook = bookItem;                
             });
 
             await FilterContentItemsAsync(ContentFilterText);
