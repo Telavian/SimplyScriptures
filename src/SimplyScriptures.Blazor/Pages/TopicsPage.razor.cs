@@ -246,8 +246,7 @@ public class TopicsPageBase : ViewModelBase
 
     protected override async Task OnInitializedAsync()
     {
-        await base.OnInitializedAsync()
-            ;
+        await base.OnInitializedAsync();
 
         SetPageState();
     }
@@ -256,26 +255,17 @@ public class TopicsPageBase : ViewModelBase
     {
         if (firstRender)
         {
-            await _applicationState!.LoadCurrentStateAsync()
-                ;
+            await _applicationState!.LoadCurrentStateAsync();
 
             SetPageState();
 
-            await RefreshAsync()
-                ;
-
-            await LoadCategoryTopicsAsync()
-                ;
-
-            await ProcessPageParametersAsync()
-                ;
-
-            await AlertIfMobileAsync()
-                ;
+            await RefreshAsync();
+            await LoadCategoryTopicsAsync();
+            await ProcessPageParametersAsync();
+            await AlertIfMobileAsync();
         }
 
-        await base.OnAfterRenderAsync(firstRender)
-            ;
+        await base.OnAfterRenderAsync(firstRender);
     }
 
     protected bool CheckVisibleItem(ContentTopicItem item)
@@ -330,8 +320,7 @@ public class TopicsPageBase : ViewModelBase
             var queryParameters = HttpUtility.ParseQueryString(uri.Query);
             var topic = queryParameters.Get("t");
 
-            await ProcessPageParametersAsync(topic ?? "")
-                ;
+            await ProcessPageParametersAsync(topic ?? "");
         }
         catch (Exception ex)
         {
@@ -349,8 +338,7 @@ public class TopicsPageBase : ViewModelBase
         SelectedTopic = AllTopics
             .FirstOrDefault(x => x.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase));
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private Task FilterContentTopicsAsync()
@@ -384,16 +372,14 @@ public class TopicsPageBase : ViewModelBase
     {
         try
         {
-            await LoadAllCategoryTopicsAsync()
-                ;
+            await LoadAllCategoryTopicsAsync();
 
             FilteredTopics = AllTopics;
             TopicsFilterText = "";
             IsTopicsLoading = false;
             SelectedTopic = FilteredTopics.FirstOrDefault();
 
-            await RefreshAsync()
-                ;
+            await RefreshAsync();
         }
         catch (Exception ex)
         {
@@ -408,25 +394,14 @@ public class TopicsPageBase : ViewModelBase
             return;
         }
 
-        var data = await _fileService!.LoadDataAsync("./Scriptures/Topics/topics.json")
-            ;
+        var data = await _fileService!.LoadDataAsync("./Scriptures/Topics/topics.json");
 
         var topicItems = data.DeserializeFromJson<ContentTopic[]>() ?? [];
-        topicItems =
-        [
-            .. topicItems
-                        .OrderBy(x => x.Topic)
-,
-        ];
+        topicItems = [.. topicItems.OrderBy(x => x.Topic),];
 
         foreach (var item in topicItems)
         {
-            item.Items =
-            [
-                .. item.Items
-                                .OrderByDescending(x => x.Book)
-,
-            ];
+            item.Items = [.. item.Items.OrderByDescending(x => x.Book),];
         }
 
         AllTopics = topicItems;

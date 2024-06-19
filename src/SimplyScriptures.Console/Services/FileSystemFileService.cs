@@ -30,8 +30,7 @@ public class FileSystemFileService : IFileService
     public Task<byte[]> LoadDataAsync(string path)
     {
         path = path.Replace("./", DataRootDirectory);
-        return File.ReadAllBytesAsync(path)
-            ;
+        return File.ReadAllBytesAsync(path);
     }
 
     #endregion

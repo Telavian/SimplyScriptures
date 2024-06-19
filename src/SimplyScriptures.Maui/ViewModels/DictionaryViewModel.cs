@@ -119,35 +119,24 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
     private async Task ShowDictionaryMenuAsync()
     {
-        await DispatchAsync(() => IsMenuOpen = !IsMenuOpen)
-            ;
+        await DispatchAsync(() => IsMenuOpen = !IsMenuOpen);
 
         if (AllWords.Length == 0 && WordsFilterText == "")
         {
-            await InitializeWordsAsync()
-                ;
+            await InitializeWordsAsync();
         }
     }
 
     private async Task InitializeWordsAsync()
     {
-        await DispatchAsync(() => IsWordsInitializing = true)
-            ;
+        await DispatchAsync(() => IsWordsInitializing = true);
+        await Task.Delay(250);
 
-        await Task.Delay(250)
-            ;
+        await LoadWordsAsync();
+        await FilterWordsAsync("");
+        await Task.Delay(250);
 
-        await LoadWordsAsync()
-            ;
-
-        await FilterWordsAsync("")
-            ;
-
-        await Task.Delay(250)
-            ;
-
-        await DispatchAsync(() => IsWordsInitializing = false)
-            ;
+        await DispatchAsync(() => IsWordsInitializing = false);
     }
 
     private async Task FilterWordsAsync(string filter)
@@ -164,11 +153,9 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
             .Select(x => new ListItem<DictionaryWord>(x, x.Word))
             .ToArray();
 
-        await DispatchAsync(() => AllWords = wordItems)
-        ;
+        await DispatchAsync(() => AllWords = wordItems);
 
-        await SelectWordAsync()
-            ;
+        await SelectWordAsync();
     }
 
     private async Task SelectWordAsync()
@@ -180,13 +167,11 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
 
         var item = AllWords.FirstOrDefault();
 
-        await DispatchAsync(() => SelectedWord = item)
-            ;
+        await DispatchAsync(() => SelectedWord = item);
 
         if (item != null)
         {
-            await ApplyItemSelectionAsync(item)
-                ;
+            await ApplyItemSelectionAsync(item);
         }
     }
 
@@ -197,8 +182,7 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
         for (var x = 0; x < 10; x++)
         {
             var fileName = $"Dictionary/words{x + 1}.json";
-            var data = await _fileService!.LoadDataAsync(fileName)
-                ;
+            var data = await _fileService!.LoadDataAsync(fileName);
 
             using (var memStream = new MemoryStream(data))
             {
@@ -209,16 +193,10 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
                     .AddRange(words);
             }
 
-            await Task.Delay(15)
-                ;
+            await Task.Delay(15);
         }
 
-        _allLoadedWords =
-        [
-            .. loadedWords
-                        .OrderBy(x => x.Word)
-,
-        ];
+        _allLoadedWords = [.. loadedWords.OrderBy(x => x.Word),];
     }
 
     private async Task WordSelectedAsync(ListItem<DictionaryWord>? item)
@@ -227,13 +205,11 @@ public class DictionaryViewModel(IFileService fileService) : ViewModelBase
             {
                 SelectedWord = item;
                 IsMenuOpen = false;
-            })
-            ;
+            });
 
         if (item != null)
         {
-            await ApplyItemSelectionAsync(item)
-                ;
+            await ApplyItemSelectionAsync(item);
         }
     }
 

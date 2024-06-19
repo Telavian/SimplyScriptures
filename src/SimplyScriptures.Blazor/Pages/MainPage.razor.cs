@@ -75,8 +75,7 @@ public class MainPageBase : ViewModelBase
 
     protected override async Task OnInitializedAsync()
     {
-        await base.OnInitializedAsync()
-            ;
+        await base.OnInitializedAsync();
 
         SetPageState();
     }
@@ -85,20 +84,14 @@ public class MainPageBase : ViewModelBase
     {
         if (firstRender)
         {
-            await _applicationState!.LoadCurrentStateAsync()
-                ;
+            await _applicationState!.LoadCurrentStateAsync();
 
             SetPageState();
-
-            await RefreshAsync()
-                ;
-
-            await AlertIfMobileAsync()
-                ;
+            await RefreshAsync();
+            await AlertIfMobileAsync();
         }
 
-        await base.OnAfterRenderAsync(firstRender)
-            ;
+        await base.OnAfterRenderAsync(firstRender);
     }
 
     #region Private Methods

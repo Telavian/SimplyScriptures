@@ -14,11 +14,8 @@ public class MauiFileService : IFileService
         path = path.Replace("./", "");
 
         using var memStream = new MemoryStream();
-        var fileStream = await FileSystem.OpenAppPackageFileAsync(path)
-            ;
-
-        await fileStream.CopyToAsync(memStream)
-            ;
+        var fileStream = await FileSystem.OpenAppPackageFileAsync(path);
+        await fileStream.CopyToAsync(memStream);
 
         memStream.Position = 0;
         return memStream.ToArray();

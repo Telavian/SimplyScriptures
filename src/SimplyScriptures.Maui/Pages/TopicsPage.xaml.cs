@@ -32,8 +32,7 @@ public partial class TopicsPage : ContentPage
     {
         base.OnNavigatedTo(args);
 
-        _ = _viewModel.InitializeAsync()
-            ;
+        _ = _viewModel.InitializeAsync();
     }
 
     #endregion Protected Methods

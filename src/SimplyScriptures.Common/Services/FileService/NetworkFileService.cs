@@ -32,8 +32,7 @@ public class NetworkFileService(HttpClient httpClient) : IFileService
         //    using (var response = await _httpClient.SendAsync(request))
         //    {
         //        response.EnsureSuccessStatusCode();
-        //        return await response.Content.ReadAsByteArrayAsync()
-        //            ;
+        //        return await response.Content.ReadAsByteArrayAsync();
         //    }
         //}
 

@@ -221,10 +221,8 @@ public static partial class StringExtensions
         await using var output = new MemoryStream();
         await using var stream = new GZipStream(output, CompressionLevel.Optimal);
 
-        await input.CopyToAsync(stream)
-            ;
-        await stream.FlushAsync()
-            ;
+        await input.CopyToAsync(stream);
+        await stream.FlushAsync();
 
         return Convert.ToBase64String(output.ToArray());
     }
@@ -248,10 +246,8 @@ public static partial class StringExtensions
         await using var input = new MemoryStream(bytes);
         await using var output = new MemoryStream();
         await using var stream = new GZipStream(input, CompressionMode.Decompress);
-        await stream.CopyToAsync(output)
-            ;
-        await output.FlushAsync()
-            ;
+        await stream.CopyToAsync(output);
+        await output.FlushAsync();
 
         return Encoding.Unicode.GetString(output.ToArray());
     }

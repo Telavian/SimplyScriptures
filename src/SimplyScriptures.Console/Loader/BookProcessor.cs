@@ -48,8 +48,7 @@ public partial class BookProcessor
 
         foreach (var book in books)
         {
-            await ProcessBookIndexDataAsync(book, items)
-                ;
+            await ProcessBookIndexDataAsync(book, items);
         }
 
         var path = Path.Combine(_rootPath, @"Scriptures\_Index");
@@ -59,47 +58,37 @@ public partial class BookProcessor
 
     public async Task<SearchMatch[]> ProcessAllBookExactSearchAsync(string text)
     {
-        await _searchService.InitializeAsync()
-            ;
+        await _searchService.InitializeAsync();
 
         var allMatches = new List<SearchMatch>();
-
-        var matches = await _searchService.FindExactMatchesAsync(text)
-            ;
+        var matches = await _searchService.FindExactMatchesAsync(text);
         allMatches.AddRange(matches);
 
-        return [.. allMatches
-];
+        return [.. allMatches];
     }
 
     public async Task<SearchMatch[]> ProcessAllBookPhraseSearchAsync(string text)
     {
-        await _searchService.InitializeAsync()
-            ;
+        await _searchService.InitializeAsync();
 
         var allMatches = new List<SearchMatch>();
 
-        var matches = await _searchService.FindPhraseMatchesAsync(text)
-            ;
+        var matches = await _searchService.FindPhraseMatchesAsync(text);
         allMatches.AddRange(matches);
 
-        return [.. allMatches
-];
+        return [.. allMatches];
     }
 
     public async Task<SearchMatch[]> ProcessAllBookScriptureSearchAsync(string text)
     {
-        await _searchService.InitializeAsync()
-            ;
+        await _searchService.InitializeAsync();
 
         var allMatches = new List<SearchMatch>();
 
-        var matches = await _searchService.FindScriptureMatchesAsync(text)
-            ;
+        var matches = await _searchService.FindScriptureMatchesAsync(text);
         allMatches.AddRange(matches);
 
-        return [.. allMatches
-];
+        return [.. allMatches];
     }
 
     #endregion
@@ -109,8 +98,7 @@ public partial class BookProcessor
     private static Task<string> LoadBookHtmlAsync(string path)
     {
         path = path.Replace("./", $"{_rootPath}/");
-        return File.ReadAllTextAsync(path)
-            ;
+        return File.ReadAllTextAsync(path);
     }
 
     private async Task ProcessBookIndexDataAsync(ScriptureBook book, List<SearchItem> items)
@@ -124,8 +112,7 @@ public partial class BookProcessor
             return;
         }
 
-        var html = await LoadBookHtmlAsync(htmlFilename)
-            ;
+        var html = await LoadBookHtmlAsync(htmlFilename);
 
         var doc = new HtmlDocument();
         doc.LoadHtml(html);

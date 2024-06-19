@@ -65,8 +65,7 @@ public class TextSearchService(IFileService fileService, Func<Task> refresh, int
 
         try
         {
-            await _initializationLock.WaitAsync()
-                ;
+            await _initializationLock.WaitAsync();
 
             if (_isInitialized)
             {
@@ -76,13 +75,11 @@ public class TextSearchService(IFileService fileService, Func<Task> refresh, int
             LogMessage("Starting search initialization");
             var timer = Stopwatch.StartNew();
 
-            await InitializeSearchIndexAsync()
-                ;
+            await InitializeSearchIndexAsync();
 
             LogMessage($"Search initialization complete: {timer.ElapsedMilliseconds} ms");
             _isInitialized = true;
-            await RefreshAsync()
-                ;
+            await RefreshAsync();
         }
         finally
         {
@@ -466,8 +463,7 @@ public class TextSearchService(IFileService fileService, Func<Task> refresh, int
     {
         var timer = Stopwatch.StartNew();
         var indexDirectory = Path.Combine(_fileService.DataRootDirectory, "UM-Index");
-        var data = await _fileService.LoadDataAsync("./Scriptures/_Index/FullIndex.bin")
-            ;
+        var data = await _fileService.LoadDataAsync("./Scriptures/_Index/FullIndex.bin");
 
         LogMessage($"Data load: {timer.ElapsedMilliseconds}");
         timer.Restart();
@@ -475,8 +471,7 @@ public class TextSearchService(IFileService fileService, Func<Task> refresh, int
         using (var memoryStream = new MemoryStream(data))
         {
             memoryStream.Position = 0L;
-            await ProcessIndexStreamAsync(memoryStream)
-                ;
+            await ProcessIndexStreamAsync(memoryStream);
         }
 
         LogMessage($"Process index: {timer.ElapsedMilliseconds}");
@@ -667,22 +662,16 @@ public class TextSearchService(IFileService fileService, Func<Task> refresh, int
         var array = list.ToArray();
         var uniqueMatches = DetermineUniqueMatches(search.Mode, array);
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
 
         return uniqueMatches;
     }
 
     private async Task RefreshAsync()
     {
-        await Task.Delay(1)
-            ;
-
-        await _refresh()
-            ;
-
-        await Task.Delay(1)
-            ;
+        await Task.Delay(1);
+        await _refresh();
+        await Task.Delay(1);
     }
 
     private static void AddLookupItems(Dictionary<string, ScriptureBook> lookup, string[] keys, ScriptureBook value)
@@ -872,13 +861,11 @@ public class TextSearchService(IFileService fileService, Func<Task> refresh, int
         try
         {
             Stopwatch.StartNew();
-            await RefreshAsync()
-                ;
+            await RefreshAsync();
 
             var valueTuple = action();
             var searchInfo = new SearchInfo(mode, valueTuple.Item3);
-            return await ProcessSearchMatchesAsync(valueTuple.Item1, valueTuple.Item2, searchInfo)
-                ;
+            return await ProcessSearchMatchesAsync(valueTuple.Item1, valueTuple.Item2, searchInfo);
         }
         finally
         {

@@ -92,17 +92,12 @@ public class ApplicationStateService(ILocalStorageService localStorage) : IAppli
 
     public async Task LoadCurrentStateAsync()
     {
-        IsOTVisible = await GetSettingAsync(nameof(IsOTVisible), true)
-            ;
-        IsNTVisible = await GetSettingAsync(nameof(IsNTVisible), true)
-            ;
-        IsBMVisible = await GetSettingAsync(nameof(IsBMVisible), true)
-            ;
-        IsDCVisible = await GetSettingAsync(nameof(IsDCVisible), true)
-            ;
+        IsOTVisible = await GetSettingAsync(nameof(IsOTVisible), true);
+        IsNTVisible = await GetSettingAsync(nameof(IsNTVisible), true);
+        IsBMVisible = await GetSettingAsync(nameof(IsBMVisible), true);
+        IsDCVisible = await GetSettingAsync(nameof(IsDCVisible), true);
 
-        IsDisplayInverted = await GetSettingAsync(nameof(IsDisplayInverted), false)
-            ;
+        IsDisplayInverted = await GetSettingAsync(nameof(IsDisplayInverted), false);
     }
 
     #region Private Methods

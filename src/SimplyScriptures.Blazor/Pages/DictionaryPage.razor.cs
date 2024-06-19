@@ -162,9 +162,7 @@ public class DictionaryPageBase : ViewModelBase
 
     protected override async Task OnInitializedAsync()
     {
-        await base.OnInitializedAsync()
-            ;
-
+        await base.OnInitializedAsync();
         SetPageState();
     }
 
@@ -172,26 +170,17 @@ public class DictionaryPageBase : ViewModelBase
     {
         if (firstRender)
         {
-            await _applicationState!.LoadCurrentStateAsync()
-                ;
+            await _applicationState!.LoadCurrentStateAsync();
 
             SetPageState();
 
-            await RefreshAsync()
-                ;
-
-            await LoadWordsAsync()
-                ;
-
-            await ProcessPageParametersAsync()
-                ;
-
-            await AlertIfMobileAsync()
-                ;
+            await RefreshAsync();
+            await LoadWordsAsync();
+            await ProcessPageParametersAsync();
+            await AlertIfMobileAsync();
         }
 
-        await base.OnAfterRenderAsync(firstRender)
-            ;
+        await base.OnAfterRenderAsync(firstRender);
     }
 
     protected MarkupString ProcessItemText(DictionaryWord? item)
@@ -218,8 +207,7 @@ public class DictionaryPageBase : ViewModelBase
             var queryParameters = HttpUtility.ParseQueryString(uri.Query);
             var word = queryParameters.Get("w");
 
-            await ProcessPageParametersAsync(word ?? "")
-                ;
+            await ProcessPageParametersAsync(word ?? "");
         }
         catch (Exception ex)
         {
@@ -237,8 +225,7 @@ public class DictionaryPageBase : ViewModelBase
         SelectedWord = AllWords
             .FirstOrDefault(x => x.Word.Equals(word, StringComparison.OrdinalIgnoreCase));
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private Task FilterWordsAsync()
@@ -274,16 +261,14 @@ public class DictionaryPageBase : ViewModelBase
     {
         try
         {
-            await LoadAllWordsAsync()
-                ;
+            await LoadAllWordsAsync();
 
             FilteredWords = AllWords.Take(100).ToArray();
             WordsFilterText = "";
             IsWordsLoading = false;
             SelectedWord = FilteredWords.FirstOrDefault();
 
-            await RefreshAsync()
-                ;
+            await RefreshAsync();
         }
         catch (Exception ex)
         {
@@ -303,8 +288,7 @@ public class DictionaryPageBase : ViewModelBase
         for (var x = 0; x < 10; ++x)
         {
             var fileName = $"./Scriptures/Dictionary/words{x + 1}.json";
-            var data = await _fileService!.LoadDataAsync(fileName)
-                ;
+            var data = await _fileService!.LoadDataAsync(fileName);
 
             using (var memStream = new MemoryStream(data))
             {
@@ -315,17 +299,13 @@ public class DictionaryPageBase : ViewModelBase
                     .AddRange(words);
             }
 
-            await RefreshAsync()
-                ;
-            await Task.Delay(15)
-                ;
+            await RefreshAsync();
+            await Task.Delay(15);
         }
 
         AllWords =
         [
-            .. loadedWords
-                        .OrderBy(x => x.Word)
-,
+            .. loadedWords.OrderBy(x => x.Word),
         ];
     }
 

@@ -251,35 +251,24 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
 
     private async Task ShowTopicsMenuAsync()
     {
-        await DispatchAsync(() => IsMenuOpen = !IsMenuOpen)
-            ;
+        await DispatchAsync(() => IsMenuOpen = !IsMenuOpen);
 
         if (AllTopics.Length == 0 && TopicsFilterText == "")
         {
-            await InitializeTopicsAsync()
-                ;
+            await InitializeTopicsAsync();
         }
     }
 
     private async Task InitializeTopicsAsync()
     {
-        await DispatchAsync(() => IsTopicsInitializing = true)
-            ;
+        await DispatchAsync(() => IsTopicsInitializing = true);
+        await Task.Delay(250);
 
-        await Task.Delay(250)
-            ;
+        await LoadTopicsAsync();
+        await FilterTopicsAsync("");
+        await Task.Delay(250);
 
-        await LoadTopicsAsync()
-            ;
-
-        await FilterTopicsAsync("")
-            ;
-
-        await Task.Delay(250)
-            ;
-
-        await DispatchAsync(() => IsTopicsInitializing = false)
-            ;
+        await DispatchAsync(() => IsTopicsInitializing = false);
     }
 
     private async Task FilterTopicsAsync(string filter)
@@ -297,11 +286,8 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
             .Select(x => new ListItem<ContentTopic>(x, x.Topic))
             .ToArray();
 
-        await DispatchAsync(() => AllTopics = items)
-            ;
-
-        await SelectTopicAsync()
-            ;
+        await DispatchAsync(() => AllTopics = items);
+        await SelectTopicAsync();
     }
 
     private async Task SelectTopicAsync()
@@ -313,23 +299,19 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
 
         var item = AllTopics.FirstOrDefault();
 
-        await DispatchAsync(() => SelectedTopic = item)
-            ;
+        await DispatchAsync(() => SelectedTopic = item);
 
         if (item != null)
         {
-            await ApplyItemSelectionAsync(item)
-                ;
+            await ApplyItemSelectionAsync(item);
         }
 
-        await FilterTopicItemsAsync(TopicItemsFilterText)
-            ;
+        await FilterTopicItemsAsync(TopicItemsFilterText);
     }
 
     private async Task LoadTopicsAsync()
     {
-        var data = await _fileService.LoadDataAsync("Topics/topics.json")
-            ;
+        var data = await _fileService.LoadDataAsync("Topics/topics.json");
         var items = data.DeserializeFromJson<ContentTopic[]>()
                     ?? [];
 
@@ -363,8 +345,7 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
             .OrderByDescending(x => x.Book)
             .ToArray();
 
-        await DispatchAsync(() => AllTopicItems = matches)
-        ;
+        await DispatchAsync(() => AllTopicItems = matches);
     }
 
     private Task ToggleOTVisibilityAsync()
@@ -399,8 +380,7 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
         }
 
         var text = item.ConvertToFormattedText();
-        await CopyItemToClipboardAsync(text)
-            ;
+        await CopyItemToClipboardAsync(text);
     }
 
     private async Task TopicSelectedAsync(ListItem<ContentTopic>? item)
@@ -409,13 +389,11 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
             {
                 SelectedTopic = item;
                 IsMenuOpen = false;
-            })
-        ;
+            });
 
         if (item != null)
         {
-            await ApplyItemSelectionAsync(item)
-                ;
+            await ApplyItemSelectionAsync(item);
         }
     }
 
@@ -431,8 +409,7 @@ public class TopicsViewModel(IFileService fileService) : ViewModelBase
                 {
                     ["ScriptureBook"] = item.Book,
                     ["SearchText"] = item.Verse,
-                })
-            ;
+                });
     }
 
     #endregion

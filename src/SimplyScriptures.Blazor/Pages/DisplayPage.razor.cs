@@ -141,8 +141,7 @@ public class DisplayPageBase : ViewModelBase
             {
                 IsMenuOpen = IsSearchOpen || IsContentOpen;
 
-                InvokeAsync(() => MenuTabs!.ActivatePanel(1))
-                ;
+                InvokeAsync(() => MenuTabs!.ActivatePanel(1));
             });
     }
 
@@ -159,8 +158,7 @@ public class DisplayPageBase : ViewModelBase
             v =>
             {
                 IsMenuOpen = IsSearchOpen || IsContentOpen;
-                InvokeAsync(() => MenuTabs!.ActivatePanel(0))
-                    ;
+                InvokeAsync(() => MenuTabs!.ActivatePanel(0));
             });
     }
 
@@ -499,8 +497,7 @@ public class DisplayPageBase : ViewModelBase
     protected override async Task OnInitializedAsync()
     {
         Console.WriteLine("Initializing display page");
-        await base.OnInitializedAsync()
-            ;
+        await base.OnInitializedAsync();
 
         _browserInitialization.SetResult();
         PageSearch ??= new TextSearchService(_fileService!, RefreshAsync);
@@ -519,7 +516,6 @@ public class DisplayPageBase : ViewModelBase
                 await _applicationState!.LoadCurrentStateAsync();
 
                 SetPageState();
-
                 await RefreshAsync();
 
                 Console.WriteLine("Initializing search");
@@ -529,16 +525,13 @@ public class DisplayPageBase : ViewModelBase
                 await ProcessPageParametersAsync();
 
                 Console.WriteLine("Loading highlights");
-                await LoadHighlightsAsync()
-                    ;
+                await LoadHighlightsAsync();
 
                 Console.WriteLine("Loading bookmarks");
-                await LoadBookmarksAsync()
-                    ;
+                await LoadBookmarksAsync();
 
                 Console.WriteLine("Alerting if mobile");
-                await AlertIfMobileAsync()
-                    ;
+                await AlertIfMobileAsync();
             }
             catch (Exception ex)
             {
@@ -550,8 +543,7 @@ public class DisplayPageBase : ViewModelBase
             }
         }
 
-        await base.OnAfterRenderAsync(firstRender)
-            ;
+        await base.OnAfterRenderAsync(firstRender);
     }
 
     protected string CleanMenuName(string name)
@@ -597,7 +589,6 @@ public class DisplayPageBase : ViewModelBase
     private Task ToggleMenuVisibilityAsync()
     {
         IsMenuOpen = !IsMenuOpen;
-
         return RefreshAsync();
     }
 
@@ -607,14 +598,9 @@ public class DisplayPageBase : ViewModelBase
         SetSelectedScripture(item.Book);
         SelectedNavigationItem = item;
 
-        await RefreshAsync()
-            ;
-
-        await LoadCurrentBookAsync(item.Book)
-            ;
-
-        await HighlightXPathLocationsAsync([item.XPath], false)
-            ;
+        await RefreshAsync();
+        await LoadCurrentBookAsync(item.Book);
+        await HighlightXPathLocationsAsync([item.XPath], false);
     }
 
     private Task HandleSearchKeypressAsync(KeyboardEventArgs args)
@@ -633,8 +619,7 @@ public class DisplayPageBase : ViewModelBase
     private async Task SearchAsync()
     {
         await Task.Yield();
-        await SearchForTextAsync(SearchText ?? "")
-            ;
+        await SearchForTextAsync(SearchText ?? "");
     }
 
     private async Task<bool> SearchForTextAsync(string? text)
@@ -644,25 +629,19 @@ public class DisplayPageBase : ViewModelBase
 
         if (text.StartsWith('"') && text.EndsWith('"'))
         {
-            await FindExactMatchesAsync(text)
-                ;
-
-            await RefreshAsync()
-                ;
+            await FindExactMatchesAsync(text);
+            await RefreshAsync();
             return false;
         }
 
-        var isScriptureMatch = await FindScriptureMatchesAsync(text)
-            ;
+        var isScriptureMatch = await FindScriptureMatchesAsync(text);
 
         if (isScriptureMatch == false)
         {
-            await FindPhraseMatchesAsync(text)
-                ;
+            await FindPhraseMatchesAsync(text);
         }
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
         return isScriptureMatch;
     }
 
@@ -672,8 +651,7 @@ public class DisplayPageBase : ViewModelBase
         Console.WriteLine($"Loading book: {book}");
 
         book = book.ToSpecificBook();
-        var bookItem = await LoadScriptureBookAsync(book)
-            ;
+        var bookItem = await LoadScriptureBookAsync(book);
 
         if (CurrentBook != null && CurrentBook.HtmlPath == bookItem.HtmlPath)
         {
@@ -686,12 +664,10 @@ public class DisplayPageBase : ViewModelBase
         FilterContentItems(ContentFilterText);
 
         await Task.Yield();
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
 
         // Wait for the initialization to complete
-        await Task.WhenAny(_browserInitialization.Task, Task.Delay(5000))
-            ;
+        await Task.WhenAny(_browserInitialization.Task, Task.Delay(5000));
 
         Console.WriteLine($"Book loaded: {timer.ElapsedMilliseconds} ms");
     }
@@ -748,8 +724,7 @@ public class DisplayPageBase : ViewModelBase
 
     private async Task<bool> FindExactMatchesAsync(string search)
     {
-        var matches = await ExecuteSearchAsync(() => PageSearch!.FindExactMatchesAsync(search))
-            ;
+        var matches = await ExecuteSearchAsync(() => PageSearch!.FindExactMatchesAsync(search));
 
         SearchResults = new SearchResults
         {
@@ -760,16 +735,14 @@ public class DisplayPageBase : ViewModelBase
         };
 
         Console.WriteLine($"Found {matches.Length} exact matches");
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
 
         return matches.Length > 0;
     }
 
     private async Task<bool> FindPhraseMatchesAsync(string search)
     {
-        var matches = await ExecuteSearchAsync(() => PageSearch!.FindPhraseMatchesAsync(search))
-            ;
+        var matches = await ExecuteSearchAsync(() => PageSearch!.FindPhraseMatchesAsync(search));
 
         SearchResults = new SearchResults
         {
@@ -780,15 +753,13 @@ public class DisplayPageBase : ViewModelBase
         };
 
         Console.WriteLine($"Found {matches.Length} exact matches");
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
         return matches.Length > 0;
     }
 
     private async Task<bool> FindScriptureMatchesAsync(string search)
     {
-        var matches = await ExecuteSearchAsync(() => PageSearch!.FindScriptureMatchesAsync(search))
-            ;
+        var matches = await ExecuteSearchAsync(() => PageSearch!.FindScriptureMatchesAsync(search));
 
         if (matches.Length > 0)
         {
@@ -796,11 +767,8 @@ public class DisplayPageBase : ViewModelBase
                 .Select(x => x.XPath)
                 .ToArray();
 
-            await SearchMatchSelectedAsync(matches[0])
-                ;
-
-            await HighlightXPathLocationsAsync(xpaths, true)
-                ;
+            await SearchMatchSelectedAsync(matches[0]);
+            await HighlightXPathLocationsAsync(xpaths, true);
         }
 
         SearchResults = new SearchResults
@@ -812,17 +780,14 @@ public class DisplayPageBase : ViewModelBase
         };
 
         Console.WriteLine($"Found {matches.Length} scripture matches");
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
         return matches.Length > 0;
     }
 
     private async Task SearchMatchSelectedAsync(SearchMatch item)
     {
         await LoadCurrentBookAsync(item.Book);
-
         await Task.Yield();
-
         await HighlightXPathLocationsAsync([item.XPath], true);
 
         SelectedSearchMatch = item;
@@ -848,8 +813,7 @@ public class DisplayPageBase : ViewModelBase
                 // Nothing
             }
 
-            await Task.Delay(100)
-                ;
+            await Task.Delay(100);
         }
     }
 
@@ -875,8 +839,7 @@ public class DisplayPageBase : ViewModelBase
                 // Nothing
             }
 
-            await Task.Delay(100)
-                ;
+            await Task.Delay(100);
         }
     }
 
@@ -909,8 +872,7 @@ public class DisplayPageBase : ViewModelBase
                 XPathsParam = xpaths,
             };
 
-            await ProcessPageParametersAsync(displayParams)
-                ;
+            await ProcessPageParametersAsync(displayParams);
         }
         catch (Exception ex)
         {
@@ -940,9 +902,7 @@ public class DisplayPageBase : ViewModelBase
         }
 
         await ProcessLocationParameterAsync(queryParameters.LocationParam);
-
         await ProcessXPathsParameterAsync(queryParameters.XPathsParam);
-
         await RefreshAsync();
     }
 
@@ -965,11 +925,9 @@ public class DisplayPageBase : ViewModelBase
 
             await Task.Yield();
 
-            await LoadCurrentBookAsync(book)
-                ;
+            await LoadCurrentBookAsync(book);
 
-            await RefreshAsync()
-                ;
+            await RefreshAsync();
         }
         catch (Exception ex)
         {
@@ -986,8 +944,7 @@ public class DisplayPageBase : ViewModelBase
 
         try
         {
-            await ScrollToLocationAsync(location)
-                ;
+            await ScrollToLocationAsync(location);
         }
         catch (Exception ex)
         {
@@ -1004,13 +961,11 @@ public class DisplayPageBase : ViewModelBase
 
         try
         {
-            var decompressed = await xpaths.DecompressTextAsync()
-                ;
+            var decompressed = await xpaths.DecompressTextAsync();
             var decoded = HttpUtility.UrlDecode(decompressed);
             var locations = decoded.DeserializeFromJson<string[]>() ?? [];
 
-            await HighlightXPathLocationsAsync(locations, true)
-                ;
+            await HighlightXPathLocationsAsync(locations, true);
         }
         catch (Exception ex)
         {
@@ -1022,8 +977,7 @@ public class DisplayPageBase : ViewModelBase
     {
         try
         {
-            var zoomLevel = await LoadDoubleSettingAsync(_zoomLevelSettingName, 1.0)
-                ;
+            var zoomLevel = await LoadDoubleSettingAsync(_zoomLevelSettingName, 1.0);
 
             await _jsRuntime!.InvokeAsync<object>("applyZoom", zoomLevel)
                 .ConfigureAwait(false);
@@ -1040,11 +994,8 @@ public class DisplayPageBase : ViewModelBase
         IsContentOpen = true;
         SetSelectedScripture(book);
 
-        await LoadCurrentBookAsync(book)
-            ;
-
-        await RefreshAsync()
-            ;
+        await LoadCurrentBookAsync(book);
+        await RefreshAsync();
     }
 
     private void FilterContentItems(string filter)
@@ -1108,8 +1059,7 @@ public class DisplayPageBase : ViewModelBase
         // A cheat to aid in setting up scripture links
         if (args.ShiftKey && args.CtrlKey)
         {
-            await DisplayCurrentSelectionInfoAsync()
-                ;
+            await DisplayCurrentSelectionInfoAsync();
 
             return;
         }
@@ -1139,8 +1089,7 @@ public class DisplayPageBase : ViewModelBase
 
         var json = item.SerializeToJson();
         var isSupported = await InvokeAsync(async () => await _clipboard!.IsSupportedAsync()
-)
-        ;
+);
 
         if (isSupported == false)
         {
@@ -1148,12 +1097,10 @@ public class DisplayPageBase : ViewModelBase
         }
 
         await InvokeAsync(async () => await _clipboard!.WriteTextAsync(json)
-)
-        ;
+);
 
         await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard")
-)
-            ;
+);
     }
 
     private async Task ZoomInAsync()
@@ -1161,11 +1108,8 @@ public class DisplayPageBase : ViewModelBase
         var currentZoom = await _jsRuntime!.InvokeAsync<double>("zoomIn")
             .ConfigureAwait(false);
 
-        await SaveSettingAsync(_zoomLevelSettingName, currentZoom)
-            ;
-
-        await RefreshAsync()
-            ;
+        await SaveSettingAsync(_zoomLevelSettingName, currentZoom);
+        await RefreshAsync();
     }
 
     private async Task ZoomOutAsync()
@@ -1173,47 +1117,34 @@ public class DisplayPageBase : ViewModelBase
         var currentZoom = await _jsRuntime!.InvokeAsync<double>("zoomOut")
             .ConfigureAwait(false);
 
-        await SaveSettingAsync(_zoomLevelSettingName, currentZoom)
-            ;
-
-        await RefreshAsync()
-            ;
+        await SaveSettingAsync(_zoomLevelSettingName, currentZoom);
+        await RefreshAsync();
     }
 
     private async Task InitializeSearchAsync()
     {
         IsSearchInitializing = true;
-        await RefreshAsync()
-            ;
-        await Task.Delay(15)
-            ;
+        await RefreshAsync();
+        await Task.Delay(15);
 
-        await PageSearch!.InitializeAsync()
-            ;
+        await PageSearch!.InitializeAsync();
 
         IsSearchInitializing = false;
-        await RefreshAsync()
-            ;
-        await Task.Delay(15)
-            ;
+        await RefreshAsync();
+        await Task.Delay(15);
     }
 
     private async Task<SearchMatch[]> ExecuteSearchAsync(Func<Task<SearchMatch[]>> action)
     {
         IsSearchBusy = true;
-        await RefreshAsync()
-            ;
-        await Task.Delay(15)
-            ;
+        await RefreshAsync();
+        await Task.Delay(15);
 
-        var matches = await action()
-            ;
+        var matches = await action();
 
         IsSearchBusy = false;
-        await RefreshAsync()
-            ;
-        await Task.Delay(15)
-            ;
+        await RefreshAsync();
+        await Task.Delay(15);
 
         return matches;
     }
@@ -1226,8 +1157,7 @@ public class DisplayPageBase : ViewModelBase
     private async Task DeleteBookmarkAsync(Bookmark bookmark)
     {
         var confirm = await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Delete bookmark?", $"Delete {bookmark.Name}?")
-)
-        ;
+);
 
         if (confirm != true)
         {
@@ -1237,15 +1167,13 @@ public class DisplayPageBase : ViewModelBase
         AllBookmarks = AllBookmarks
             .Except(new[] { bookmark })
             .ToArray();
-        await SaveBookmarksAsync()
-            ;
+        await SaveBookmarksAsync();
 
         // TODO: MudBlazor doesn't remove them automatically
         await _jsRuntime!.InvokeAsync<object>("removeBookmarkById", bookmark.BookmarkId.ToString())
             .ConfigureAwait(false);
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private async Task AddBookmarkAsync()
@@ -1266,37 +1194,28 @@ public class DisplayPageBase : ViewModelBase
         };
 
         NewBookmarkName = "";
-        AllBookmarks = [.. AllBookmarks
-,
-            .. new[] { bookmark }];
-        await SaveBookmarksAsync()
-            ;
+        AllBookmarks = [.. AllBookmarks, .. new[] { bookmark }];
+        await SaveBookmarksAsync();
 
-        await InvokeAsync(() => BookmarksMessageBox?.Close())
-            ;
-
-        await RefreshAsync()
-            ;
+        await InvokeAsync(() => BookmarksMessageBox?.Close());
+        await RefreshAsync();
     }
 
     private async Task DisplayBookmarkAsync(Bookmark bookmark)
     {
-        await InvokeAsync(() => BookmarksMessageBox?.Close())
-            ;
+        await InvokeAsync(() => BookmarksMessageBox?.Close());
 
         if (SelectedScriptureBook != bookmark.Book)
         {
             SetSelectedScripture(bookmark.Book);
 
-            await LoadCurrentBookAsync(bookmark.Book)
-                ;
+            await LoadCurrentBookAsync(bookmark.Book);
         }
 
         await _jsRuntime!.InvokeAsync<object>("setCurrentFrameScrollLocation", bookmark.Location)
             .ConfigureAwait(false);
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private async Task SaveBookmarksAsync()
@@ -1308,18 +1227,11 @@ public class DisplayPageBase : ViewModelBase
 
     private async Task LoadBookmarksAsync()
     {
-        var bookmarks = await ReadBookmarksAsync()
-            ;
+        var bookmarks = await ReadBookmarksAsync();
 
-        AllBookmarks =
-        [
-            .. bookmarks
-                        .OrderBy(x => x.Name)
-,
-        ];
+        AllBookmarks = [.. bookmarks.OrderBy(x => x.Name),];
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private async Task<Bookmark[]> ReadBookmarksAsync()
@@ -1341,9 +1253,7 @@ public class DisplayPageBase : ViewModelBase
     {
         _applicationState!.IsDisplayInverted = isInverted;
 
-        await ApplyHighlightsForBookAsync()
-            ;
-
+        await ApplyHighlightsForBookAsync();
         await _jsRuntime!.InvokeAsync<object>("initializePageFrame", IsDisplayInverted)
             .ConfigureAwait(false);
     }
@@ -1363,36 +1273,28 @@ public class DisplayPageBase : ViewModelBase
 
     private async Task ApplyHighlightAsync()
     {
-        var highlight = await GetHighlightSelectionsAsync()
-            ;
+        var highlight = await GetHighlightSelectionsAsync();
 
         if (highlight == null)
         {
             return;
         }
 
-        await UpdateSelectionHighlightsAsync(highlight)
-            ;
-
-        await SaveCurrentHighlightsAsync()
-            ;
+        await UpdateSelectionHighlightsAsync(highlight);
+        await SaveCurrentHighlightsAsync();
     }
 
     private async Task RemoveHighlightAsync()
     {
-        var highlight = await GetHighlightSelectionsAsync()
-            ;
+        var highlight = await GetHighlightSelectionsAsync();
 
         if (highlight == null)
         {
             return;
         }
 
-        await RemoveSelectionHighlightsAsync(highlight)
-            ;
-
-        await SaveCurrentHighlightsAsync()
-            ;
+        await RemoveSelectionHighlightsAsync(highlight);
+        await SaveCurrentHighlightsAsync();
     }
 
     private async Task<HighlightSelection?> GetHighlightSelectionsAsync()
@@ -1425,8 +1327,7 @@ public class DisplayPageBase : ViewModelBase
     {
         await selection.XPath
             .ForAllAsync(async item => await _jsRuntime!.InvokeAsync<object>("updateHighlightColor", item, "")
-                    .ConfigureAwait(false))
-            ;
+                    .ConfigureAwait(false));
 
         var matches = AllHighlights
             .Where(x => x.Book == selection.Book && x.XPath.Any(y => selection.XPath.Contains(y)))
@@ -1436,17 +1337,13 @@ public class DisplayPageBase : ViewModelBase
             .Except(matches)
             .ToArray();
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     private async Task UpdateSelectionHighlightsAsync(HighlightSelection selection)
     {
-        await RemoveSelectionHighlightsAsync(selection)
-            ;
-
-        await AddSelectionHighlightsAsync(selection)
-            ;
+        await RemoveSelectionHighlightsAsync(selection);
+        await AddSelectionHighlightsAsync(selection);
     }
 
     private async Task AddSelectionHighlightsAsync(HighlightSelection selection)
@@ -1460,15 +1357,10 @@ public class DisplayPageBase : ViewModelBase
 
                 await _jsRuntime!.InvokeAsync<object>("updateHighlightColor", item, colorText)
                     .ConfigureAwait(false);
-            })
-            ;
+            });
 
-        AllHighlights = [.. AllHighlights
-,
-            .. new[] { selection }];
-
-        await RefreshAsync()
-            ;
+        AllHighlights = [.. AllHighlights, .. new[] { selection }];
+        await RefreshAsync();
     }
 
     private Task ApplyHighlightsForBookAsync()
@@ -1476,8 +1368,7 @@ public class DisplayPageBase : ViewModelBase
         var highlights = GetCurrentBookHighlights();
 
         return highlights
-            .ForAllAsync(async selection => await AddSelectionHighlightsAsync(selection)
-);
+            .ForAllAsync(async selection => await AddSelectionHighlightsAsync(selection));
     }
 
     private HighlightSelection[] GetCurrentBookHighlights()
@@ -1496,8 +1387,7 @@ public class DisplayPageBase : ViewModelBase
 
     private async Task LoadHighlightsAsync()
     {
-        var highlights = await ReadHighlightsAsync()
-            ;
+        var highlights = await ReadHighlightsAsync();
 
         Console.WriteLine($"Loaded {highlights.Length} highlights");
         AllHighlights = highlights;
@@ -1517,44 +1407,32 @@ public class DisplayPageBase : ViewModelBase
             .ConfigureAwait(false);
 
         var isSupported = await InvokeAsync(async () => await _clipboard!.IsSupportedAsync()
-)
-        ;
+);
 
         if (isSupported == false)
         {
             return;
         }
 
-        await InvokeAsync(async () => await _clipboard!.WriteTextAsync(text)
-)
-        ;
-
-        await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard")
-)
-            ;
+        await InvokeAsync(async () => await _clipboard!.WriteTextAsync(text));
+        await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard"));
     }
 
     private async Task CopyLinkAsync()
     {
         var isSupported = await InvokeAsync(async () => await _clipboard!.IsSupportedAsync()
-)
-        ;
+);
 
         if (isSupported == false)
         {
             return;
         }
 
-        var link = await GetSelectionLinkAsync()
-            ;
+        var link = await GetSelectionLinkAsync();
 
-        await InvokeAsync(async () => await _clipboard!.WriteTextAsync(link)
-)
-        ;
+        await InvokeAsync(async () => await _clipboard!.WriteTextAsync(link));
 
-        await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard")
-)
-            ;
+        await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard"));
     }
 
     private async Task<string> GetSelectionLinkAsync()

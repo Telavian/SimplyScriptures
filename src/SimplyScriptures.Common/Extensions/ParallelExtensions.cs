@@ -24,8 +24,7 @@ public static class ParallelExtensions
     {
         foreach (var item in items)
         {
-            await action(item)
-                ;
+            await action(item);
         }
     }
 

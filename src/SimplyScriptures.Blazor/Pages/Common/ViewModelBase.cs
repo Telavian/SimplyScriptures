@@ -100,8 +100,7 @@ public partial class ViewModelBase : LayoutComponentBase
                         await _dialogService!
                             .ShowMessageBox("App", "Site is optimized for desktop. Use app on mobile devices")
                             .ConfigureAwait(false);
-                    })
-                    ;
+                    });
             }
         }
         catch (Exception ex)
@@ -190,22 +189,16 @@ public partial class ViewModelBase : LayoutComponentBase
 
     protected async Task CopyTextToClipboardAsync(string text)
     {
-        var isSupported = await InvokeAsync(async () => await _clipboard!.IsSupportedAsync()
-)
-            ;
+        var isSupported = await InvokeAsync(async () => await _clipboard!.IsSupportedAsync());
 
         if (isSupported == false)
         {
             return;
         }
 
-        await InvokeAsync(async () => await _clipboard!.WriteTextAsync(text)
-)
-            ;
+        await InvokeAsync(async () => await _clipboard!.WriteTextAsync(text));
 
-        await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard")
-)
-            ;
+        await InvokeAsync(async () => await _dialogService!.ShowMessageBox("Copy item", "Item copied to clipboard"));
     }
 
     protected void UpdateProperty<T>(ref T property, T newValue)
@@ -235,10 +228,7 @@ public partial class ViewModelBase : LayoutComponentBase
     protected async Task<T?> InvokeAsync<T>(Func<Task<T>> action)
     {
         T? result = default;
-
-        await InvokeAsync(async () => result = await action()
-)
-        ;
+        await InvokeAsync(async () => result = await action());
 
         return result;
     }
@@ -247,12 +237,8 @@ public partial class ViewModelBase : LayoutComponentBase
     {
         return async () =>
         {
-            await AttemptActionAsync(async () => await action()
-, message)
-            ;
-
-            await RefreshAsync()
-                ;
+            await AttemptActionAsync(async () => await action(), message);
+            await RefreshAsync();
         };
     }
 
@@ -260,12 +246,8 @@ public partial class ViewModelBase : LayoutComponentBase
     {
         return async (T args) =>
         {
-            await AttemptActionAsync(async () => await action(args)
-, message)
-            ;
-
-            await RefreshAsync()
-                ;
+            await AttemptActionAsync(async () => await action(args), message);
+            await RefreshAsync();
         };
     }
 
@@ -273,12 +255,8 @@ public partial class ViewModelBase : LayoutComponentBase
     {
         return async (T1 t1, T2 t2) =>
         {
-            await AttemptActionAsync(async () => await action(t1, t2)
-, message)
-            ;
-
-            await RefreshAsync()
-                ;
+            await AttemptActionAsync(async () => await action(t1, t2), message);
+            await RefreshAsync();
         };
     }
 
@@ -287,9 +265,7 @@ public partial class ViewModelBase : LayoutComponentBase
         return (T args) =>
         {
             AttemptAction(() => action(args), message);
-
-            RefreshAsync()
-                ;
+            RefreshAsync();
         };
     }
 
@@ -298,7 +274,6 @@ public partial class ViewModelBase : LayoutComponentBase
         return () =>
         {
             AttemptAction(() => action(), message);
-
             InvokeAsync(() => StateHasChanged());
         };
     }
@@ -317,16 +292,14 @@ public partial class ViewModelBase : LayoutComponentBase
             }
         }
 
-        RefreshAsync()
-            ;
+        RefreshAsync();
     }
 
     protected async Task AttemptActionAsync(Func<Task> actionAsync, string message)
     {
         try
         {
-            await actionAsync()
-                ;
+            await actionAsync();
         }
         catch (Exception ex)
         {
@@ -337,14 +310,12 @@ public partial class ViewModelBase : LayoutComponentBase
             }
         }
 
-        await RefreshAsync()
-            ;
+        await RefreshAsync();
     }
 
     protected Task RefreshAsync()
     {
         _isUpdated = true;
-
         return InvokeAsync(StateHasChanged);
     }
 

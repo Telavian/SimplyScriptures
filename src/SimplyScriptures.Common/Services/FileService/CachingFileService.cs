@@ -20,8 +20,7 @@ public class CachingFileService(IMemoryCache cache, IFileService innerService) :
             return data!;
         }
 
-        data = await _innerService.LoadDataAsync(path)
-            ;
+        data = await _innerService.LoadDataAsync(path);
 
         _cache.Set(path, data, TimeSpan.FromMinutes(5));
         return data;
