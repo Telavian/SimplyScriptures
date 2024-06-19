@@ -34,14 +34,13 @@ public partial class DisplayPage : ContentPage
     #region Protected Methods
 
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
-    {
-        base.OnNavigatedTo(args);
+    {        
         _viewModel.HighlightColorPopup = HighlightColorPopup;
         _viewModel.BookmarksPopup = BookmarksPopup;
         _viewModel.MainContentWebView = MainContentWebView;
 
-        _ = _viewModel.InitializeAsync()
-            ;
+        _ = _viewModel.InitializeAsync();
+        base.OnNavigatedTo(args);
     }
 
     #endregion Protected Methods

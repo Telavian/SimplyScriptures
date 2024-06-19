@@ -1577,18 +1577,13 @@ public class DisplayPageBase : ViewModelBase
 
     private async Task InitializePageFrameAsync()
     {
-        Console.WriteLine("Initializing page frame");
+        Console.WriteLine($"Initializing page frame. Inverted: {IsDisplayInverted}");
 
         try
         {
-            await _jsRuntime!.InvokeAsync<object>("initializePageFrame", IsDisplayInverted)
-                .ConfigureAwait(false);
-
-            await ApplySavedZoomSettingAsync()
-                ;
-
-            await ApplyHighlightsForBookAsync()
-                ;
+            await _jsRuntime!.InvokeAsync<object>("initializePageFrame", IsDisplayInverted);
+            await ApplySavedZoomSettingAsync();
+            await ApplyHighlightsForBookAsync();
         }
         catch (Exception ex)
         {

@@ -215,7 +215,7 @@
                                  HorizontalOptions="End" Padding="5, 5, 5, 5"
                                  VerticalOptions="Center" 
                                  IsOpaque="True" BackgroundColor="Transparent" 
-                                 HeightRequest="32" WidthRequest="32"
+                                 HeightRequest="24" WidthRequest="24"
                                  Source="{AppThemeBinding Light=down_light.png, Dark=down_dark.png}" 
                                  Command="{Binding Path=ShowHighlightColorsAsyncCommand}" />
                     <ImageButton Grid.Column="7" 

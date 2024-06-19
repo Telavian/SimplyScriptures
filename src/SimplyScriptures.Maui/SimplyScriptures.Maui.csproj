@@ -22,8 +22,8 @@
 		<ApplicationIdGuid>33662316-3D89-4D4E-A2E1-BCBF1B5F34C5</ApplicationIdGuid>
 
 		<!-- Versions -->
-    <ApplicationDisplayVersion>3.0.4</ApplicationDisplayVersion>
-    <ApplicationVersion>25</ApplicationVersion>
+    <ApplicationDisplayVersion>3.0.5</ApplicationDisplayVersion>
+    <ApplicationVersion>26</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
@@ -34,7 +34,7 @@
 		<DefaultLanguage>en</DefaultLanguage>
 	</PropertyGroup>
 
-  <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
     <MtouchLink>SdkOnly</MtouchLink>
     <AndroidEnableSGenConcurrent>False</AndroidEnableSGenConcurrent>
   </PropertyGroup>
@@ -54,7 +54,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
     <MtouchLink>SdkOnly</MtouchLink>
-  </PropertyGroup>-->
+  </PropertyGroup>
 
   <ItemGroup>
     <!-- App Icon -->    
