@@ -1,4 +1,4 @@
-# Simply Scriptures - [Go to SimplyScriptures](https://telavian.github.io/simply_scriptures)
+# Simply Scriptures - [Go to SimplyScriptures](https://telavian.github.io/SimplyScriptures/)
 All standard scriptural with changes from the original manuscripts indicated in the text. Where appropriate, JST changes are directly incorporated and indicated. Each edition increases the readability by modernizing the page layout into paragraphs and poetic form when needed. Section headers and bullet lists are added when needed along with chapter/verse numbers indicated in a subdued form to increase readability.
 
 The Old Testament is broken into 3 books because of the overall length of the text. JST changes are indicated with an underline. For small changes the King James Version of the text is indicated in the margin. Minimal text changes were performed to modernize the text when a direct equivalent word was available. When an equivalent word was not available then the text was left as original.
